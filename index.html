@@ -87,7 +87,7 @@
     let cards = [];
 
     async function loadCards() {
-        const response = await fetch('database.csv');
+        const response = await fetch('./database.csv');
         const csvText = await response.text();
         cards = parseCSV(csvText);
     }
