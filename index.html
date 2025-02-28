@@ -6,62 +6,79 @@
     <title>Arcardia Card Search</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
-            background-color: #f5f5f5;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #e0e0e0;
             margin: 0;
             padding: 0;
             display: flex;
             justify-content: center;
             align-items: center;
             height: 100vh;
+            background: linear-gradient(135deg, rgba(60, 60, 60, 0.8), rgba(255, 255, 255, 0.1));
+            backdrop-filter: blur(10px);
+            color: #fff;
         }
 
         .container {
             text-align: center;
-            background: white;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-            max-width: 700px;
+            background: rgba(255, 255, 255, 0.1); /* Semi-transparent background */
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(20px);
             width: 90%;
-            margin: 20px;
+            max-width: 700px;
         }
 
         h2 {
-            font-size: 1.5rem;
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            color: #ffdd00;
         }
 
         input[type="text"] {
             width: 100%;
             padding: 12px;
-            margin: 10px 0;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            font-size: 0.9rem;
-            box-sizing: border-box;
+            margin: 15px 0;
+            border: none;
+            border-radius: 10px;
+            font-size: 1rem;
+            background: rgba(255, 255, 255, 0.2);
+            color: #fff;
+            outline: none;
+            box-shadow: inset 4px 4px 8px rgba(0, 0, 0, 0.1), inset -4px -4px 8px rgba(255, 255, 255, 0.2);
+        }
+
+        input[type="text"]:focus {
+            background: rgba(255, 255, 255, 0.3);
         }
 
         .results {
             text-align: left;
             max-height: 400px;
             overflow-y: auto;
-            margin-top: 10px;
+            margin-top: 20px;
+            padding: 10px;
+            border-radius: 10px;
         }
 
         .card {
             display: flex;
             align-items: center;
             padding: 10px;
-            border-bottom: 1px solid #eee;
-            flex-wrap: wrap;
+            border-radius: 10px;
+            margin: 10px 0;
+            background: rgba(255, 255, 255, 0.1);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+            backdrop-filter: blur(15px);
         }
 
         .card img {
             width: 60px;
             height: 80px;
             object-fit: cover;
-            margin-right: 10px;
-            border: 1px solid #ddd;
+            margin-right: 15px;
+            border-radius: 5px;
         }
 
         .card-details {
@@ -70,7 +87,7 @@
         }
 
         .card-details a {
-            color: #007BFF;
+            color: #ffdd00;
             font-weight: bold;
             text-decoration: none;
         }
@@ -80,63 +97,77 @@
         }
 
         .card-details p {
-            margin: 3px 0;
-            color: #555;
+            margin: 5px 0;
+            color: #fff;
         }
 
         .add-to-cart {
             background-color: #4CAF50;
             color: white;
             border: none;
-            padding: 5px 10px;
-            border-radius: 5px;
+            padding: 8px 15px;
+            border-radius: 20px;
             cursor: pointer;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease;
         }
 
         .add-to-cart:hover {
             background-color: #45a049;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
         }
 
         .cart {
-            margin-top: 20px;
-            text-align: left;
+            margin-top: 30px;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(20px);
         }
 
         .cart p {
             font-size: 1.1rem;
+            color: #fff;
         }
 
         .cart-total {
-            font-size: 1.2rem;
+            font-size: 1.4rem;
             font-weight: bold;
-            color: #007BFF;
+            color: #ffdd00;
         }
 
         .remove-item {
             background-color: #FF4D4D;
             color: white;
             border: none;
-            padding: 5px 10px;
-            border-radius: 5px;
+            padding: 8px 15px;
+            border-radius: 20px;
             cursor: pointer;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease;
         }
 
         .remove-item:hover {
             background-color: #FF3333;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
         }
 
         .clear-cart {
             background-color: #FF9800;
             color: white;
             border: none;
-            padding: 10px;
-            border-radius: 5px;
+            padding: 12px 25px;
+            border-radius: 25px;
             cursor: pointer;
-            margin-top: 10px;
+            margin-top: 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
         }
 
         .clear-cart:hover {
             background-color: #FF6500;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
         }
 
         .cart-item-controls {
@@ -146,7 +177,24 @@
         }
 
         .cart-item-quantity {
-            font-size: 1.2rem;
+            font-size: 1.3rem;
+            color: #fff;
+        }
+
+        .cart-item-controls button {
+            padding: 8px 12px;
+            font-size: 1.4rem;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 50%;
+            cursor: pointer;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .cart-item-controls button:hover {
+            background-color: #0056b3;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
         }
 
         /* Mobile responsiveness */
@@ -183,7 +231,7 @@
 
 <div class="container">
     <h2>Trading Card Search</h2>
-    <input type="text" id="searchBar" placeholder="Search by Name or Card Number (OPXX-XXX)...">
+    <input type="text" id="searchBar" placeholder="Search by Name or OPXX-XXX...">
     <div class="results" id="resultsContainer"></div>
 
     <!-- Cart display -->
@@ -238,10 +286,10 @@
         }
 
         results.forEach(card => {
-            const cardDiv = document.createElement('div');
             const usdPrice = parseFloat(card.marketPrice);
             const cadPrice = (usdPrice * 1.35).toFixed(2);
 
+            const cardDiv = document.createElement('div');
             cardDiv.classList.add('card');
             cardDiv.innerHTML = `
                 <img src="${card.imageUrl}" alt="${card.name}">
