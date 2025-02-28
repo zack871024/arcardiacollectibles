@@ -34,10 +34,11 @@
         input[type="text"] {
             width: 100%;
             padding: 12px;
-            margin: 20px 0;
+            margin: 10px 0; /* Adjust margin */
             border: 1px solid #ccc;
             border-radius: 5px;
             font-size: 1rem;
+            box-sizing: border-box; /* Ensure padding and border are included in width */
         }
 
         .results {
@@ -107,6 +108,7 @@
 
             input[type="text"] {
                 font-size: 1.2rem;
+                padding: 10px; /* Adjust padding for mobile */
             }
         }
 
@@ -172,7 +174,7 @@
             const cardDiv = document.createElement('div');
             cardDiv.classList.add('card');
             const usdPrice = parseFloat(card.marketPrice);
-            const cadPrice = (usdPrice * 1.5).toFixed(2); // Convert USD to CAD
+            const cadPrice = (usdPrice * 1.35).toFixed(2); // Convert USD to CAD
 
             cardDiv.innerHTML = `
                 <img src="${card.imageUrl}" alt="${card.name}">
