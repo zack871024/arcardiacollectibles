@@ -6,51 +6,50 @@
     <title>Arcardia Card Search</title>
     <style>
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #e0e0e0;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", "Arial", sans-serif;
+            background-color: #f4f4f4;
             margin: 0;
             padding: 0;
             display: flex;
             justify-content: center;
             align-items: center;
             height: 100vh;
-            background: linear-gradient(135deg, rgba(60, 60, 60, 0.8), rgba(255, 255, 255, 0.1));
-            backdrop-filter: blur(10px);
-            color: #fff;
+            color: #333;
         }
 
         .container {
             text-align: center;
-            background: rgba(255, 255, 255, 0.1); /* Semi-transparent background */
-            padding: 30px;
-            border-radius: 15px;
-            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-            backdrop-filter: blur(20px);
+            background: #fff;
+            padding: 40px;
+            border-radius: 16px;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
             width: 90%;
-            max-width: 700px;
+            max-width: 800px;
         }
 
         h2 {
-            font-size: 1.8rem;
+            font-size: 2rem;
             margin-bottom: 20px;
-            color: #ffdd00;
+            color: #333;
+            font-weight: 600;
         }
 
         input[type="text"] {
             width: 100%;
-            padding: 12px;
+            padding: 14px;
             margin: 15px 0;
-            border: none;
-            border-radius: 10px;
-            font-size: 1rem;
-            background: rgba(255, 255, 255, 0.2);
-            color: #fff;
+            border: 1px solid #dcdcdc;
+            border-radius: 8px;
+            font-size: 1.2rem;
+            background: #f7f7f7;
+            color: #333;
             outline: none;
-            box-shadow: inset 4px 4px 8px rgba(0, 0, 0, 0.1), inset -4px -4px 8px rgba(255, 255, 255, 0.2);
+            box-sizing: border-box;
         }
 
         input[type="text"]:focus {
-            background: rgba(255, 255, 255, 0.3);
+            border-color: #007aff;
+            background: #fff;
         }
 
         .results {
@@ -58,24 +57,23 @@
             max-height: 400px;
             overflow-y: auto;
             margin-top: 20px;
-            padding: 10px;
-            border-radius: 10px;
         }
 
         .card {
             display: flex;
             align-items: center;
-            padding: 10px;
-            border-radius: 10px;
+            padding: 14px;
+            border-radius: 12px;
             margin: 10px 0;
-            background: rgba(255, 255, 255, 0.1);
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
-            backdrop-filter: blur(15px);
+            background: #f9f9f9;
+            border: 1px solid #ddd;
+            box-sizing: border-box;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
         }
 
         .card img {
-            width: 60px;
-            height: 80px;
+            width: 70px;
+            height: 90px;
             object-fit: cover;
             margin-right: 15px;
             border-radius: 5px;
@@ -87,8 +85,8 @@
         }
 
         .card-details a {
-            color: #ffdd00;
-            font-weight: bold;
+            color: #007aff;
+            font-weight: 600;
             text-decoration: none;
         }
 
@@ -98,76 +96,76 @@
 
         .card-details p {
             margin: 5px 0;
-            color: #fff;
+            color: #333;
         }
 
         .add-to-cart {
-            background-color: #4CAF50;
+            background-color: #007aff;
             color: white;
             border: none;
-            padding: 8px 15px;
+            padding: 10px 20px;
             border-radius: 20px;
             cursor: pointer;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            font-size: 1rem;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
             transition: all 0.3s ease;
         }
 
         .add-to-cart:hover {
-            background-color: #45a049;
-            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+            background-color: #0051ba;
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
         }
 
         .cart {
-            margin-top: 30px;
+            margin-top: 40px;
             padding: 20px;
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 15px;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-            backdrop-filter: blur(20px);
+            background: #f9f9f9;
+            border-radius: 16px;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
         }
 
         .cart p {
-            font-size: 1.1rem;
-            color: #fff;
+            font-size: 1.2rem;
+            color: #333;
         }
 
         .cart-total {
             font-size: 1.4rem;
             font-weight: bold;
-            color: #ffdd00;
+            color: #007aff;
         }
 
         .remove-item {
-            background-color: #FF4D4D;
+            background-color: #FF3B30;
             color: white;
             border: none;
-            padding: 8px 15px;
+            padding: 10px 20px;
             border-radius: 20px;
             cursor: pointer;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            font-size: 1rem;
             transition: all 0.3s ease;
         }
 
         .remove-item:hover {
-            background-color: #FF3333;
-            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+            background-color: #e63228;
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
         }
 
         .clear-cart {
-            background-color: #FF9800;
+            background-color: #FF9500;
             color: white;
             border: none;
             padding: 12px 25px;
             border-radius: 25px;
             cursor: pointer;
             margin-top: 20px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            font-size: 1rem;
             transition: all 0.3s ease;
         }
 
         .clear-cart:hover {
-            background-color: #FF6500;
-            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+            background-color: #e67600;
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
         }
 
         .cart-item-controls {
@@ -177,24 +175,24 @@
         }
 
         .cart-item-quantity {
-            font-size: 1.3rem;
-            color: #fff;
+            font-size: 1.2rem;
+            color: #333;
         }
 
         .cart-item-controls button {
-            padding: 8px 12px;
-            font-size: 1.4rem;
-            background-color: #007BFF;
+            padding: 8px 14px;
+            font-size: 1.3rem;
+            background-color: #007aff;
             color: white;
             border: none;
             border-radius: 50%;
             cursor: pointer;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease;
         }
 
         .cart-item-controls button:hover {
-            background-color: #0056b3;
-            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+            background-color: #0051ba;
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
         }
 
         /* Mobile responsiveness */
@@ -205,8 +203,8 @@
             }
 
             .card img {
-                width: 100px;
-                height: 130px;
+                width: 90px;
+                height: 120px;
                 margin-right: 0;
                 margin-bottom: 10px;
             }
@@ -221,7 +219,7 @@
 
             input[type="text"] {
                 font-size: 1.2rem;
-                padding: 10px;
+                padding: 12px;
             }
         }
 
