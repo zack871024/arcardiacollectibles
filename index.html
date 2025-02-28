@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -39,7 +38,6 @@
             border: 1px solid #ccc;
             border-radius: 5px;
             font-size: 0.9rem;
-            /* Smaller text size */
             box-sizing: border-box;
         }
 
@@ -86,6 +84,61 @@
             color: #555;
         }
 
+        .add-to-cart {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .add-to-cart:hover {
+            background-color: #45a049;
+        }
+
+        .cart {
+            margin-top: 20px;
+            text-align: left;
+        }
+
+        .cart p {
+            font-size: 1.1rem;
+        }
+
+        .cart-total {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #007BFF;
+        }
+
+        .remove-item {
+            background-color: #FF4D4D;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .remove-item:hover {
+            background-color: #FF3333;
+        }
+
+        .clear-cart {
+            background-color: #FF9800;
+            color: white;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        .clear-cart:hover {
+            background-color: #FF6500;
+        }
+
         /* Mobile responsiveness */
         @media screen and (max-width: 600px) {
             .card {
@@ -111,93 +164,134 @@
             input[type="text"] {
                 font-size: 1.2rem;
                 padding: 10px;
-                /* Adjust padding for mobile */
             }
         }
 
-        /* Tablet view */
-        @media screen and (max-width: 900px) {
-            .container {
-                width: 80%;
-            }
-        }
     </style>
 </head>
-
 <body>
 
-    <div class="container">
-        <h2>One Piece TCG Card Search</h2>
-        <input type="text" id="searchBar" placeholder="Search by Name or Card Number...">
-        <div class="results" id="resultsContainer"></div>
+<div class="container">
+    <h2>Trading Card Search</h2>
+    <input type="text" id="searchBar" placeholder="Search by Name or OPXX-XXX...">
+    <div class="results" id="resultsContainer"></div>
+
+    <!-- Cart display -->
+    <div class="cart">
+        <h3>Your Cart</h3>
+        <div id="cartContainer"></div>
+        <p class="cart-total" id="cartTotal"></p>
+        <button class="clear-cart" onclick="clearCart()">Clear Cart</button>
     </div>
+</div>
 
-    <script>
-        let cards = [];
+<script>
+    let cards = [];
+    let cart = [];
 
-        async function loadCards() {
-            const response = await fetch('https://raw.githubusercontent.com/zack871024/zack871024.github.io/refs/heads/main/database.csv');
-            const csvText = await response.text();
-            cards = parseCSV(csvText);
-        }
+    async function loadCards() {
+        const response = await fetch('https://raw.githubusercontent.com/zack871024/zack871024.github.io/refs/heads/main/database.csv');
+        const csvText = await response.text();
+        cards = parseCSV(csvText);
+    }
 
-        function parseCSV(csvText) {
-            const rows = csvText.trim().split('\n');
-            const headers = rows[0].split(',').map(header => header.trim());
+    function parseCSV(csvText) {
+        const rows = csvText.trim().split('\n');
+        const headers = rows[0].split(',').map(header => header.trim());
 
-            return rows.slice(1).map(row => {
-                const values = row.split(',').map(value => value.trim());
-                let entry = {};
-                headers.forEach((header, index) => {
-                    entry[header] = values[index] || ''; // Safeguard for empty values
-                });
-                return entry;
+        return rows.slice(1).map(row => {
+            const values = row.split(',').map(value => value.trim());
+            let entry = {};
+            headers.forEach((header, index) => {
+                entry[header] = values[index] || '';
             });
+            return entry;
+        });
+    }
+
+    function searchCards(query) {
+        query = query.toLowerCase();
+        const results = cards.filter(card => 
+            card.name.toLowerCase().includes(query) ||
+            card.extNumber.toLowerCase().includes(query)
+        );
+        displayResults(results);
+    }
+
+    function displayResults(results) {
+        const container = document.getElementById('resultsContainer');
+        container.innerHTML = '';
+
+        if (results.length === 0) {
+            container.innerHTML = '<p>No cards found.</p>';
+            return;
         }
 
-        function searchCards(query) {
-            query = query.toLowerCase();
-            const results = cards.filter(card =>
-                card.name.toLowerCase().includes(query) ||
-                card.extNumber.toLowerCase().includes(query)
-            );
-            displayResults(results);
-        }
+        results.forEach(card => {
+            const cardDiv = document.createElement('div');
+            cardDiv.classList.add('card');
+            const usdPrice = parseFloat(card.marketPrice);
+            const cadPrice = (usdPrice * 1.35).toFixed(2);
 
-        function displayResults(results) {
-            const container = document.getElementById('resultsContainer');
-            container.innerHTML = '';
-
-            if (results.length === 0) {
-                container.innerHTML = '<p>No cards found.</p>';
-                return;
-            }
-
-            results.forEach(card => {
-                const cardDiv = document.createElement('div');
-                cardDiv.classList.add('card');
-                const usdPrice = parseFloat(card.marketPrice);
-                const cadPrice = (usdPrice * 1.35).toFixed(2); // Convert USD to CAD
-
-                cardDiv.innerHTML = `
+            cardDiv.innerHTML = `
                 <img src="${card.imageUrl}" alt="${card.name}">
                 <div class="card-details">
                     <a href="${card.url}" target="_blank">${card.name}</a>
                     <p>Ext Number: ${card.extNumber}</p>
                     <p>Suggested Price: $${usdPrice} (CAD: $${cadPrice})</p>
+                    <button class="add-to-cart" onclick="addToCart('${card.extNumber}', '${card.name}', ${usdPrice}, '${card.imageUrl}', '${card.url}')">Add to Cart</button>
                 </div>
             `;
-                container.appendChild(cardDiv);
-            });
-        }
+            container.appendChild(cardDiv);
+        });
+    }
 
-        document.getElementById('searchBar').addEventListener('input', (e) => {
-            searchCards(e.target.value);
+    function addToCart(extNumber, name, price, imageUrl, url) {
+        const card = { extNumber, name, price, imageUrl, url };
+        cart.push(card);
+        updateCart();
+    }
+
+    function removeItem(extNumber) {
+        cart = cart.filter(card => card.extNumber !== extNumber);
+        updateCart();
+    }
+
+    function clearCart() {
+        cart = [];
+        updateCart();
+    }
+
+    function updateCart() {
+        const cartContainer = document.getElementById('cartContainer');
+        const cartTotal = document.getElementById('cartTotal');
+
+        cartContainer.innerHTML = '';
+        let totalUSD = 0;
+
+        cart.forEach(card => {
+            const cardDiv = document.createElement('div');
+            cardDiv.innerHTML = `
+                <div>
+                    <img src="${card.imageUrl}" alt="${card.name}" width="50" height="70">
+                    <span>${card.name}</span>
+                    <button class="remove-item" onclick="removeItem('${card.extNumber}')">Remove</button>
+                </div>
+            `;
+            cartContainer.appendChild(cardDiv);
+            totalUSD += card.price;
         });
 
-        loadCards();
-    </script>
+        const totalCAD = (totalUSD * 1.35).toFixed(2);
+        cartTotal.innerHTML = `Total: $${totalUSD.toFixed(2)} (CAD: $${totalCAD})`;
+    }
+
+    document.getElementById('searchBar').addEventListener('input', (e) => {
+        searchCards(e.target.value);
+    });
+
+    loadCards();
+</script>
 
 </body>
-
 </html>
