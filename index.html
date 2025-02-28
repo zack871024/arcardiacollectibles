@@ -12,9 +12,10 @@
             padding: 0;
             display: flex;
             justify-content: center;
-            align-items: center;
+            align-items: flex-start;
             height: 100vh;
             color: #333;
+            overflow: hidden;
         }
 
         .container {
@@ -25,6 +26,7 @@
             box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
             width: 90%;
             max-width: 800px;
+            overflow: hidden;
         }
 
         h2 {
@@ -57,6 +59,7 @@
             max-height: 400px;
             overflow-y: auto;
             margin-top: 20px;
+            margin-bottom: 20px;
         }
 
         .card {
@@ -72,8 +75,8 @@
         }
 
         .card img {
-            width: 70px;
-            height: 90px;
+            width: 100px;
+            height: 120px;
             object-fit: cover;
             margin-right: 15px;
             border-radius: 5px;
@@ -117,11 +120,20 @@
         }
 
         .cart {
-            margin-top: 40px;
+            margin-top: 20px;
             padding: 20px;
             background: #f9f9f9;
             border-radius: 16px;
             box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+            max-height: 400px;
+            overflow-y: auto;
+        }
+
+        .cart h3 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 15px;
+            color: #333;
         }
 
         .cart p {
@@ -195,6 +207,37 @@
             box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
         }
 
+        .cart-item-preview {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .cart-item-preview img {
+            width: 80px;
+            height: 100px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-right: 15px;
+        }
+
+        .cart-item-info {
+            flex-grow: 1;
+            text-align: left;
+        }
+
+        .cart-item-info span {
+            display: block;
+            font-size: 1rem;
+            font-weight: 600;
+        }
+
+        .cart-item-info p {
+            margin: 5px 0;
+            font-size: 1rem;
+            color: #333;
+        }
+
         /* Mobile responsiveness */
         @media screen and (max-width: 600px) {
             .card {
@@ -222,7 +265,6 @@
                 padding: 12px;
             }
         }
-
     </style>
 </head>
 <body>
@@ -242,6 +284,8 @@
 </div>
 
 <script>
+    const EXCHANGE_RATE = 1.5; // Fixed exchange rate
+
     let cards = [];
     let cart = [];
 
@@ -285,7 +329,7 @@
 
         results.forEach(card => {
             const usdPrice = parseFloat(card.marketPrice);
-            const cadPrice = (usdPrice * 1.35).toFixed(2);
+            const cadPrice = (usdPrice * EXCHANGE_RATE).toFixed(2); // Using fixed exchange rate
 
             const cardDiv = document.createElement('div');
             cardDiv.classList.add('card');
@@ -321,26 +365,29 @@
 
         cart.forEach(card => {
             const usdPrice = card.price;
-            const cadPrice = (usdPrice * 1.35).toFixed(2);
+            const cadPrice = (usdPrice * EXCHANGE_RATE).toFixed(2);
 
             const cardDiv = document.createElement('div');
+            cardDiv.classList.add('cart-item-preview');
             cardDiv.innerHTML = `
-                <div>
-                    <img src="${card.imageUrl}" alt="${card.name}" width="50" height="70">
+                <img src="${card.imageUrl}" alt="${card.name}">
+                <div class="cart-item-info">
                     <span>${card.name}</span>
+                    <p>Ext Number: ${card.extNumber}</p>
+                    <p>Price: $${usdPrice} (CAD: $${cadPrice})</p>
                     <div class="cart-item-controls">
                         <button onclick="changeQuantity('${card.extNumber}', -1)">-</button>
                         <span class="cart-item-quantity">${card.quantity}</span>
                         <button onclick="changeQuantity('${card.extNumber}', 1)">+</button>
                     </div>
-                    <button class="remove-item" onclick="removeItem('${card.extNumber}')">Remove</button>
                 </div>
+                <button class="remove-item" onclick="removeItem('${card.extNumber}')">Remove</button>
             `;
             cartContainer.appendChild(cardDiv);
             totalUSD += card.quantity * usdPrice;
         });
 
-        const totalCAD = (totalUSD * 1.35).toFixed(2);
+        const totalCAD = (totalUSD * EXCHANGE_RATE).toFixed(2); // Using fixed exchange rate
         cartTotal.innerHTML = `Total: $${totalUSD.toFixed(2)} (CAD: $${totalCAD})`;
     }
 
