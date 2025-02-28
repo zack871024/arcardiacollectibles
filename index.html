@@ -6,80 +6,65 @@
     <title>Arcardia Card Search</title>
     <style>
         body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", "Arial", sans-serif;
-            background-color: #f4f4f4;
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
             margin: 0;
             padding: 0;
             display: flex;
             justify-content: center;
             align-items: flex-start;
             height: 100vh;
-            color: #333;
             overflow: hidden;
         }
 
         .container {
             text-align: center;
-            background: #fff;
-            padding: 40px;
-            border-radius: 16px;
-            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            max-width: 700px;
             width: 90%;
-            max-width: 800px;
-            overflow: hidden;
+            margin: 20px;
+            overflow-y: auto; /* Allow scrolling inside the container */
+            max-height: 90vh; /* Prevents the content from overflowing the screen */
         }
 
         h2 {
-            font-size: 2rem;
-            margin-bottom: 20px;
-            color: #333;
-            font-weight: 600;
+            font-size: 1.5rem;
         }
 
         input[type="text"] {
             width: 100%;
-            padding: 14px;
-            margin: 15px 0;
-            border: 1px solid #dcdcdc;
-            border-radius: 8px;
-            font-size: 1.2rem;
-            background: #f7f7f7;
-            color: #333;
-            outline: none;
+            padding: 12px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 0.9rem;
             box-sizing: border-box;
-        }
-
-        input[type="text"]:focus {
-            border-color: #007aff;
-            background: #fff;
         }
 
         .results {
             text-align: left;
             max-height: 400px;
             overflow-y: auto;
-            margin-top: 20px;
-            margin-bottom: 20px;
+            margin-top: 10px;
         }
 
         .card {
             display: flex;
             align-items: center;
-            padding: 14px;
-            border-radius: 12px;
-            margin: 10px 0;
-            background: #f9f9f9;
-            border: 1px solid #ddd;
-            box-sizing: border-box;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            padding: 10px;
+            border-bottom: 1px solid #eee;
+            flex-wrap: wrap;
         }
 
         .card img {
-            width: 100px;
-            height: 120px;
+            width: 60px;
+            height: 80px;
             object-fit: cover;
-            margin-right: 15px;
-            border-radius: 5px;
+            margin-right: 10px;
+            border: 1px solid #ddd;
         }
 
         .card-details {
@@ -88,8 +73,8 @@
         }
 
         .card-details a {
-            color: #007aff;
-            font-weight: 600;
+            color: #007BFF;
+            font-weight: bold;
             text-decoration: none;
         }
 
@@ -98,86 +83,65 @@
         }
 
         .card-details p {
-            margin: 5px 0;
-            color: #333;
+            margin: 3px 0;
+            color: #555;
         }
 
         .add-to-cart {
-            background-color: #007aff;
+            background-color: #4CAF50;
             color: white;
             border: none;
-            padding: 10px 20px;
-            border-radius: 20px;
+            padding: 5px 10px;
+            border-radius: 5px;
             cursor: pointer;
-            font-size: 1rem;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-            transition: all 0.3s ease;
         }
 
         .add-to-cart:hover {
-            background-color: #0051ba;
-            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+            background-color: #45a049;
         }
 
         .cart {
             margin-top: 20px;
-            padding: 20px;
-            background: #f9f9f9;
-            border-radius: 16px;
-            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
-            max-height: 400px;
-            overflow-y: auto;
-        }
-
-        .cart h3 {
-            font-size: 1.5rem;
-            font-weight: 600;
-            margin-bottom: 15px;
-            color: #333;
+            text-align: left;
+            padding-top: 20px;
+            border-top: 1px solid #ddd;
         }
 
         .cart p {
-            font-size: 1.2rem;
-            color: #333;
+            font-size: 1.1rem;
         }
 
         .cart-total {
-            font-size: 1.4rem;
+            font-size: 1.2rem;
             font-weight: bold;
-            color: #007aff;
+            color: #007BFF;
         }
 
         .remove-item {
-            background-color: #FF3B30;
+            background-color: #FF4D4D;
             color: white;
             border: none;
-            padding: 10px 20px;
-            border-radius: 20px;
+            padding: 5px 10px;
+            border-radius: 5px;
             cursor: pointer;
-            font-size: 1rem;
-            transition: all 0.3s ease;
         }
 
         .remove-item:hover {
-            background-color: #e63228;
-            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+            background-color: #FF3333;
         }
 
         .clear-cart {
-            background-color: #FF9500;
+            background-color: #FF9800;
             color: white;
             border: none;
-            padding: 12px 25px;
-            border-radius: 25px;
+            padding: 10px;
+            border-radius: 5px;
             cursor: pointer;
-            margin-top: 20px;
-            font-size: 1rem;
-            transition: all 0.3s ease;
+            margin-top: 10px;
         }
 
         .clear-cart:hover {
-            background-color: #e67600;
-            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+            background-color: #FF6500;
         }
 
         .cart-item-controls {
@@ -188,54 +152,6 @@
 
         .cart-item-quantity {
             font-size: 1.2rem;
-            color: #333;
-        }
-
-        .cart-item-controls button {
-            padding: 8px 14px;
-            font-size: 1.3rem;
-            background-color: #007aff;
-            color: white;
-            border: none;
-            border-radius: 50%;
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
-
-        .cart-item-controls button:hover {
-            background-color: #0051ba;
-            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
-        }
-
-        .cart-item-preview {
-            display: flex;
-            align-items: center;
-            margin-bottom: 15px;
-        }
-
-        .cart-item-preview img {
-            width: 80px;
-            height: 100px;
-            object-fit: cover;
-            border-radius: 8px;
-            margin-right: 15px;
-        }
-
-        .cart-item-info {
-            flex-grow: 1;
-            text-align: left;
-        }
-
-        .cart-item-info span {
-            display: block;
-            font-size: 1rem;
-            font-weight: 600;
-        }
-
-        .cart-item-info p {
-            margin: 5px 0;
-            font-size: 1rem;
-            color: #333;
         }
 
         /* Mobile responsiveness */
@@ -246,8 +162,8 @@
             }
 
             .card img {
-                width: 90px;
-                height: 120px;
+                width: 100px;
+                height: 130px;
                 margin-right: 0;
                 margin-bottom: 10px;
             }
@@ -262,9 +178,10 @@
 
             input[type="text"] {
                 font-size: 1.2rem;
-                padding: 12px;
+                padding: 10px;
             }
         }
+
     </style>
 </head>
 <body>
@@ -284,8 +201,6 @@
 </div>
 
 <script>
-    const EXCHANGE_RATE = 1.5; // Fixed exchange rate
-
     let cards = [];
     let cart = [];
 
@@ -328,10 +243,10 @@
         }
 
         results.forEach(card => {
-            const usdPrice = parseFloat(card.marketPrice);
-            const cadPrice = (usdPrice * EXCHANGE_RATE).toFixed(2); // Using fixed exchange rate
-
             const cardDiv = document.createElement('div');
+            const usdPrice = parseFloat(card.marketPrice);
+            const cadPrice = (usdPrice * 1.5).toFixed(2);
+
             cardDiv.classList.add('card');
             cardDiv.innerHTML = `
                 <img src="${card.imageUrl}" alt="${card.name}">
@@ -365,29 +280,26 @@
 
         cart.forEach(card => {
             const usdPrice = card.price;
-            const cadPrice = (usdPrice * EXCHANGE_RATE).toFixed(2);
+            const cadPrice = (usdPrice * 1.5).toFixed(2);
 
             const cardDiv = document.createElement('div');
-            cardDiv.classList.add('cart-item-preview');
             cardDiv.innerHTML = `
-                <img src="${card.imageUrl}" alt="${card.name}">
-                <div class="cart-item-info">
+                <div>
+                    <img src="${card.imageUrl}" alt="${card.name}" width="50" height="70">
                     <span>${card.name}</span>
-                    <p>Ext Number: ${card.extNumber}</p>
-                    <p>Price: $${usdPrice} (CAD: $${cadPrice})</p>
                     <div class="cart-item-controls">
                         <button onclick="changeQuantity('${card.extNumber}', -1)">-</button>
                         <span class="cart-item-quantity">${card.quantity}</span>
                         <button onclick="changeQuantity('${card.extNumber}', 1)">+</button>
                     </div>
+                    <button class="remove-item" onclick="removeItem('${card.extNumber}')">Remove</button>
                 </div>
-                <button class="remove-item" onclick="removeItem('${card.extNumber}')">Remove</button>
             `;
             cartContainer.appendChild(cardDiv);
             totalUSD += card.quantity * usdPrice;
         });
 
-        const totalCAD = (totalUSD * EXCHANGE_RATE).toFixed(2); // Using fixed exchange rate
+        const totalCAD = (totalUSD * 1.5).toFixed(2);
         cartTotal.innerHTML = `Total: $${totalUSD.toFixed(2)} (CAD: $${totalCAD})`;
     }
 
