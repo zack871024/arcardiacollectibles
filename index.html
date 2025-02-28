@@ -87,20 +87,21 @@
     let cards = [];
 
     async function loadCards() {
-        const response = await fetch('./database.csv');
+        const response = await fetch('https://raw.githubusercontent.com/your-username/your-repository/main/database.csv'); // Adjust the URL
         const csvText = await response.text();
+        console.log(csvText); // Log the raw CSV text to check if it's being loaded correctly
         cards = parseCSV(csvText);
     }
 
     function parseCSV(csvText) {
-        const rows = csvText.trim().split('\\n');
-        const headers = rows[0].split(',');
+        const rows = csvText.trim().split('\n');
+        const headers = rows[0].split(',').map(header => header.trim());
 
         return rows.slice(1).map(row => {
-            const values = row.split(',');
+            const values = row.split(',').map(value => value.trim());
             let entry = {};
             headers.forEach((header, index) => {
-                entry[header.trim()] = values[index] ? values[index].trim() : '';
+                entry[header] = values[index] || ''; // Safeguard for empty values
             });
             return entry;
         });
