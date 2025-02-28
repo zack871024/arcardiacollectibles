@@ -139,6 +139,16 @@
             background-color: #FF6500;
         }
 
+        .cart-item-controls {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .cart-item-quantity {
+            font-size: 1.2rem;
+        }
+
         /* Mobile responsiveness */
         @media screen and (max-width: 600px) {
             .card {
@@ -173,7 +183,7 @@
 
 <div class="container">
     <h2>Trading Card Search</h2>
-    <input type="text" id="searchBar" placeholder="Search by Name or OPXX-XXX...">
+    <input type="text" id="searchBar" placeholder="Search by Name or Card Number (OPXX-XXX)...">
     <div class="results" id="resultsContainer"></div>
 
     <!-- Cart display -->
@@ -229,10 +239,10 @@
 
         results.forEach(card => {
             const cardDiv = document.createElement('div');
-            cardDiv.classList.add('card');
             const usdPrice = parseFloat(card.marketPrice);
             const cadPrice = (usdPrice * 1.35).toFixed(2);
 
+            cardDiv.classList.add('card');
             cardDiv.innerHTML = `
                 <img src="${card.imageUrl}" alt="${card.name}">
                 <div class="card-details">
@@ -247,18 +257,12 @@
     }
 
     function addToCart(extNumber, name, price, imageUrl, url) {
-        const card = { extNumber, name, price, imageUrl, url };
-        cart.push(card);
-        updateCart();
-    }
-
-    function removeItem(extNumber) {
-        cart = cart.filter(card => card.extNumber !== extNumber);
-        updateCart();
-    }
-
-    function clearCart() {
-        cart = [];
+        const existingCard = cart.find(card => card.extNumber === extNumber);
+        if (existingCard) {
+            existingCard.quantity += 1;
+        } else {
+            cart.push({ extNumber, name, price, imageUrl, url, quantity: 1 });
+        }
         updateCart();
     }
 
@@ -270,20 +274,49 @@
         let totalUSD = 0;
 
         cart.forEach(card => {
+            const usdPrice = card.price;
+            const cadPrice = (usdPrice * 1.35).toFixed(2);
+
             const cardDiv = document.createElement('div');
             cardDiv.innerHTML = `
                 <div>
                     <img src="${card.imageUrl}" alt="${card.name}" width="50" height="70">
                     <span>${card.name}</span>
+                    <div class="cart-item-controls">
+                        <button onclick="changeQuantity('${card.extNumber}', -1)">-</button>
+                        <span class="cart-item-quantity">${card.quantity}</span>
+                        <button onclick="changeQuantity('${card.extNumber}', 1)">+</button>
+                    </div>
                     <button class="remove-item" onclick="removeItem('${card.extNumber}')">Remove</button>
                 </div>
             `;
             cartContainer.appendChild(cardDiv);
-            totalUSD += card.price;
+            totalUSD += card.quantity * usdPrice;
         });
 
         const totalCAD = (totalUSD * 1.35).toFixed(2);
         cartTotal.innerHTML = `Total: $${totalUSD.toFixed(2)} (CAD: $${totalCAD})`;
+    }
+
+    function changeQuantity(extNumber, delta) {
+        const card = cart.find(card => card.extNumber === extNumber);
+        if (card) {
+            card.quantity += delta;
+            if (card.quantity <= 0) {
+                removeItem(extNumber);
+            }
+        }
+        updateCart();
+    }
+
+    function removeItem(extNumber) {
+        cart = cart.filter(card => card.extNumber !== extNumber);
+        updateCart();
+    }
+
+    function clearCart() {
+        cart = [];
+        updateCart();
     }
 
     document.getElementById('searchBar').addEventListener('input', (e) => {
