@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Arcardia Card Search</title>
+    <title>Arcadia One Piece TCG Search</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -28,13 +28,7 @@
             width: 90%;
             margin: 20px;
             overflow-y: auto;
-            /* Allow scrolling inside the container */
             max-height: 90vh;
-            /* Prevents the content from overflowing the screen */
-        }
-
-        h2 {
-            font-size: 1.5rem;
         }
 
         input[type="text"] {
@@ -43,15 +37,12 @@
             margin: 10px 0;
             border: 1px solid #ccc;
             border-radius: 5px;
-            font-size: 0.9rem;
-            box-sizing: border-box;
         }
 
         .results {
             text-align: left;
             max-height: 400px;
             overflow-y: auto;
-            margin-top: 10px;
         }
 
         .card {
@@ -59,7 +50,6 @@
             align-items: center;
             padding: 10px;
             border-bottom: 1px solid #eee;
-            flex-wrap: wrap;
         }
 
         .card img {
@@ -68,26 +58,6 @@
             object-fit: cover;
             margin-right: 10px;
             border: 1px solid #ddd;
-        }
-
-        .card-details {
-            flex-grow: 1;
-            text-align: left;
-        }
-
-        .card-details a {
-            color: #007BFF;
-            font-weight: bold;
-            text-decoration: none;
-        }
-
-        .card-details a:hover {
-            text-decoration: underline;
-        }
-
-        .card-details p {
-            margin: 3px 0;
-            color: #555;
         }
 
         .add-to-cart {
@@ -99,111 +69,32 @@
             cursor: pointer;
         }
 
-        .add-to-cart:hover {
-            background-color: #45a049;
-        }
-
         .cart {
             margin-top: 20px;
-            text-align: left;
-            padding-top: 20px;
             border-top: 1px solid #ddd;
+            padding-top: 10px;
+            text-align: left;
         }
 
-        .cart p {
-            font-size: 1.1rem;
-        }
-
-        .cart-total {
-            font-size: 1.2rem;
-            font-weight: bold;
-            color: #007BFF;
+        .cart-item-controls button {
+            margin: 0 5px;
         }
 
         .remove-item {
             background-color: #FF4D4D;
             color: white;
+            padding: 5px;
             border: none;
-            padding: 5px 10px;
-            border-radius: 5px;
             cursor: pointer;
-        }
-
-        .remove-item:hover {
-            background-color: #FF3333;
         }
 
         .clear-cart {
             background-color: #FF9800;
             color: white;
+            padding: 10px;
+            margin-top: 10px;
             border: none;
-            padding: 15px 30px;
-            /* Increased padding for better touch target */
-            font-size: 1.2rem;
-            /* Larger font size for easier readability */
-            border-radius: 8px;
             cursor: pointer;
-            margin-top: 20px;
-            /* Added margin to provide more space */
-            width: 100%;
-            /* Make button span the full width of its container */
-            box-sizing: border-box;
-            /* Ensure padding is included in width calculation */
-            position: relative;
-            /* Ensure the button is positioned correctly */
-            z-index: 10;
-            /* Make sure the button is above other elements */
-        }
-
-        .clear-cart:hover {
-            background-color: #FF6500;
-        }
-
-        .cart-item-controls {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        .cart-item-quantity {
-            font-size: 1.2rem;
-        }
-
-        /* Mobile responsiveness */
-        @media screen and (max-width: 600px) {
-            .card {
-                flex-direction: column;
-                align-items: flex-start;
-            }
-
-            .card img {
-                width: 100px;
-                height: 130px;
-                margin-right: 0;
-                margin-bottom: 10px;
-            }
-
-            .card-details a {
-                font-size: 1.2rem;
-            }
-
-            .card-details p {
-                font-size: 1rem;
-            }
-
-            input[type="text"] {
-                font-size: 1.2rem;
-                padding: 10px;
-            }
-
-            .clear-cart {
-                padding: 20px 40px;
-                /* Increased padding for mobile devices */
-                font-size: 1.3rem;
-                /* Slightly larger font for easier reading */
-                width: 100%;
-                /* Full width button on mobile for easier tap */
-            }
         }
     </style>
 </head>
@@ -211,15 +102,14 @@
 <body>
 
     <div class="container">
-        <h2>Arcardia One Piece TCG Search Engine</h2>
+        <h2>Arcadia One Piece TCG Search Engine</h2>
         <input type="text" id="searchBar" placeholder="Search by Name or OPXX-XXX...">
         <div class="results" id="resultsContainer"></div>
 
-        <!-- Cart display -->
         <div class="cart">
             <h3>Your Cart</h3>
             <div id="cartContainer"></div>
-            <p class="cart-total" id="cartTotal"></p>
+            <p id="cartTotal"></p>
             <button class="clear-cart" onclick="clearCart()">Clear Cart</button>
         </div>
     </div>
@@ -236,14 +126,12 @@
 
         function parseCSV(csvText) {
             const rows = csvText.trim().split('\n');
-            const headers = rows[0].split(',').map(header => header.trim());
+            const headers = rows[0].split(',').map(h => h.trim());
 
             return rows.slice(1).map(row => {
-                const values = row.split(',').map(value => value.trim());
+                const values = row.split(',').map(v => v.trim());
                 let entry = {};
-                headers.forEach((header, index) => {
-                    entry[header] = values[index] || '';
-                });
+                headers.forEach((header, index) => entry[header] = values[index] || '');
                 return entry;
             });
         }
@@ -251,8 +139,7 @@
         function searchCards(query) {
             query = query.toLowerCase();
             const results = cards.filter(card =>
-                card.name.toLowerCase().includes(query) ||
-                card.extNumber.toLowerCase().includes(query)
+                card.name.toLowerCase().includes(query) || card.extNumber.toLowerCase().includes(query)
             );
             displayResults(results);
         }
@@ -260,7 +147,6 @@
         function displayResults(results) {
             const container = document.getElementById('resultsContainer');
             container.innerHTML = '';
-
             if (results.length === 0) {
                 container.innerHTML = '<p>No cards found.</p>';
                 return;
@@ -273,20 +159,22 @@
 
                 cardDiv.classList.add('card');
                 cardDiv.innerHTML = `
-                <img src="${card.imageUrl}" alt="${card.name}">
-                <div class="card-details">
-                    <a href="${card.url}" target="_blank">${card.name}</a>
-                    <p>Ext Number: ${card.extNumber}</p>
-                    <p>Suggested Price: $${usdPrice} (CAD: $${cadPrice})</p>
-                    <button class="add-to-cart" onclick="addToCart('${card.extNumber}', '${card.name}', ${usdPrice}, '${card.imageUrl}', '${card.url}')">Add to Cart</button>
-                </div>
-            `;
+                    <img src="${card.imageUrl}" alt="${card.name}">
+                    <div>
+                        <p><strong>${card.name}</strong> (${card.extNumber})</p>
+                        <p>Price: $${usdPrice} USD (CAD: $${cadPrice})</p>
+                        <button class="add-to-cart" onclick="addToCart('${card.extNumber}', '${card.name}', ${usdPrice}, '${card.imageUrl}', '${card.url}')">Add to Cart</button>
+                    </div>
+                `;
                 container.appendChild(cardDiv);
             });
         }
 
         function addToCart(extNumber, name, price, imageUrl, url) {
-            const existingCard = cart.find(card => card.extNumber === extNumber);
+            const existingCard = cart.find(card =>
+                card.extNumber === extNumber && card.price === price && card.url === url
+            );
+
             if (existingCard) {
                 existingCard.quantity += 1;
             } else {
@@ -303,43 +191,44 @@
             let totalUSD = 0;
 
             cart.forEach(card => {
-                const usdPrice = card.price;
-                const cadPrice = (usdPrice * 1.5).toFixed(2);
+                const cadPrice = (card.price * 1.5).toFixed(2);
 
-                const cardDiv = document.createElement('div');
-                cardDiv.innerHTML = `
-                <div>
-                    <img src="${card.imageUrl}" alt="${card.name}" width="50" height="70">
-                    <span>${card.name}</span>
+                const itemDiv = document.createElement('div');
+                itemDiv.innerHTML = `
+                    <p>${card.name} (${card.extNumber}) - $${card.price.toFixed(2)} USD</p>
                     <div class="cart-item-controls">
-                        <button onclick="changeQuantity('${card.extNumber}', -1)">-</button>
-                        <span class="cart-item-quantity">${card.quantity}</span>
-                        <button onclick="changeQuantity('${card.extNumber}', 1)">+</button>
+                        <button onclick="changeQuantity('${card.extNumber}', ${card.price}, '${card.url}', -1)">-</button>
+                        ${card.quantity}
+                        <button onclick="changeQuantity('${card.extNumber}', ${card.price}, '${card.url}', 1)">+</button>
+                        <button class="remove-item" onclick="removeItem('${card.extNumber}', ${card.price}, '${card.url}')">Remove</button>
                     </div>
-                    <button class="remove-item" onclick="removeItem('${card.extNumber}')">Remove</button>
-                </div>
-            `;
-                cartContainer.appendChild(cardDiv);
-                totalUSD += card.quantity * usdPrice;
+                `;
+                cartContainer.appendChild(itemDiv);
+
+                totalUSD += card.quantity * card.price;
             });
 
             const totalCAD = (totalUSD * 1.5).toFixed(2);
-            cartTotal.innerHTML = `Total: $${totalUSD.toFixed(2)} (CAD: $${totalCAD})`;
+            cartTotal.innerText = `Total: $${totalUSD.toFixed(2)} USD (CAD: $${totalCAD})`;
         }
 
-        function changeQuantity(extNumber, delta) {
-            const card = cart.find(card => card.extNumber === extNumber);
+        function changeQuantity(extNumber, price, url, delta) {
+            const card = cart.find(card =>
+                card.extNumber === extNumber && card.price === price && card.url === url
+            );
             if (card) {
                 card.quantity += delta;
                 if (card.quantity <= 0) {
-                    removeItem(extNumber);
+                    removeItem(extNumber, price, url);
                 }
             }
             updateCart();
         }
 
-        function removeItem(extNumber) {
-            cart = cart.filter(card => card.extNumber !== extNumber);
+        function removeItem(extNumber, price, url) {
+            cart = cart.filter(card =>
+                !(card.extNumber === extNumber && card.price === price && card.url === url)
+            );
             updateCart();
         }
 
@@ -348,13 +237,9 @@
             updateCart();
         }
 
-        document.getElementById('searchBar').addEventListener('input', (e) => {
-            searchCards(e.target.value);
-        });
-
+        document.getElementById('searchBar').addEventListener('input', e => searchCards(e.target.value));
         loadCards();
     </script>
 
 </body>
-
 </html>
