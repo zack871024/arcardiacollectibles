@@ -32,12 +32,13 @@
         }
 
         input[type="text"] {
-            width: 100%;
+            width: calc(100% - 20px);  /* This ensures it doesn't overflow the container */
             padding: 12px;
             margin: 10px 0;
             border: 1px solid #ccc;
             border-radius: 5px;
-        }
+            box-sizing: border-box;  /* Ensures padding is included in width */
+}
 
         .results {
             text-align: left;
