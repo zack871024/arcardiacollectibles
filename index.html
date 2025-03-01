@@ -76,6 +76,25 @@
             text-align: left;
         }
 
+        .cart-item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 10px;
+        }
+
+        .cart-item img {
+            width: 40px;
+            height: 50px;
+            object-fit: cover;
+            margin-right: 10px;
+            border: 1px solid #ddd;
+        }
+
+        .cart-item-info {
+            flex-grow: 1;
+        }
+
         .cart-item-controls button {
             margin: 0 5px;
         }
@@ -194,8 +213,14 @@
                 const cadPrice = (card.price * 1.5).toFixed(2);
 
                 const itemDiv = document.createElement('div');
+                itemDiv.classList.add('cart-item');
+
                 itemDiv.innerHTML = `
-                    <p>${card.name} (${card.extNumber}) - $${card.price.toFixed(2)} USD</p>
+                    <img src="${card.imageUrl}" alt="${card.name}">
+                    <div class="cart-item-info">
+                        <p>${card.name} (${card.extNumber})</p>
+                        <p>$${card.price.toFixed(2)} USD</p>
+                    </div>
                     <div class="cart-item-controls">
                         <button onclick="changeQuantity('${card.extNumber}', ${card.price}, '${card.url}', -1)">-</button>
                         ${card.quantity}
