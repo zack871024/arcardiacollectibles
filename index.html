@@ -165,30 +165,40 @@
         }
 
         function displayResults(results) {
-            const container = document.getElementById('resultsContainer');
-            container.innerHTML = '';
-            if (results.length === 0) {
-                container.innerHTML = '<p>No cards found.</p>';
-                return;
-            }
+    const container = document.getElementById('resultsContainer');
+    container.innerHTML = '';
+    if (results.length === 0) {
+        container.innerHTML = '<p>No cards found.</p>';
+        return;
+    }
 
-            results.forEach(card => {
-                const cardDiv = document.createElement('div');
-                const usdPrice = parseFloat(card.marketPrice);
-                const cadPrice = (usdPrice * 1.5).toFixed(2);
+    results.forEach(card => {
+        const cardDiv = document.createElement('div');
+        const usdPrice = parseFloat(card.marketPrice);
+        const cadPrice = (usdPrice * 1.5).toFixed(2);
 
-                cardDiv.classList.add('card');
-                cardDiv.innerHTML = `
-                    <img src="${card.imageUrl}" alt="${card.name}">
-                    <div>
-                        <p><strong>${card.name}</strong> (${card.extNumber})</p>
-                        <p>Price: $${usdPrice} USD (CAD: $${cadPrice})</p>
-                        <button class="add-to-cart" onclick="addToCart('${card.extNumber}', '${card.name}', ${usdPrice}, '${card.imageUrl}', '${card.url}')">Add to Cart</button>
-                    </div>
-                `;
-                container.appendChild(cardDiv);
-            });
-        }
+        cardDiv.classList.add('card');
+        cardDiv.innerHTML = `
+            <img src="${card.imageUrl}" alt="${card.name}">
+            <div>
+                <p>
+                    <strong>
+                        <a href="${card.url}" target="_blank" style="text-decoration:none; color:#007bff;">
+                            ${card.name}
+                        </a>
+                    </strong> 
+                    (${card.extNumber})
+                </p>
+                <p>Price: $${usdPrice.toFixed(2)} USD (CAD: $${cadPrice})</p>
+                <button class="add-to-cart" 
+                    onclick="addToCart('${card.extNumber}', '${card.name}', ${usdPrice}, '${card.imageUrl}', '${card.url}')">
+                    Add to Cart
+                </button>
+            </div>
+        `;
+        container.appendChild(cardDiv);
+    });
+}
 
         function addToCart(extNumber, name, price, imageUrl, url) {
             const existingCard = cart.find(card =>
