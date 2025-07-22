@@ -57,7 +57,6 @@ urls = [
     'https://tcgcsv.com/tcgplayer/68/24068/ProductsAndPrices.csv',
     'https://tcgcsv.com/tcgplayer/68/24241/ProductsAndPrices.csv',
     'https://tcgcsv.com/tcgplayer/68/24242/ProductsAndPrices.csv',
-    'https://tcgcsv.com/tcgplayer/68/23991/ProductsAndPrices.csv',
     'https://tcgcsv.com/tcgplayer/68/24282/ProductsAndPrices.csv',
     'https://tcgcsv.com/tcgplayer/68/24283/ProductsAndPrices.csv',
     'https://tcgcsv.com/tcgplayer/68/24284/ProductsAndPrices.csv',
@@ -110,11 +109,11 @@ def download_and_process_csv(urls):
     combined_df = pd.concat(dfs, ignore_index=True)
 
     # Drop certain columns (example: 'column_to_remove')
-    columns_to_remove = ['cleanName', 'categoryId', 'groupId', 'modifiedOn', 'imageCount', 'lowPrice', 'midPrice', 'highPrice', 'directLowPrice', 'subTypeName', 'extRarity', 'extDescription', 'extColor', 'extCardType', 'extLife', 'extPower', 'extSubtypes', 'extAttribute', 'extCost', 'extCounterplus']
+    columns_to_remove = ['cleanName', 'categoryId', 'groupId', 'modifiedOn', 'imageCount', 'lowPrice', 'midPrice', 'highPrice', 'directLowPrice', 'subTypeName', 'extLife', 'extPower', 'extSubtypes', 'extAttribute', 'extCost', 'extCounterplus']
     combined_df = combined_df.drop(columns=columns_to_remove, errors='ignore')
 
     # Reformat combined DataFrame to match your database.csv structure
-    combined_df = combined_df[['productId','name', 'extNumber', 'imageUrl', 'url', 'marketPrice']]  # Adjust as needed
+    combined_df = combined_df[['productId','name', 'extNumber', 'imageUrl', 'url', 'marketPrice','extRarity', 'extDescription', 'extColor', 'extCardType',]]  # Adjust as needed
 
     # Save the final DataFrame as 'database.csv'
     combined_df.to_csv('database.csv', index=False)
