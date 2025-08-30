@@ -1,8 +1,14 @@
 import pandas as pd
 import requests
+import math
 from io import StringIO
 
-# URLs of the CSV files to be downloaded
+##############################################################
+##############################################################
+#### PUT NEW PRODCUT URL DOWN BELOW, REMOVE EXISITING ONES####
+##############################################################
+##############################################################
+
 urls = [
     'https://tcgcsv.com/tcgplayer/68/24241/ProductsAndPrices.csv',
     # Add more URLs as needed
@@ -56,5 +62,47 @@ def download_and_process_csv(urls):
     combined_df.to_csv('database.csv', index=False)
     print("CSV file processed and saved as 'database.csv'")
 
+def generate_formatted_csv(input_file='database.csv', output_file='formatted_import_shopify.csv'):
+    # Read the existing database.csv
+    df = pd.read_csv(input_file)
+
+    # Build Title = name + (extNumber) if exists
+    df['Title'] = df.apply(
+        lambda row: f"{row['name']} ({row['extNumber']})"
+        if pd.notna(row['extNumber']) and str(row['extNumber']).strip() != ""
+        else row['name'],
+        axis=1
+    )
+
+    # Status = Draft
+    df['Status'] = 'Draft'
+
+    # Price = ceil(marketPrice * 1.67)
+    df['Price'] = df['marketPrice'].apply(
+        lambda x: int(math.ceil(x * 1.67)) if pd.notna(x) else ""
+    )
+
+    # Fix image URL: replace '200w' with '1000w'
+    df['Product image URL'] = df['imageUrl'].apply(
+        lambda url: url.replace("200w", "1000w") if pd.notna(url) else ""
+    )
+
+    # Map the final DataFrame
+    formatted_df = pd.DataFrame({
+        'Title': df['Title'],
+        'Status': df['Status'],
+        'Price': df['Price'],
+        'Product image URL': df['imageUrl'],
+        'Rarity': df['extRarity'],
+        'Description': df['extDescription'],
+        'Color': df['extColor'],
+        'CardType': df['extCardType']
+    })
+
+    # Save as a new CSV
+    formatted_df.to_csv(output_file, index=False)
+
 if __name__ == "__main__":
     download_and_process_csv(urls)
+    generate_formatted_csv()
+
