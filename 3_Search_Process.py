@@ -116,9 +116,9 @@ def download_and_process_csv(urls):
     # Reformat combined DataFrame to match your database.csv structure
     combined_df = combined_df[['productId','name', 'extNumber', 'imageUrl', 'url', 'marketPrice','extRarity', 'extDescription', 'extColor', 'extCardType',]]  # Adjust as needed
 
-    # Save the final DataFrame as 'database.csv'
-    combined_df.to_csv('database.csv', index=False)
-    print("CSV file processed and saved as 'database.csv'")
+    # Save the final DataFrame as 'search_database.csv'
+    combined_df.to_csv('search_database.csv', index=False)
+    print("CSV file processed and saved as 'search_database.csv'")
 
 if __name__ == "__main__":
     download_and_process_csv(urls)

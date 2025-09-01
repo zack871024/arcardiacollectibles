@@ -118,10 +118,10 @@ def download_and_process_csv(urls):
     combined_df = combined_df[['productId','name', 'extNumber', 'imageUrl', 'url', 'marketPrice','extRarity', 'extDescription', 'extColor', 'extCardType',]]  # Adjust as needed
 
     # Save the final DataFrame as 'database.csv'
-    combined_df.to_csv('database.csv', index=False)
-    print("CSV file processed and saved as 'database.csv'")
+    combined_df.to_csv('price_update_database.csv', index=False)
+    print("CSV file processed and saved as 'price_update)_database.csv'")
 
-def generate_title_and_price_csv(input_file='database.csv', output_file='price_update_shopify.csv'):
+def generate_title_and_price_csv(input_file='price_update_database.csv', output_file='price_update_shopify.csv'):
     df = pd.read_csv(input_file)
 
     # Title = name + (extNumber) if exists
@@ -131,9 +131,9 @@ def generate_title_and_price_csv(input_file='database.csv', output_file='price_u
         axis=1
     )
 
-    # Price = ceil( ceil(marketPrice) * 1.67 ), integer only
+    # Price = ceil( ceil(marketPrice) * 1.38 (USD -> CAD) * 50% markup ), integer only
     df['Price'] = df['marketPrice'].apply(
-        lambda x: int(math.ceil(math.ceil(x) * 1.67)) if pd.notna(x) else ""
+        lambda x: int(math.ceil((x) * 1.38 *1.5)) if pd.notna(x) else ""
     )
 
     formatted_df = df[['Title','Price']]

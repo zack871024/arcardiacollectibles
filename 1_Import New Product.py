@@ -59,10 +59,10 @@ def download_and_process_csv(urls):
     combined_df = combined_df[['productId','name', 'extNumber', 'imageUrl', 'url', 'marketPrice','extRarity', 'extDescription', 'extColor', 'extCardType',]]  # Adjust as needed
 
     # Save the final DataFrame as 'database.csv'
-    combined_df.to_csv('database.csv', index=False)
-    print("CSV file processed and saved as 'database.csv'")
+    combined_df.to_csv('new_product_database.csv', index=False)
+    print("CSV file processed and saved as 'new_product_database.csv'")
 
-def generate_formatted_csv(input_file='database.csv', output_file='formatted_import_shopify.csv'):
+def generate_formatted_csv(input_file='new_product_database.csv', output_file='formatted_import_shopify.csv'):
     # Read the existing database.csv
     df = pd.read_csv(input_file)
 
@@ -77,9 +77,9 @@ def generate_formatted_csv(input_file='database.csv', output_file='formatted_imp
     # Status = Draft
     df['Status'] = 'Draft'
 
-    # Price = ceil(marketPrice * 1.67)
+    # Price = ceil(marketPrice * 1.38 * 1.5)
     df['Price'] = df['marketPrice'].apply(
-        lambda x: int(math.ceil(x * 1.67)) if pd.notna(x) else ""
+        lambda x: int(math.ceil(x * 1.38 * 1.5)) if pd.notna(x) else ""
     )
 
     # Fix image URL: replace '200w' with '1000w'
