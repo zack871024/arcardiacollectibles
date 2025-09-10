@@ -27,13 +27,14 @@ jobs:
       run: pip install -r requirements.txt
 
     - name: Run update script
-      run: python 3_Search_Process.py
+      run: python 2_Update Existing Price.py
 
     - name: Commit and push updated Price CSV
       run: |
         git config user.name "github-actions[bot]"
         git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-        git add search_database.csv
+        git add price_update_database.csv
+        git add price_update_shopify.csv
         if git diff --cached --quiet; then
           echo "No changes to commit"
         else
