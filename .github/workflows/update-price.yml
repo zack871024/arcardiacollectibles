@@ -27,7 +27,7 @@ jobs:
       run: pip install -r requirements.txt
 
     - name: Run update script
-      run: python 2_Update Existing Price.py
+      run: python 2_Update_Existing_Price.py
 
     - name: Commit and push updated Price CSV
       run: |
