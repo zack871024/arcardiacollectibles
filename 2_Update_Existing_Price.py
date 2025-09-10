@@ -136,7 +136,9 @@ def generate_title_and_price_csv(input_file='price_update_database.csv', output_
         lambda x: int(math.ceil((x) * 1.38 *1.5)) if pd.notna(x) else ""
     )
 
-    formatted_df = df[['Title','Price']]
+    df['SKU'] = df['productId']
+
+    formatted_df = df[['Title','Price','SKU']]
     formatted_df.to_csv(output_file, index=False)
 
 if __name__ == "__main__":
