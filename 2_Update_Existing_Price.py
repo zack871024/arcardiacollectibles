@@ -130,10 +130,12 @@ def generate_title_and_price_csv(input_file='price_update_database.csv', output_
         else row['name'],
         axis=1
     )
+    # Ensure marketPrice is numeric
+    df['marketPrice'] = pd.to_numeric(df['marketPrice'], errors='coerce')
 
-    # Price = ceil( ceil(marketPrice) * 1.38 (USD -> CAD) * 50% markup ), integer only
+    # Price = ceil( ceil(marketPrice) * 1.38 * 1.5 ), minimum 12
     df['Price'] = df['marketPrice'].apply(
-        lambda x: int(math.ceil((x) * 1.38 *1.5)) if pd.notna(x) else ""
+        lambda x: max(12, int(math.ceil(x * 1.38 * 1.5))) if pd.notna(x) else ""
     )
 
     df['SKU'] = df['productId']
