@@ -38,7 +38,7 @@ jobs:
         if git diff --cached --quiet; then
           echo "No changes to commit"
         else
-          git commit -m "Auto-update  prrce database"
+          git commit -m "Auto-update  price database"
           git push
         fi
       env:
