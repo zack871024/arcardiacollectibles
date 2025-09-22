@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Arcardia One Piece TCG Search</title>
+    <title>Arcadia One Piece TCG Search</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -31,14 +31,15 @@
             max-height: 90vh;
         }
 
+        select,
         input[type="text"] {
-            width: calc(100% - 20px);  /* This ensures it doesn't overflow the container */
+            width: calc(100% - 20px);
             padding: 12px;
             margin: 10px 0;
             border: 1px solid #ccc;
             border-radius: 5px;
-            box-sizing: border-box;  /* Ensures padding is included in width */
-}
+            box-sizing: border-box;
+        }
 
         .results {
             text-align: left;
@@ -122,10 +123,20 @@
 <body>
 
     <div class="container">
-        <h2>Arcardia One Piece TCG Search Engine</h2>
+        <h2>Arcadia One Piece TCG Search Engine</h2>
+
+        <!-- Category dropdown -->
+        <select id="categorySelect">
+            <option value="">All Sets</option>
+        </select>
+
+        <!-- Search bar -->
         <input type="text" id="searchBar" placeholder="Search by Name or OPXX-XXX...">
+
+        <!-- Results -->
         <div class="results" id="resultsContainer"></div>
 
+        <!-- Cart -->
         <div class="cart">
             <h3>Your Cart</h3>
             <div id="cartContainer"></div>
@@ -142,6 +153,8 @@
             const response = await fetch('search_database.csv?t=' + Date.now());
             const csvText = await response.text();
             cards = parseCSV(csvText);
+
+            populateCategories(cards);
         }
 
         function parseCSV(csvText) {
@@ -156,49 +169,76 @@
             });
         }
 
+        function populateCategories(cards) {
+            const categorySelect = document.getElementById("categorySelect");
+            const categories = new Set();
+
+            cards.forEach(card => {
+                const match = card.extNumber.match(/^(OP\d{2})/i);
+                if (match) categories.add(match[1].toUpperCase());
+            });
+
+            Array.from(categories).sort().forEach(cat => {
+                const option = document.createElement("option");
+                option.value = cat;
+                option.textContent = cat;
+                categorySelect.appendChild(option);
+            });
+        }
+
         function searchCards(query) {
             query = query.toLowerCase();
-            const results = cards.filter(card =>
-                card.name.toLowerCase().includes(query) || card.extNumber.toLowerCase().includes(query)
-            );
+            const category = document.getElementById("categorySelect").value;
+
+            const results = cards.filter(card => {
+                const matchesQuery =
+                    !query || card.name.toLowerCase().includes(query) || card.extNumber.toLowerCase().includes(query);
+
+                const matchesCategory = category
+                    ? card.extNumber.toUpperCase().startsWith(category.toUpperCase())
+                    : true;
+
+                return matchesCategory && matchesQuery;
+            });
+
             displayResults(results);
         }
 
         function displayResults(results) {
-    const container = document.getElementById('resultsContainer');
-    container.innerHTML = '';
-    if (results.length === 0) {
-        container.innerHTML = '<p>No cards found.</p>';
-        return;
-    }
+            const container = document.getElementById('resultsContainer');
+            container.innerHTML = '';
+            if (results.length === 0) {
+                container.innerHTML = '<p>No cards found.</p>';
+                return;
+            }
 
-    results.forEach(card => {
-        const cardDiv = document.createElement('div');
-        const usdPrice = parseFloat(card.marketPrice);
-        const cadPrice = (usdPrice * 1.5).toFixed(2);
+            results.forEach(card => {
+                const cardDiv = document.createElement('div');
+                const usdPrice = parseFloat(card.marketPrice);
+                const cadPrice = (usdPrice * 1.5).toFixed(2);
 
-        cardDiv.classList.add('card');
-        cardDiv.innerHTML = `
-            <img src="${card.imageUrl}" alt="${card.name}">
-            <div>
-                <p>
-                    <strong>
-                        <a href="${card.url}" target="_blank" style="text-decoration:none; color:#007bff;">
-                            ${card.name}
-                        </a>
-                    </strong> 
-                    (${card.extNumber})
-                </p>
-                <p>Price: $${usdPrice.toFixed(2)} USD (CAD: $${cadPrice})</p>
-                <button class="add-to-cart" 
-                    onclick="addToCart('${card.extNumber}', '${card.name}', ${usdPrice}, '${card.imageUrl}', '${card.url}')">
-                    Add to Cart
-                </button>
-            </div>
-        `;
-        container.appendChild(cardDiv);
-    });
-}
+                cardDiv.classList.add('card');
+                cardDiv.innerHTML = `
+                    <img src="${card.imageUrl}" alt="${card.name}">
+                    <div>
+                        <p>
+                            <strong>
+                                <a href="${card.url}" target="_blank" style="text-decoration:none; color:#007bff;">
+                                    ${card.name}
+                                </a>
+                            </strong> 
+                            (${card.extNumber})
+                        </p>
+                        <p>Price: $${usdPrice.toFixed(2)} USD (CAD: $${cadPrice})</p>
+                        <button class="add-to-cart" 
+                            onclick="addToCart('${card.extNumber}', '${card.name}', ${usdPrice}, '${card.imageUrl}', '${card.url}')">
+                            Add to Cart
+                        </button>
+                    </div>
+                `;
+                container.appendChild(cardDiv);
+            });
+        }
 
         function addToCart(extNumber, name, price, imageUrl, url) {
             const existingCard = cart.find(card =>
@@ -273,7 +313,13 @@
             updateCart();
         }
 
+        // Event listeners
         document.getElementById('searchBar').addEventListener('input', e => searchCards(e.target.value));
+        document.getElementById('categorySelect').addEventListener('change', () => {
+            const query = document.getElementById('searchBar').value;
+            searchCards(query);
+        });
+
         loadCards();
     </script>
 
