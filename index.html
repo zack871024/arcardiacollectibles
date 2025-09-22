@@ -131,7 +131,13 @@
         </select>
 
         <!-- Search bar -->
-        <input type="text" id="searchBar" placeholder="Search by Name or OPXX-XXX...">
+        <div style="display:flex; gap:10px; align-items:center;">
+            <input type="text" id="searchBar" placeholder="Search by Name or OPXX-XXX..." style="flex:1;">
+            <button id="clearSearch"
+                style="padding:10px; border:none; background:#FF4D4D; color:white; border-radius:5px; cursor:pointer;">
+                Clear
+            </button>
+        </div>
 
         <!-- Results -->
         <div class="results" id="resultsContainer"></div>
@@ -321,7 +327,15 @@
         });
 
         loadCards();
+
+        document.getElementById('clearSearch').addEventListener('click', () => {
+            document.getElementById('searchBar').value = '';
+            document.getElementById('categorySelect').value = ''; // reset dropdown
+            // Default: show all cards from the latest set
+            showLatestSet();
+        });
     </script>
 
 </body>
+
 </html>
