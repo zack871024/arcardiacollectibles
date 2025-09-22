@@ -123,7 +123,7 @@
 <body>
 
     <div class="container">
-        <h2>Arcardia One Piece TCG Search Engine</h2>
+        <h2>Arcadia One Piece TCG Search Engine</h2>
 
         <!-- Category dropdown -->
         <select id="categorySelect">
@@ -154,6 +154,7 @@
     <script>
         let cards = [];
         let cart = [];
+        let latestSet = "";
 
         async function loadCards() {
             const response = await fetch('search_database.csv?t=' + Date.now());
@@ -161,6 +162,7 @@
             cards = parseCSV(csvText);
 
             populateCategories(cards);
+            showLatestSet();
         }
 
         function parseCSV(csvText) {
@@ -180,16 +182,44 @@
             const categories = new Set();
 
             cards.forEach(card => {
-                const match = card.extNumber.match(/^(OP\d{2})/i);
-                if (match) categories.add(match[1].toUpperCase());
+                const match = card.extNumber.match(/^([A-Z]+)(\d{2})/i);
+                if (match) categories.add(match[1].toUpperCase() + match[2]);
             });
 
-            Array.from(categories).sort().forEach(cat => {
+            const sortedCategories = Array.from(categories).sort(customSetSort);
+
+            // determine latest
+            latestSet = sortedCategories[sortedCategories.length - 1];
+
+            // clear and rebuild dropdown
+            categorySelect.innerHTML = '<option value="">All Sets</option>';
+            sortedCategories.forEach(cat => {
                 const option = document.createElement("option");
                 option.value = cat;
-                option.textContent = cat;
+                option.textContent = (cat === latestSet) ? `${cat} (Latest)` : cat;
                 categorySelect.appendChild(option);
             });
+        }
+
+        function customSetSort(a, b) {
+            const matchA = a.match(/^([A-Z]+)(\d{2})$/);
+            const matchB = b.match(/^([A-Z]+)(\d{2})$/);
+            if (!matchA || !matchB) return a.localeCompare(b);
+            const [ , prefixA, numA ] = matchA;
+            const [ , prefixB, numB ] = matchB;
+            if (prefixA === prefixB) {
+                return parseInt(numA) - parseInt(numB);
+            }
+            return prefixA.localeCompare(prefixB);
+        }
+
+        function showLatestSet() {
+            if (!latestSet) return;
+            document.getElementById('categorySelect').value = latestSet;
+            const results = cards.filter(card =>
+                card.extNumber.toUpperCase().startsWith(latestSet)
+            );
+            displayResults(results);
         }
 
         function searchCards(query) {
@@ -326,16 +356,13 @@
             searchCards(query);
         });
 
-        loadCards();
-
         document.getElementById('clearSearch').addEventListener('click', () => {
             document.getElementById('searchBar').value = '';
-            document.getElementById('categorySelect').value = ''; // reset dropdown
-            // Default: show all cards from the latest set
             showLatestSet();
         });
+
+        loadCards();
     </script>
 
 </body>
-
 </html>
