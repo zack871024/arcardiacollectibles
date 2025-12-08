@@ -82,22 +82,27 @@ def generate_formatted_csv(input_file='new_product_database.csv', output_file='f
         lambda x: int(math.ceil(x * 1.38 * 1.5)) if pd.notna(x) else ""
     )
 
-    # Fix image URL: replace '200w' with '1000w'
+    # Fix image URL: replace '200w' with 'in_1000x1000'
     df['Product image URL'] = df['imageUrl'].apply(
         lambda url: url.replace("200w", "in_1000x1000") if pd.notna(url) else ""
     )
 
     # Map the final DataFrame
     formatted_df = pd.DataFrame({
-        'Title': df['Title'],
-        'Status': df['Status'],
-        'Price': df['Price'],
-        'Product image URL': df['imageUrl'],
-        'Rarity': df['extRarity'],
-        'Description': df['extDescription'],
-        'Color': df['extColor'],
-        'CardType': df['extCardType']
-    })
+    'SKU': df['productId'],
+    'Title': df['Title'],
+    'Status': df['Status'],
+    'Price': df['Price'],
+    'Product image URL': df['Product image URL'],  # FIXED
+    'Rarity (product.metafields.shopify.rarity)': df['extRarity'],
+    'Description': df['extDescription'],
+    'Color (product.metafields.shopify.color-pattern)': df['extColor'],
+    'Card attributes (product.metafields.shopify.card-attributes)': df['extCardType'],
+
+    # New columns
+    'Product Category': 'Arts & Entertainment > Hobbies & Creative Arts > Collectibles > Collectible Trading Cards',
+    'Tags': 'English, One Piece, Single',
+})
 
     # Save as a new CSV
     formatted_df.to_csv(output_file, index=False)
