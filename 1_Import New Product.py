@@ -84,7 +84,7 @@ def generate_formatted_csv(input_file='new_product_database.csv', output_file='f
 
     # Fix image URL: replace '200w' with '1000w'
     df['Product image URL'] = df['imageUrl'].apply(
-        lambda url: url.replace("200w", "1000w") if pd.notna(url) else ""
+        lambda url: url.replace("200w", "in_1000x1000") if pd.notna(url) else ""
     )
 
     # Map the final DataFrame
