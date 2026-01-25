@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Arcadia One Piece TCG Search</title>
+
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -31,8 +31,7 @@
             max-height: 90vh;
         }
 
-        select,
-        input[type="text"] {
+        select, input[type="text"] {
             width: calc(100% - 20px);
             padding: 12px;
             margin: 10px 0;
@@ -93,12 +92,8 @@
             border: 1px solid #ddd;
         }
 
-        .cart-item-info {
-            flex-grow: 1;
-        }
-
         .cart-item-controls button {
-            margin: 0 5px;
+            margin: 0 3px;
         }
 
         .remove-item {
@@ -122,247 +117,244 @@
 
 <body>
 
-    <div class="container">
-        <h2>Arcadia One Piece TCG Search Engine</h2>
+<div class="container">
+    <h2>Arcadia One Piece TCG Search Engine</h2>
 
-        <!-- Category dropdown -->
-        <select id="categorySelect">
-            <option value="">All Sets</option>
-        </select>
+    <!-- Primary Set Type -->
+    <select id="setTypeSelect">
+        <option value="">All Types</option>
+        <option value="OP">OP</option>
+        <option value="EB">EB</option>
+        <option value="ST">ST</option>
+    </select>
 
-        <!-- Search bar -->
-        <div style="display:flex; gap:10px; align-items:center;">
-            <input type="text" id="searchBar" placeholder="Search by Name or OPXX-XXX..." style="flex:1;">
-            <button id="clearSearch"
-                style="padding:10px; border:none; background:#FF4D4D; color:white; border-radius:5px; cursor:pointer;">
-                Clear
-            </button>
-        </div>
+    <!-- Subcategory -->
+    <select id="setNumberSelect" disabled>
+        <option value="">All Sets</option>
+    </select>
 
-        <!-- Results -->
-        <div class="results" id="resultsContainer"></div>
-
-        <!-- Cart -->
-        <div class="cart">
-            <h3>Your Cart</h3>
-            <div id="cartContainer"></div>
-            <p id="cartTotal"></p>
-            <button class="clear-cart" onclick="clearCart()">Clear Cart</button>
-        </div>
+    <!-- Search -->
+    <div style="display:flex; gap:10px;">
+        <input type="text" id="searchBar" placeholder="Search by Name or OPXX-XXX..." style="flex:1;">
+        <button id="clearSearch"
+            style="padding:10px; border:none; background:#FF4D4D; color:white; border-radius:5px; cursor:pointer;">
+            Clear
+        </button>
     </div>
 
-    <script>
-        let cards = [];
-        let cart = [];
-        let latestSet = "";
+    <!-- Results -->
+    <div class="results" id="resultsContainer"></div>
 
-        async function loadCards() {
-            const response = await fetch('search_database.csv?t=' + Date.now());
-            const csvText = await response.text();
-            cards = parseCSV(csvText);
+    <!-- Cart -->
+    <div class="cart">
+        <h3>Your Cart</h3>
+        <div id="cartContainer"></div>
+        <p id="cartTotal"></p>
+        <button class="clear-cart" onclick="clearCart()">Clear Cart</button>
+    </div>
+</div>
 
-            populateCategories(cards);
-            showLatestSet();
-        }
+<script>
+let cards = [];
+let cart = [];
+let setsByType = {};
+let latestSet = "";
 
-        function parseCSV(csvText) {
-            const rows = csvText.trim().split('\n');
-            const headers = rows[0].split(',').map(h => h.trim());
+async function loadCards() {
+    const response = await fetch('search_database.csv?t=' + Date.now());
+    const csvText = await response.text();
+    cards = parseCSV(csvText);
+    populateCategories(cards);
+}
 
-            return rows.slice(1).map(row => {
-                const values = row.split(',').map(v => v.trim());
-                let entry = {};
-                headers.forEach((header, index) => entry[header] = values[index] || '');
-                return entry;
-            });
-        }
+function parseCSV(csvText) {
+    const rows = csvText.trim().split('\n');
+    const headers = rows[0].split(',').map(h => h.trim());
 
-        function populateCategories(cards) {
-            const categorySelect = document.getElementById("categorySelect");
-            const categories = new Set();
+    return rows.slice(1).map(row => {
+        const values = row.split(',').map(v => v.trim());
+        let entry = {};
+        headers.forEach((h, i) => entry[h] = values[i] || '');
+        return entry;
+    });
+}
 
-            cards.forEach(card => {
-                const match = card.extNumber.match(/^([A-Z]+)(\d{2})/i);
-                if (match) categories.add(match[1].toUpperCase() + match[2]);
-            });
+function populateCategories(cards) {
+    setsByType = {};
 
-            const sortedCategories = Array.from(categories).sort(customSetSort);
+    cards.forEach(card => {
+        const match = card.extNumber.match(/^([A-Z]+)(\d{2})/i);
+        if (!match) return;
 
-            // determine latest
-            latestSet = sortedCategories[sortedCategories.length - 1];
+        const type = match[1].toUpperCase();
+        const set = type + match[2];
 
-            // clear and rebuild dropdown
-            categorySelect.innerHTML = '<option value="">All Sets</option>';
-            sortedCategories.forEach(cat => {
-                const option = document.createElement("option");
-                option.value = cat;
-                option.textContent = (cat === latestSet) ? `${cat} (Latest)` : cat;
-                categorySelect.appendChild(option);
-            });
-        }
+        if (!setsByType[type]) setsByType[type] = new Set();
+        setsByType[type].add(set);
+    });
 
-        function customSetSort(a, b) {
-            const matchA = a.match(/^([A-Z]+)(\d{2})$/);
-            const matchB = b.match(/^([A-Z]+)(\d{2})$/);
-            if (!matchA || !matchB) return a.localeCompare(b);
-            const [ , prefixA, numA ] = matchA;
-            const [ , prefixB, numB ] = matchB;
-            if (prefixA === prefixB) {
-                return parseInt(numA) - parseInt(numB);
-            }
-            return prefixA.localeCompare(prefixB);
-        }
+    for (const type in setsByType) {
+        setsByType[type] = Array.from(setsByType[type]).sort(customSetSort);
+    }
 
-        function showLatestSet() {
-            if (!latestSet) return;
-            document.getElementById('categorySelect').value = latestSet;
-            const results = cards.filter(card =>
-                card.extNumber.toUpperCase().startsWith(latestSet)
-            );
-            displayResults(results);
-        }
+    if (setsByType.OP?.length) {
+        latestSet = setsByType.OP[setsByType.OP.length - 1];
+        document.getElementById("setTypeSelect").value = "OP";
+        populateSubcategories("OP");
+        document.getElementById("setNumberSelect").value = latestSet;
+        displayResults(cards.filter(c =>
+            c.extNumber.toUpperCase().startsWith(latestSet)
+        ));
+    }
+}
 
-        function searchCards(query) {
-            query = query.toLowerCase();
-            const category = document.getElementById("categorySelect").value;
+function populateSubcategories(type) {
+    const sub = document.getElementById("setNumberSelect");
+    sub.innerHTML = '<option value="">All Sets</option>';
 
-            const results = cards.filter(card => {
-                const matchesQuery =
-                    !query || card.name.toLowerCase().includes(query) || card.extNumber.toLowerCase().includes(query);
+    if (!type || !setsByType[type]) {
+        sub.disabled = true;
+        return;
+    }
 
-                const matchesCategory = category
-                    ? card.extNumber.toUpperCase().startsWith(category.toUpperCase())
-                    : true;
+    setsByType[type].forEach(set => {
+        const opt = document.createElement("option");
+        opt.value = set;
+        opt.textContent = set;
+        sub.appendChild(opt);
+    });
 
-                return matchesCategory && matchesQuery;
-            });
+    sub.disabled = false;
+}
 
-            displayResults(results);
-        }
+function customSetSort(a, b) {
+    return a.localeCompare(b, undefined, { numeric: true });
+}
 
-        function displayResults(results) {
-            const container = document.getElementById('resultsContainer');
-            container.innerHTML = '';
-            if (results.length === 0) {
-                container.innerHTML = '<p>No cards found.</p>';
-                return;
-            }
+function searchCards(query) {
+    query = query.toLowerCase();
+    const type = document.getElementById("setTypeSelect").value;
+    const set = document.getElementById("setNumberSelect").value;
 
-            results.forEach(card => {
-                const cardDiv = document.createElement('div');
-                const usdPrice = parseFloat(card.marketPrice);
-                const cadPrice = (usdPrice * 1.5).toFixed(2);
+    const results = cards.filter(card => {
+        const matchQuery = !query ||
+            card.name.toLowerCase().includes(query) ||
+            card.extNumber.toLowerCase().includes(query);
 
-                cardDiv.classList.add('card');
-                cardDiv.innerHTML = `
-                    <img src="${card.imageUrl}" alt="${card.name}">
-                    <div>
-                        <p>
-                            <strong>
-                                <a href="${card.url}" target="_blank" style="text-decoration:none; color:#007bff;">
-                                    ${card.name}
-                                </a>
-                            </strong> 
-                            (${card.extNumber})
-                        </p>
-                        <p>Price: $${usdPrice.toFixed(2)} USD (CAD: $${cadPrice})</p>
-                        <button class="add-to-cart" 
-                            onclick="addToCart('${card.extNumber}', '${card.name}', ${usdPrice}, '${card.imageUrl}', '${card.url}')">
-                            Add to Cart
-                        </button>
-                    </div>
-                `;
-                container.appendChild(cardDiv);
-            });
-        }
+        const matchType = type
+            ? card.extNumber.toUpperCase().startsWith(type)
+            : true;
 
-        function addToCart(extNumber, name, price, imageUrl, url) {
-            const existingCard = cart.find(card =>
-                card.extNumber === extNumber && card.price === price && card.url === url
-            );
+        const matchSet = set
+            ? card.extNumber.toUpperCase().startsWith(set)
+            : true;
 
-            if (existingCard) {
-                existingCard.quantity += 1;
-            } else {
-                cart.push({ extNumber, name, price, imageUrl, url, quantity: 1 });
-            }
-            updateCart();
-        }
+        return matchQuery && matchType && matchSet;
+    });
 
-        function updateCart() {
-            const cartContainer = document.getElementById('cartContainer');
-            const cartTotal = document.getElementById('cartTotal');
+    displayResults(results);
+}
 
-            cartContainer.innerHTML = '';
-            let totalUSD = 0;
+function displayResults(results) {
+    const container = document.getElementById("resultsContainer");
+    container.innerHTML = '';
 
-            cart.forEach(card => {
-                const cadPrice = (card.price * 1.5).toFixed(2);
+    if (!results.length) {
+        container.innerHTML = "<p>No cards found.</p>";
+        return;
+    }
 
-                const itemDiv = document.createElement('div');
-                itemDiv.classList.add('cart-item');
+    results.forEach(card => {
+        const usd = parseFloat(card.marketPrice);
+        const cad = (usd * 1.5).toFixed(2);
 
-                itemDiv.innerHTML = `
-                    <img src="${card.imageUrl}" alt="${card.name}">
-                    <div class="cart-item-info">
-                        <p>${card.name} (${card.extNumber})</p>
-                        <p>$${card.price.toFixed(2)} USD</p>
-                    </div>
-                    <div class="cart-item-controls">
-                        <button onclick="changeQuantity('${card.extNumber}', ${card.price}, '${card.url}', -1)">-</button>
-                        ${card.quantity}
-                        <button onclick="changeQuantity('${card.extNumber}', ${card.price}, '${card.url}', 1)">+</button>
-                        <button class="remove-item" onclick="removeItem('${card.extNumber}', ${card.price}, '${card.url}')">Remove</button>
-                    </div>
-                `;
-                cartContainer.appendChild(itemDiv);
+        const div = document.createElement("div");
+        div.className = "card";
+        div.innerHTML = `
+            <img src="${card.imageUrl}">
+            <div>
+                <strong><a href="${card.url}" target="_blank">${card.name}</a></strong>
+                (${card.extNumber})
+                <p>$${usd.toFixed(2)} USD (CAD $${cad})</p>
+                <button class="add-to-cart"
+                    onclick="addToCart('${card.extNumber}','${card.name}',${usd},'${card.imageUrl}','${card.url}')">
+                    Add to Cart
+                </button>
+            </div>
+        `;
+        container.appendChild(div);
+    });
+}
 
-                totalUSD += card.quantity * card.price;
-            });
+function addToCart(extNumber, name, price, imageUrl, url) {
+    const item = cart.find(c =>
+        c.extNumber === extNumber && c.price === price && c.url === url
+    );
 
-            const totalCAD = (totalUSD * 1.5).toFixed(2);
-            cartTotal.innerText = `Total: $${totalUSD.toFixed(2)} USD (CAD: $${totalCAD})`;
-        }
+    item ? item.quantity++ : cart.push({ extNumber, name, price, imageUrl, url, quantity: 1 });
+    updateCart();
+}
 
-        function changeQuantity(extNumber, price, url, delta) {
-            const card = cart.find(card =>
-                card.extNumber === extNumber && card.price === price && card.url === url
-            );
-            if (card) {
-                card.quantity += delta;
-                if (card.quantity <= 0) {
-                    removeItem(extNumber, price, url);
-                }
-            }
-            updateCart();
-        }
+function updateCart() {
+    const c = document.getElementById("cartContainer");
+    const t = document.getElementById("cartTotal");
+    c.innerHTML = '';
+    let total = 0;
 
-        function removeItem(extNumber, price, url) {
-            cart = cart.filter(card =>
-                !(card.extNumber === extNumber && card.price === price && card.url === url)
-            );
-            updateCart();
-        }
+    cart.forEach(card => {
+        total += card.price * card.quantity;
+        c.innerHTML += `
+            <div class="cart-item">
+                <img src="${card.imageUrl}">
+                <div>${card.name} (${card.extNumber})</div>
+                <div>
+                    <button onclick="changeQuantity('${card.extNumber}',${card.price},'${card.url}',-1)">-</button>
+                    ${card.quantity}
+                    <button onclick="changeQuantity('${card.extNumber}',${card.price},'${card.url}',1)">+</button>
+                    <button class="remove-item"
+                        onclick="removeItem('${card.extNumber}',${card.price},'${card.url}')">Remove</button>
+                </div>
+            </div>
+        `;
+    });
 
-        function clearCart() {
-            cart = [];
-            updateCart();
-        }
+    t.innerText = `Total: $${total.toFixed(2)} USD (CAD $${(total*1.5).toFixed(2)})`;
+}
 
-        // Event listeners
-        document.getElementById('searchBar').addEventListener('input', e => searchCards(e.target.value));
-        document.getElementById('categorySelect').addEventListener('change', () => {
-            const query = document.getElementById('searchBar').value;
-            searchCards(query);
-        });
+function changeQuantity(ext, price, url, delta) {
+    const card = cart.find(c => c.extNumber === ext && c.price === price && c.url === url);
+    if (!card) return;
+    card.quantity += delta;
+    if (card.quantity <= 0) removeItem(ext, price, url);
+    updateCart();
+}
 
-        document.getElementById('clearSearch').addEventListener('click', () => {
-            document.getElementById('searchBar').value = '';
-            showLatestSet();
-        });
+function removeItem(ext, price, url) {
+    cart = cart.filter(c => !(c.extNumber === ext && c.price === price && c.url === url));
+    updateCart();
+}
 
-        loadCards();
-    </script>
+function clearCart() {
+    cart = [];
+    updateCart();
+}
+
+document.getElementById("searchBar").addEventListener("input", e => searchCards(e.target.value));
+document.getElementById("setTypeSelect").addEventListener("change", e => {
+    populateSubcategories(e.target.value);
+    document.getElementById("setNumberSelect").value = "";
+    searchCards(document.getElementById("searchBar").value);
+});
+document.getElementById("setNumberSelect").addEventListener("change", () =>
+    searchCards(document.getElementById("searchBar").value)
+);
+document.getElementById("clearSearch").addEventListener("click", () => {
+    document.getElementById("searchBar").value = "";
+    populateCategories(cards);
+});
+
+loadCards();
+</script>
 
 </body>
 </html>
