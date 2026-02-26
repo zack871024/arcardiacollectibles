@@ -72,6 +72,7 @@ def generate_formatted_csv(input_file='new_product_database.csv', output_file='f
         'L': 'leader',
         'R': 'Rare',
         'PR': 'Promo',
+        'DON!!':'don-1',
     }
     df['extRarity'] = df['extRarity'].map(rarity_map).fillna(df['extRarity'])
 
