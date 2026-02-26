@@ -69,7 +69,7 @@ def generate_formatted_csv(input_file='new_product_database.csv', output_file='f
         'TR': 'Treasure Rare',
         'SR': 'super-rare',
         'SEC': 'Secret Rare',
-        'L': 'Leader',
+        'L': 'leader',
         'R': 'Rare',
         'PR': 'Promo',
     }
