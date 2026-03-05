@@ -1,5 +1,5 @@
 Title,Price,SKU
-Romance Dawn - Booster Pack,196,450085
+Romance Dawn - Booster Pack,197,450085
 Romance Dawn - Booster Box (Wave 1 - Blue),11816,450086
 Romance Dawn - Booster Box Case (Wave 2 - White),19483,450087
 Trafalgar Law (002) (OP01-002),12,453505
@@ -7,7 +7,7 @@ Monkey.D.Luffy (003) (Parallel) (OP01-003),1726,453506
 Cavendish (Box Topper) (OP01-008),12,453507
 Monkey.D.Luffy (024) (OP01-024),12,453508
 Monkey.D.Luffy (024) (Parallel) (OP01-024),313,453509
-Roronoa Zoro (025) (OP01-025),14,453510
+Roronoa Zoro (025) (OP01-025),13,453510
 Roronoa Zoro (025) (Parallel) (OP01-025),381,453511
 In Two Years!! At the Sabaody Archipelago!! (OP01-030),12,453512
 Inuarashi (Box Topper) (OP01-034),12,453513
@@ -17,7 +17,7 @@ Nekomamushi (Box Topper) (OP01-048),12,453516
 Kaido (061) (OP01-061),12,453517
 Alvida (Box Topper) (OP01-064),14,453518
 Crocodile (067) (OP01-067),12,453519
-Perona (Box Topper) (OP01-077),49,453520
+Perona (Box Topper) (OP01-077),48,453520
 Kaido (094) (OP01-094),12,453521
 Who's.Who (Box Topper) (OP01-109),12,453522
 Roronoa Zoro (001) (OP01-001),12,454512
@@ -35,11 +35,11 @@ Komachiyo (OP01-010),12,454525
 Gordon (OP01-011),12,454526
 Sai (OP01-012),12,454527
 Sanji (OP01-013),12,454529
-Sanji (Parallel) (OP01-013),112,454530
+Sanji (Parallel) (OP01-013),111,454530
 Jinbe (014) (OP01-014),12,454532
 Tony Tony.Chopper (OP01-015),12,454533
 Nami (OP01-016),12,454534
-Nami (Parallel) (OP01-016),940,454536
+Nami (Parallel) (OP01-016),926,454536
 Nico Robin (OP01-017),12,454538
 Hajrudin (OP01-018),12,454540
 Bartolomeo (OP01-019),12,454542
@@ -96,7 +96,7 @@ Gecko Moria (OP01-068),12,454596
 Gecko Moria (OP01-068),12,454596
 Caesar Clown (OP01-069),12,454597
 Dracule Mihawk (OP01-070),12,454598
-Dracule Mihawk (Parallel) (OP01-070),104,454599
+Dracule Mihawk (Parallel) (OP01-070),103,454599
 Jinbe (071) (OP01-071),12,454600
 Smiley (OP01-072),12,454601
 Donquixote Doflamingo (073) (OP01-073),12,454602
@@ -106,7 +106,7 @@ Pacifista (OP01-075),12,454605
 Bellamy (OP01-076),12,454606
 Perona (OP01-077),12,454607
 Boa Hancock (OP01-078),12,454608
-Boa Hancock (Parallel) (OP01-078),312,454609
+Boa Hancock (Parallel) (OP01-078),309,454609
 Ms. All Sunday (OP01-079),12,454610
 Miss Doublefinger(Zala) (OP01-080),12,454611
 Mocha (OP01-081),12,454612
@@ -125,7 +125,7 @@ King (091) (Parallel) (OP01-091),284,454623
 Urashima (OP01-092),12,454624
 Ulti (OP01-093),12,454625
 Ulti (Parallel) (OP01-093),42,454626
-Kaido (094) (Parallel) (OP01-094),81,454627
+Kaido (094) (Parallel) (OP01-094),72,454627
 Kyoshirou (OP01-095),12,454628
 King (096) (OP01-096),12,454629
 King (096) (Parallel) (OP01-096),27,454630
@@ -154,8 +154,8 @@ Sheep's Horn (OP01-117),12,454661
 Ulti-Mortar (OP01-118),12,454662
 Thunder Bagua (OP01-119),12,454663
 Shanks (OP01-120),17,454664
-Shanks (Parallel) (OP01-120),206,454665
-Shanks (Parallel) (Manga) (Alternate Art) (OP01-120),3473,454666
+Shanks (Parallel) (OP01-120),203,454665
+Shanks (Parallel) (Manga) (Alternate Art) (OP01-120),3580,454666
 Yamato (OP01-121),17,454667
 Yamato (Parallel) (OP01-121),231,454669
 Hitokiri Kamazo (OP01-108),12,455808
@@ -167,8 +167,8 @@ Romance Dawn - Booster Box (Wave 2 - White),3631,557280
 Romance Dawn - Booster Box Case (Wave 1 - Blue),,650853
 Starter Deck 1: Straw Hat Crew,63,288221
 Starter Deck 1: Straw Hat Crew Display,,288222
-Starter Decks 1-4 [Set of 4],250,288225
-Monkey.D.Luffy (001) (ST01-001),51,288228
+Starter Decks 1-4 [Set of 4],255,288225
+Monkey.D.Luffy (001) (ST01-001),52,288228
 Usopp (ST01-002),12,288229
 Karoo (ST01-003),12,288230
 Sanji (ST01-004),12,288232
@@ -272,19 +272,19 @@ Karoo (ST01-003),12,415270
 Sanji (ST01-004),12,415843
 Jinbe (ST01-005),12,416474
 Tony Tony.Chopper (ST01-006),25,416671
-Nami (ST01-007),41,416939
+Nami (ST01-007),40,416939
 Nico Robin (ST01-008),20,417583
 Nefeltari Vivi (ST01-009),13,418080
 Franky (ST01-010),12,418482
 Brook (ST01-011),12,418673
-Monkey.D.Luffy (012) (ST01-012),183,418873
-Roronoa Zoro (ST01-013),169,419388
+Monkey.D.Luffy (012) (ST01-012),179,418873
+Roronoa Zoro (ST01-013),167,419388
 Guard Point (ST01-014),12,419678
 Gum-Gum Jet Pistol (ST01-015),12,419963
 Diable Jambe (ST01-016),12,420304
 Thousand Sunny (ST01-017),15,421107
 DON!! Card,12,434340
-Super Pre-Release Starter Deck 3: The Seven Warlords of The Sea,490,411279
+Super Pre-Release Starter Deck 3: The Seven Warlords of The Sea,503,411279
 Super Pre-Release Starter Deck 3: The Seven Warlords of The Sea Display,,412137
 Crocodile (001) (ST03-001),243,419882
 Crocodile (003) (ST03-003),23,420103
@@ -301,7 +301,7 @@ Gecko Moria (ST03-004),12,422032
 Edward Weevil (ST03-002),12,422215
 Dracule Mihawk (ST03-005),12,422377
 Buggy (ST03-011),12,422584
-Boa Hancock (ST03-013),33,422741
+Boa Hancock (ST03-013),34,422741
 Bartholomew Kuma (ST03-010),12,422877
 Super Pre-Release Starter Deck 4: Animal Kingdom Pirates,353,422137
 Super Pre-Release Starter Deck 4: Animal Kingdom Pirates Display,,422760
@@ -337,12 +337,12 @@ Yamato (Tournament Pack Vol. 1) (P-008),12,455802
 Trafalgar Law (Tournament Pack Vol. 1) (P-009),16,455804
 Kaido (Tournament Pack Vol. 1) (P-010),12,455805
 Usopp - OP01-004 (Treasure Cup) (OP01-004),,455814
-Tony Tony.Chopper - ST01-006 (Treasure Cup) (ST01-006),417,455815
+Tony Tony.Chopper - ST01-006 (Treasure Cup) (ST01-006),430,455815
 Roronoa Zoro - ST01-013 (Treasure Cup) (ST01-013),2845,455816
 Portgas.D.Ace (Event Pack Vol. 1) (P-028),44,455819
 Bartolomeo (Event Pack Vol. 1) (P-029),12,455820
 Jinbe (Event Pack Vol. 1) (P-030),12,455823
-Uta (Event Pack Vol. 1) (P-031),35,455824
+Uta (Event Pack Vol. 1) (P-031),32,455824
 Sengoku (Event Pack Vol. 1) (P-032),14,455825
 Tournament Pack Vol. 1,36,457013
 Winner Pack Vol. 1,91,457017
@@ -386,7 +386,7 @@ Charlotte Pudding (Online Regional 2023) [Participant] (ST07-008),44,482233
 Charlotte Pudding (Online Regional 2023) [Finalist] (ST07-008),98,482234
 Charlotte Pudding (Online Regional 2023) [Winner] (ST07-008),,482235
 DON!! Card (Gold),12,482236
-DON!! Card (Red),87,482237
+DON!! Card (Red),89,482237
 DON!! Card (Yellow),42,482238
 DON!! Card (Blue),69,482239
 DON!! Card (Purple),93,482240
@@ -424,7 +424,7 @@ Sanji (Offline Regional 2023) [Participant] (ST01-004),39,483182
 Sanji (Offline Regional 2023) [Finalist] (ST01-004),,483183
 Sanji (Offline Regional 2023) [Winner] (ST01-004),,483184
 Marshall.D.Teach (Offline Regional 2023) [Participant] (ST03-014),19,483185
-Marshall.D.Teach (Offline Regional 2023) [Finalist] (ST03-014),67,483186
+Marshall.D.Teach (Offline Regional 2023) [Finalist] (ST03-014),62,483186
 Marshall.D.Teach (Offline Regional 2023) [Winner] (ST03-014),,483187
 Jack (Offline Regional 2023) [Participant] (ST04-008),13,483189
 Jack (Offline Regional 2023) [Finalist] (ST04-008),26,483192
@@ -432,26 +432,26 @@ Jack (Offline Regional 2023) [Winner] (ST04-008),,483193
 Charlotte Pudding (Offline Regional 2023) [Participant] (ST07-008),33,483195
 Charlotte Pudding (Offline Regional 2023) [Finalist] (ST07-008),123,483197
 Charlotte Pudding (Offline Regional 2023) [Winner] (ST07-008),,483198
-Gift Collection 2023,471,484943
-Roronoa Zoro - OP01-001 (Alternate Art) (OP01-001),163,485262
+Gift Collection 2023,470,484943
+Roronoa Zoro - OP01-001 (Alternate Art) (OP01-001),162,485262
 Sanji - OP01-013 (Alternate Art) (OP01-013),39,485263
 Usopp - ST01-002 (Alternate Art) (ST01-002),18,485264
 Nami - OP01-016 (Alternate Art) (OP01-016),90,485265
-Nico Robin - ST01-008 (Alternate Art) (ST01-008),60,485266
-Tony Tony.Chopper - ST01-006 (Alternate Art) (ST01-006),127,485267
+Nico Robin - ST01-008 (Alternate Art) (ST01-008),57,485266
+Tony Tony.Chopper - ST01-006 (Alternate Art) (ST01-006),126,485267
 Franky - ST01-010 (Alternate Art) (ST01-010),17,485268
 Brook - OP01-022 (Alternate Art) (OP01-022),30,485269
 Jinbe - ST01-005 (Alternate Art) (ST01-005),12,485270
-Premium Card Collection 25th Edition,1050,485271
+Premium Card Collection 25th Edition,1048,485271
 Morgan (Pirates Party Vol. 2) (P-026),12,486778
-One Piece Film Red Uta Promo Pack,32,488903
+One Piece Film Red Uta Promo Pack,34,488903
 DON!! Card Pack Vol. 1,145,493339
 Gift Collection 2023 Display,2140,493744
 Boa Hancock (Judge) (OP02-059),50,495984
-Nami (Tournament Pack Vol. 3) [Participant] (ST01-007),14,496999
-Nami (Tournament Pack Vol. 3) [Winner] (ST01-007),330,497000
+Nami (Tournament Pack Vol. 3) [Participant] (ST01-007),13,496999
+Nami (Tournament Pack Vol. 3) [Winner] (ST01-007),326,497000
 Jewelry Bonney (Tournament Pack Vol. 3) [Participant] (ST02-007),12,497001
-Jewelry Bonney (Tournament Pack Vol. 3) [Winner] (ST02-007),71,497002
+Jewelry Bonney (Tournament Pack Vol. 3) [Winner] (ST02-007),69,497002
 Sentomaru (Tournament Pack Vol. 3) [Participant] (ST03-007),12,497003
 Sentomaru (Tournament Pack Vol. 3) [Winner] (ST03-007),12,497004
 Who's.Who (Tournament Pack Vol. 3) [Participant] (ST04-010),12,497005
@@ -478,7 +478,7 @@ Judge Pack Vol. 1,36,502570
 Jozu (Judge) (OP02-008),12,502973
 Koby (Judge) (OP02-098),12,502974
 Donquixote Rosinante (Store Championship Participation Pack) (OP02-108),22,503017
-Tony Tony.Chopper (Store Championship Participation Pack) (OP02-034),63,503018
+Tony Tony.Chopper (Store Championship Participation Pack) (OP02-034),58,503018
 Hitokiri Kamazo (Store Championship Participation Pack) (OP01-108),15,503019
 Nico Robin (Store Championship Participation Pack) (OP01-017),104,503020
 Charlotte Brulee (Store Championship Participation Pack) (ST07-007),17,503021
@@ -493,12 +493,12 @@ Brook (Winner Pack Vol. 4) (ST01-011),45,503248
 Dracule Mihawk (Winner Pack Vol. 4) (ST03-005),47,503249
 Tashigi (Winner Pack Vol. 4) (ST06-006),19,503250
 Tournament Pack Vol. 4,12,503251
-Winner Pack Vol. 4,38,503252
+Winner Pack Vol. 4,39,503252
 Roronoa Zoro (3-on-3 Cup) [Participant] (ST01-013),,503253
 Roronoa Zoro (3-on-3 Cup) [Winner] (ST01-013),,503254
 Usopp (3-on-3 Cup) [Participant] (OP01-004),180,503255
 Usopp (3-on-3 Cup) [Winner] (OP01-004),,503256
-Premium Card Collection -ONE PIECE FILM RED Edition-,303,504466
+Premium Card Collection -ONE PIECE FILM RED Edition-,300,504466
 Uta (Premium Card Collection -ONE PIECE FILM RED Edition-) (OP01-005),17,504468
 Jinbe (Premium Card Collection -ONE PIECE FILM RED Edition-) (OP01-014),12,504469
 Nico Robin (Premium Card Collection -ONE PIECE FILM RED Edition-) (OP01-017),36,504470
@@ -522,7 +522,7 @@ Sanji (Event Pack Vol. 2) (P-034),12,509464
 Borsalino (Championship 2023) (OP02-114),904,509465
 Kuzan (Championship 2023) (OP02-096),3416,509466
 Sakazuki (Championship 2023) (OP02-099),3209,509467
-Monkey.D.Luffy (Alternate Art) (P-001),198,509752
+Monkey.D.Luffy (Alternate Art) (P-001),196,509752
 Monkey.D.Luffy (Gen Con 2023) (P-037),110,510578
 Bellamy (Pirates Party Vol. 4) (P-039),12,510688
 Mr.2.Bon.Kurei (Bentham) (Store Championship Participation Pack Vol. 2) (OP01-084),42,510707
@@ -531,7 +531,7 @@ Pearl (Store Championship Participation Pack Vol. 2) (OP03-031),15,510718
 Helmeppo (Store Championship Participation Pack Vol. 2) (OP03-091),13,510722
 Sanji (Store Championship Participation Pack Vol. 2) (OP03-102),42,510726
 Shiki (Store Championship Participation Pack Vol. 2) (ST05-008),20,510728
-"Eustass""Captain""Kid (Store Championship Vol. 2 Winner) (P-003)",69,510733
+"Eustass""Captain""Kid (Store Championship Vol. 2 Winner) (P-003)",68,510733
 Otama (Online Regional 2023) [Participant] (OP01-006),90,514032
 Otama (Online Regional 2023) [Finalist] (OP01-006),155,514033
 Crocodile (Online Regional 2023) [Participant] (OP02-053),23,514034
@@ -561,7 +561,7 @@ Donquixote Rosinante (Judge Pack Vol. 2) (OP02-108),12,514057
 Buggy (Judge Pack Vol. 2) (OP03-008),19,514058
 Flame Emperor (Judge Pack Vol. 2) (OP03-016),12,514059
 Three Thousand Worlds (Judge Pack Vol. 2) (OP03-057),12,514060
-Monkey.D.Luffy (Judge Pack Vol. 2) (OP03-070),58,514061
+Monkey.D.Luffy (Judge Pack Vol. 2) (OP03-070),59,514061
 Kalifa (Judge Pack Vol. 2) (OP03-081),12,514062
 Charlotte Pudding (Judge Pack Vol. 2) (OP03-112),12,514063
 Thunder Bolt (Judge Pack Vol. 2) (OP03-121),12,514064
@@ -576,7 +576,7 @@ Crocodile (Offline Regional 2023) [Participant] (OP02-053),18,514179
 Kuroobi (Offline Regional 2023) [Finalist] (OP03-026),47,514183
 Kuroobi (Offline Regional 2023) [Winner] (OP03-026),,514184
 Kuroobi (Offline Regional 2023) [Participant] (OP03-026),33,514185
-Minorhinoceros (Offline Regional 2023) [Finalist] (OP03-069),36,514186
+Minorhinoceros (Offline Regional 2023) [Finalist] (OP03-069),,514186
 Minorhinoceros (Offline Regional 2023) [Winner] (OP03-069),,514187
 Minorhinoceros (Offline Regional 2023) [Participant] (OP03-069),12,514188
 Spandam (Offline Regional 2023) [Finalist] (OP03-086),59,514189
@@ -594,8 +594,8 @@ Monkey.D.Luffy (Pre-Release Tournament) (Winner) (P-036),626,515362
 Monkey.D.Luffy (Leader Pack) (Sealed Battle 2023 Vol. 1),21,518691
 Monkey.D.Luffy (Leader Pack - Live Action) (Sealed Battle 2023 Vol. 1),19,518692
 Sabo (Sealed Battle 2023 Vol. 1) (OP04-083),292,518693
-Monkey.D.Luffy (047) (Sealed Battle Kit Vol. 1) (P-047),156,518694
-Arlong (Sealed Battle Kit Vol. 1) (P-048),95,518695
+Monkey.D.Luffy (047) (Sealed Battle Kit Vol. 1) (P-047),152,518694
+Arlong (Sealed Battle Kit Vol. 1) (P-048),96,518695
 Usopp (Sealed Battle Kit Vol. 1) (P-049),22,518696
 Sanji (Sealed Battle Kit Vol. 1) (P-050),16,518697
 Shanks (Sealed Battle Kit Vol. 1) (P-051),14,518698
@@ -622,17 +622,17 @@ DON!! Card (Yamato) (1st Anniversary DON!! Card Pack),55,520775
 DON!! Card (Yamato) (1st Anniversary DON!! Card Pack),83,520775
 DON!! Card (Monkey.D.Luffy) (1st Anniversary DON!! Card Pack),39,520776
 DON!! Card (Monkey.D.Luffy) (1st Anniversary DON!! Card Pack),53,520776
-Boa Hancock (Gift Collection 2023) (OP02-059),61,523761
-Yamato (Gift Collection 2023) (ST09-012),25,523763
-Nami (Gift Collection 2023) (OP01-016),112,523775
-Trafalgar Law (Gift Collection 2023) (ST03-008),26,523776
+Boa Hancock (Gift Collection 2023) (OP02-059),60,523761
+Yamato (Gift Collection 2023) (ST09-012),24,523763
+Nami (Gift Collection 2023) (OP01-016),110,523775
+Trafalgar Law (Gift Collection 2023) (ST03-008),25,523776
 Portgas.D.Ace (Gift Collection 2023) (P-028),30,523782
-Monkey.D.Luffy (Gift Collection 2023) (P-001),65,523785
+Monkey.D.Luffy (Gift Collection 2023) (P-001),62,523785
 Jinbe (Gift Collection 2023) (ST01-005),12,523792
 Franky (Gift Collection 2023) (OP01-021),19,523798
-Uta (Gift Collection 2023) (OP01-005),40,523802
+Uta (Gift Collection 2023) (OP01-005),39,523802
 Sanji (Gift Collection 2023) (OP01-013),26,523811
-Roronoa Zoro (Gift Collection 2023) (ST01-013),54,523812
+Roronoa Zoro (Gift Collection 2023) (ST01-013),53,523812
 Tony Tony.Chopper (Gift Collection 2023) (ST01-006),117,523819
 Nico Robin (Gift Collection 2023) (ST01-008),56,523820
 Premium Card Collection -Best Selection Vol. 1-,252,525294
@@ -642,7 +642,7 @@ Tsuru (CS 2023 Event Pack) (OP02-106),16,525297
 General Franky (CS 2023 Event Pack) (P-027),65,525298
 Portgas.D.Ace (CS 2023 Event Pack) (P-028),160,525299
 Bartolomeo (CS 2023 Event Pack) (P-029),16,525300
-Jinbe (CS 2023 Event Pack) (P-030),37,525301
+Jinbe (CS 2023 Event Pack) (P-030),36,525301
 Uta (CS 2023 Event Pack) (P-031),161,525302
 Sengoku (CS 2023 Event Pack) (P-032),29,525303
 Monkey.D.Luffy (CS 2023 Event Pack) (P-033),1334,525304
@@ -650,15 +650,15 @@ Sanji (CS 2023 Event Pack) (P-034),64,525305
 Franky (CS 2023 Celebration Pack) (OP01-021),59,525306
 Izo (CS 2023 Celebration Pack) (OP01-033),20,525307
 Okiku (CS 2023 Celebration Pack) (OP01-035),23,525308
-Monkey.D.Luffy (006) (CS 2023 Celebration Pack) (P-006),124,525310
+Monkey.D.Luffy (006) (CS 2023 Celebration Pack) (P-006),123,525310
 Monkey.D.Luffy (007) (CS 2023 Celebration Pack) (P-007),190,525315
-Yamato (CS 2023 Celebration Pack) (P-008),90,525317
+Yamato (CS 2023 Celebration Pack) (P-008),92,525317
 Trafalgar Law (CS 2023 Celebration Pack) (P-009),57,525319
 Kaido (CS 2023 Celebration Pack) (P-010),73,525323
 Nami (CS 2023 Celebration Pack) (ST01-007),490,525324
 Brook (CS 2023 Celebration Pack) (ST01-011),57,525325
 Jewelry Bonney (CS 2023 Celebration Pack) (ST02-007),130,525326
-Dracule Mihawk (CS 2023 Celebration Pack) (ST03-005),84,525327
+Dracule Mihawk (CS 2023 Celebration Pack) (ST03-005),85,525327
 Sentomaru (CS 2023 Celebration Pack) (ST03-007),17,525328
 Who's.Who (CS 2023 Celebration Pack) (ST04-010),21,525332
 Black Maria (CS 2023 Celebration Pack) (ST04-011),56,525336
@@ -688,7 +688,7 @@ Sasaki (CS 2023 Event Pack Finalist Ver.) (OP01-101),,525694
 Kaido (CS 2023 Trophy Card) [3rd Place] (ST04-003),,525702
 Kaido (CS 2023 Trophy Card) [2nd Place] (ST04-003),,525703
 Kaido (CS 2023 Trophy Card) [Winner] (ST04-003),,525704
-Premium Card Collection -Live Action Edition-,184,527128
+Premium Card Collection -Live Action Edition-,182,527128
 Nami - OP01-016 (Ultra Deck: The Three Captains) (OP01-016),12,527619
 Roronoa Zoro - OP01-025 (Ultra Deck: The Three Captains) (OP01-025),12,527620
 Monkey.D.Luffy (041) (P-041),12,531486
@@ -714,7 +714,7 @@ Roronoa Zoro (OP-06 Pre-Release Tournament) [Winner] (P-045),499,537439
 Hatchan (Tournament Pack Vol. 6) (OP03-033),12,537440
 Hatchan (Winner Pack Vol. 6) (OP03-033),12,537441
 Kaya (Tournament Pack Vol. 6) (OP03-044),12,537442
-Kaya (Winner Pack Vol. 6) (OP03-044),32,537443
+Kaya (Winner Pack Vol. 6) (OP03-044),28,537443
 Fukurou (Tournament Pack Vol. 6) (OP03-088),12,537444
 Fukurou (Winner Pack Vol. 6) (OP03-088),12,537445
 Shirahoshi (Tournament Pack Vol. 6) (OP03-116),12,537446
@@ -726,14 +726,14 @@ Premium Card Collection -Uta-,172,538837
 Monet (Event Pack Vol. 3) (OP05-036),12,539174
 Trafalgar Law (Event Pack Vol. 3) (ST03-008),14,539175
 Roronoa Zoro (Event Pack Vol. 3) (P-042),48,539176
-Yamato (Event Pack Vol. 3) (P-046),46,539177
+Yamato (Event Pack Vol. 3) (P-046),45,539177
 Online Regional Participation Pack 2024 Vol. 1,,539178
 Event Pack Vol. 3,97,539179
 Brannew (Online Regional 2024) [Participant] (OP03-089),12,539180
 Brannew (Online Regional 2024) [Finalist] (OP03-089),72,539181
 Brannew (Online Regional 2024) [Winner] (OP03-089),,539182
 Brannew (Offline Regional 2024) [Participant] (OP03-089),12,539183
-Brannew (Offline Regional 2024) [Finalist] (OP03-089),35,539184
+Brannew (Offline Regional 2024) [Finalist] (OP03-089),,539184
 Brannew (Offline Regional 2024) [Winner] (OP03-089),,539185
 Sanji (Online Regional 2024) [Participant] (OP03-102),44,539186
 Sanji (Online Regional 2024) [Finalist] (OP03-102),294,539187
@@ -792,7 +792,7 @@ Monkey.D.Luffy (001) (Online Regional 2024 Vol. 2) [Winner] (P-001),,544775
 "Eustass""Captain""Kid (Online Regional 2024 Vol. 2) [Finalist] (P-003)",118,544779
 "Eustass""Captain""Kid (Offline Regional 2024 Vol. 2) [Winner] (P-003)",,544780
 "Eustass""Captain""Kid (Online Regional 2024 Vol. 2) [Winner] (P-003)",,544781
-Monkey.D.Luffy (041) (Offline Regional 2024 Vol. 2) [Participant] (P-041),317,544782
+Monkey.D.Luffy (041) (Offline Regional 2024 Vol. 2) [Participant] (P-041),323,544782
 Monkey.D.Luffy (041) (Online Regional 2024 Vol. 2) [Participant] (P-041),335,544783
 Monkey.D.Luffy (041) (Offline Regional 2024 Vol. 2) [Finalist] (P-041),,544784
 Monkey.D.Luffy (041) (Online Regional 2024 Vol. 2) [Finalist] (P-041),651,544785
@@ -817,7 +817,7 @@ DON!! Card (3D Text),12,544805
 Curly.Dadan (Premium Card Collection -Best Selection Vol. 1-) (OP02-005),12,546666
 Tsuru (Premium Card Collection -Best Selection Vol. 1-) (OP02-106),12,546667
 Love-Love Mellow (Premium Card Collection -Best Selection Vol. 1-) (ST03-017),64,546668
-Nami (Premium Card Collection -Best Selection Vol. 1-) (OP02-036),63,546669
+Nami (Premium Card Collection -Best Selection Vol. 1-) (OP02-036),61,546669
 Charlotte Amande (Premium Card Collection -Best Selection Vol. 1-) (OP04-105),12,546670
 Blast Breath (Premium Card Collection -Best Selection Vol. 1-) (ST04-016),12,546671
 Pacifista (Premium Card Collection -Best Selection Vol. 1-) (ST03-012),12,546672
@@ -832,7 +832,7 @@ Nami (Premium Card Collection -Live Action Edition-) (P-053),40,546712
 Dracule Mihawk (Premium Card Collection -Live Action Edition-) (P-052),12,546713
 Monkey.D.Luffy (055) (Premium Card Collection -Live Action Edition-) (P-055),22,546715
 Usopp (Premium Card Collection -Live Action Edition-) (P-049),12,546716
-Arlong (Premium Card Collection -Live Action Edition-) (P-048),48,546717
+Arlong (Premium Card Collection -Live Action Edition-) (P-048),47,546717
 Roronoa Zoro (Premium Card Collection -Live Action Edition-) (P-056),26,546718
 Sanji (Premium Card Collection -Live Action Edition-) (P-050),12,546719
 Shanks (Premium Card Collection -Live Action Edition-) (P-051),12,546720
@@ -843,7 +843,7 @@ Kouzuki Momonosuke (Winner Pack Vol. 7) (OP01-041),12,548395
 Shura (Tournament Pack Vol. 7) (OP05-106),12,548434
 Shura (Winner Pack Vol. 7) (OP05-106),12,548435
 Trafalgar Law (Tournament Pack Vol. 7) (P-017),12,548436
-Trafalgar Law (Winner Pack Vol. 7) (P-017),16,548437
+Trafalgar Law (Winner Pack Vol. 7) (P-017),17,548437
 Bepo (Tournament Pack Vol. 7) (P-019),12,548438
 Bepo (Winner Pack Vol. 7) (P-019),28,548439
 Tournament Pack Vol. 7,12,548440
@@ -852,14 +852,14 @@ Sanji (Pirates Party Vol. 7) (P-068),12,548442
 Sakazuki (Pirates Party Vol. 7) (P-076),12,548444
 "Eustass""Captain""Kid (OP-07 Pre-Release Tournament) (P-067)",12,552050
 "Eustass""Captain""Kid (OP-07 Pre-Release Tournament) [Winner] (P-067)",33,552051
-Monkey.D.Luffy (Convention Promo 2024) (P-043),150,552131
+Monkey.D.Luffy (Convention Promo 2024) (P-043),146,552131
 Monkey.D.Luffy (Convention Promo 2024) (P-043),1000,552131
 Monkey.D.Luffy (Sealed Battle 2024 Vol. 2),12,552137
 Monkey.D.Luffy (Sealed Battle 2024 Vol. 2),18,552137
 Boa Hancock (Sealed Battle 2024 Vol. 2) (P-066),171,552138
 Boa Hancock (Sealed Battle 2024 Vol. 2) (P-066),15,552138
 Yamato (Treasure Cup) (OP01-121),,552709
-Monkey.D.Luffy (English Version 1st Anniversary Set) (ST10-006),788,557283
+Monkey.D.Luffy (English Version 1st Anniversary Set) (ST10-006),787,557283
 Usopp (English Version 1st Anniversary Set) (OP01-004),105,557284
 Sanji (English Version 1st Anniversary Set) (OP01-013),207,557285
 Nami (English Version 1st Anniversary Set) (OP01-016),417,557286
@@ -867,7 +867,7 @@ Brook (English Version 1st Anniversary Set) (ST01-011),134,557287
 Roronoa Zoro (English Version 1st Anniversary Set) (OP01-025),558,557288
 Tony Tony.Chopper (English Version 1st Anniversary Set) (ST01-006),559,557289
 Jinbe (English Version 1st Anniversary Set) (ST10-005),59,557290
-Nico Robin (English Version 1st Anniversary Set) (OP01-017),385,557291
+Nico Robin (English Version 1st Anniversary Set) (OP01-017),387,557291
 Franky (English Version 1st Anniversary Set) (ST01-010),66,557292
 Monkey.D.Luffy (PSA Magazine) (OP05-060),523,557296
 Welcome Pack Vol. 1,12,558742
@@ -880,12 +880,12 @@ DON!! Card (Monkey.D.Luffy) (2023 World Championship Finals),,561656
 Perona (Treasure Cup 2024) (OP06-093),,563709
 Uta - P-011 (Premium Card Collection -Uta-) (P-011),33,564138
 Uta - ST08-002 (Premium Card Collection -Uta-) (ST08-002),31,564139
-Uta - ST05-004 (Premium Card Collection -Uta-) (ST05-004),20,564140
-Uta - P-031 (Premium Card Collection -Uta-) (P-031),42,564141
+Uta - ST05-004 (Premium Card Collection -Uta-) (ST05-004),19,564140
+Uta - P-031 (Premium Card Collection -Uta-) (P-031),41,564141
 Uta - OP01-005 (Premium Card Collection -Uta-) (OP01-005),36,564142
 Uta - OP02-120 (Premium Card Collection -Uta-) (OP02-120),26,564143
 Monkey.D.Luffy (Premium Card Collection -BANDAI CARD GAMES Fest. 23-24 Edition-) (P-001),39,564250
-Brook (Premium Card Collection -BANDAI CARD GAMES Fest. 23-24 Edition-) (ST01-011),20,564251
+Brook (Premium Card Collection -BANDAI CARD GAMES Fest. 23-24 Edition-) (ST01-011),19,564251
 Izo (Premium Card Collection -BANDAI CARD GAMES Fest. 23-24 Edition-) (OP01-033),12,564252
 Okiku (Premium Card Collection -BANDAI CARD GAMES Fest. 23-24 Edition-) (OP01-035),12,564253
 Sentomaru (Premium Card Collection -BANDAI CARD GAMES Fest. 23-24 Edition-) (ST03-007),12,564254
@@ -898,9 +898,9 @@ Sanji (Premium Card Collection -BANDAI CARD GAMES Fest. 23-24 Edition-) (OP03-10
 Shirahoshi (Premium Card Collection -BANDAI CARD GAMES Fest. 23-24 Edition-) (OP03-116),13,564261
 Roronoa Zoro (Treasure Cup 2024) (ST12-008),,564531
 Dracule Mihawk (Treasure Cup 2024) (OP01-070),,564532
-Perona (Store Treasure Cup 2024) (OP06-093),117,565271
-Treasure Booster Set,350,565285
-Monkey.D.Luffy (Treasure Booster Set) (ST10-006),18,565288
+Perona (Store Treasure Cup 2024) (OP06-093),116,565271
+Treasure Booster Set,351,565285
+Monkey.D.Luffy (Treasure Booster Set) (ST10-006),17,565288
 Premium Card Collection -Leader Collection-,328,566951
 Monkey.D.Luffy (Premium Card Collection -Leader Collection-) (ST13-003),183,566952
 Portgas.D.Ace (Premium Card Collection -Leader Collection-) (ST13-002),39,566953
@@ -923,13 +923,13 @@ Drum Kingdom (Championship 2024 Top Player Pack) (OP08-020),,579373
 Sanji (Championship 2024 Top Player Pack) (OP07-064),1104,579374
 Brook (Championship 2024 Top Player Pack) (OP06-092),,579375
 Camie (Championship 2024 Top Player Pack) (OP06-025),,579376
-Gedatsu (Championship 2024 Top Player Pack) (OP05-102),,579377
+Gedatsu (Championship 2024 Top Player Pack) (OP05-102),349,579377
 Perona (Championship 2024 Top Player Pack) (OP01-077),,579378
 Championship 2024 Top Player Pack,,579379
 Monet (CS 2024 Event Pack) (OP05-036),13,579982
 Monkey.D.Luffy (CS 2024 Event Pack) (OP07-109),,579983
 Trafalgar Law - P-038 (CS 2024 Event Pack) (P-038),35,579984
-Roronoa Zoro (CS 2024 Event Pack) (P-042),195,579985
+Roronoa Zoro (CS 2024 Event Pack) (P-042),188,579985
 Sabo (CS 2024 Event Pack) (P-044),35,579986
 Yamato (CS 2024 Event Pack) (P-046),107,579987
 Jinbe (CS 2024 Event Pack) (P-063),12,579988
@@ -958,7 +958,7 @@ Monkey.D.Luffy (CS 2024 Celebration Pack) (ST01-012),161,580050
 Crocodile (CS 2024 Celebration Pack) (ST03-003),20,580052
 Kaido (CS 2024 Celebration Pack) (ST04-003),38,580053
 CS 2024 Celebration Pack,,580054
-Monkey.D.Luffy (CS 2024 Participation) (P-041),66,580055
+Monkey.D.Luffy (CS 2024 Participation) (P-041),64,580055
 Monkey.D.Luffy (Bandai Card Games Fest 24-25) (P-080),223,580056
 Tournament Pack 2024 Oct.-Dec.,12,583731
 Winner Pack 2024 Oct.-Dec.,39,583732
@@ -967,7 +967,7 @@ Charlotte Pudding (Tournament Pack 2024 Oct.-Dec.) (OP03-112),12,583735
 Charlotte Pudding (Winner Pack 2024 Oct.-Dec.) (OP03-112),13,583736
 Tony Tony.Chopper (Winner Pack 2024 Oct.-Dec.) (OP04-010),34,583737
 Tony Tony.Chopper (Tournament Pack 2024 Oct.-Dec.) (OP04-010),12,583738
-Portgas.D.Ace (Winner Pack 2024 Oct.-Dec.) (OP07-053),31,583739
+Portgas.D.Ace (Winner Pack 2024 Oct.-Dec.) (OP07-053),30,583739
 Portgas.D.Ace (Tournament Pack 2024 Oct.-Dec.) (OP07-053),12,583740
 Edison (Winner Pack 2024 Oct.-Dec.) (OP07-100),12,583741
 Edison (Tournament Pack 2024 Oct.-Dec.) (OP07-100),12,583742
@@ -984,12 +984,12 @@ Baccarat (Judge Pack Vol. 4) (OP07-010),12,583753
 Marshall.D.Teach (Judge Pack Vol. 4) (ST03-014),12,583754
 Ain (Judge Pack Vol. 4) (ST05-002),12,583755
 Makino (Judge Pack Vol. 4) (ST13-012),12,583756
-Tony Tony.Chopper (Offline Regional 2024 Vol. 3) [Finalist] (OP01-015),260,583757
+Tony Tony.Chopper (Offline Regional 2024 Vol. 3) [Finalist] (OP01-015),275,583757
 Mr.1 (Daz.Bonez) (Offline Regional 2024 Vol. 3) [Finalist] (OP02-063),39,583758
 Nekomamushi (Offline Regional 2024 Vol. 3) [Finalist] (OP06-110),51,583760
 Monkey.D.Luffy (091) (Offline Regional 2024 Vol. 3) [Finalist] (OP07-091),759,583762
 Zoro-Juurou (Event Pack Vol. 5) (OP05-067),169,583763
-O-Nami (Event Pack Vol. 5) (OP06-101),178,583764
+O-Nami (Event Pack Vol. 5) (OP06-101),176,583764
 Tony Tony.Chopper (Event Pack Vol. 5) (P-065),80,583766
 Koala (Event Pack Vol. 5) (P-069),17,583768
 Nefeltari Vivi (October Championship 2024 Store Regionals) (OP05-086),3851,583773
@@ -1023,11 +1023,11 @@ Karasu (Premium Card Collection -Best Selection Vol. 2-) (OP05-005),16,587221
 X.Drake (Premium Card Collection -Best Selection Vol. 2-) (OP01-114),12,587223
 Boa Hancock (Premium Card Collection -Best Selection Vol. 2-) (ST03-013),47,587224
 Hina (Premium Card Collection -Best Selection Vol. 2-) (ST06-008),15,587225
-Kikunojo (Premium Card Collection -Best Selection Vol. 2-) (OP06-104),89,587226
-Fire Fist (Premium Card Collection -Best Selection Vol. 2-) (OP05-019),25,587227
+Kikunojo (Premium Card Collection -Best Selection Vol. 2-) (OP06-104),90,587226
+Fire Fist (Premium Card Collection -Best Selection Vol. 2-) (OP05-019),29,587227
 The Billion-fold World Trichiliocosm (Premium Card Collection -Best Selection Vol. 2-) (OP06-038),19,587228
 Gum-Gum Giant Gavel (Premium Card Collection -Best Selection Vol. 2-) (OP03-055),12,587229
-Onigashima Island (Premium Card Collection -Best Selection Vol. 2-) (ST04-017),15,587230
+Onigashima Island (Premium Card Collection -Best Selection Vol. 2-) (ST04-017),14,587230
 Barrier!! (Premium Card Collection -Best Selection Vol. 2-) (OP04-095),12,587231
 El Thor (Premium Card Collection -Best Selection Vol. 2-) (OP05-114),12,587232
 Whitebeard Pirates (ST15 - ST20 Release Event Pack) (OP02-022),12,588168
@@ -1036,10 +1036,10 @@ Tony Tony.Chopper (ST15 - ST20 Release Event Winner Pack) (OP02-034),102,588171
 Tony Tony.Chopper (ST15 - ST20 Release Event Pack) (OP02-034),13,588172
 Shirahoshi (ST15 - ST20 Release Event Winner Pack) (OP03-116),42,588173
 Shirahoshi (ST15 - ST20 Release Event Pack) (OP03-116),12,588174
-Crocodile (ST15 - ST20 Release Event Winner Pack) (OP07-040),36,588175
+Crocodile (ST15 - ST20 Release Event Winner Pack) (OP07-040),35,588175
 Crocodile (ST15 - ST20 Release Event Pack) (OP07-040),12,588176
 Roronoa Zoro (ST15 - ST20 Release Event Pack) (P-045),12,588178
-Roronoa Zoro (ST15 - ST20 Release Event Winner Pack) (P-045),84,588179
+Roronoa Zoro (ST15 - ST20 Release Event Winner Pack) (P-045),94,588179
 Tashigi (ST15 - ST20 Release Event Pack) (ST06-006),12,588180
 Tashigi (ST15 - ST20 Release Event Winner Pack) (ST06-006),,588181
 ST15 - ST20 Release Event Winner Pack,,588183
@@ -1060,8 +1060,8 @@ Issho (Welcome Pack Vol. 1) (OP05-042),12,599748
 DON!! Card (2nd Anniversary Tournament),12,600706
 Sabo (2nd Anniversary Tournament) (ST13-001),62,600707
 Portgas.D.Ace (2nd Anniversary Tournament) (ST13-002),69,600709
-Monkey.D.Luffy (2nd Anniversary Tournament) (ST13-003),218,600711
-Monkey.D.Luffy (2nd Anniversary Stamped Promo) (P-043),38,603076
+Monkey.D.Luffy (2nd Anniversary Tournament) (ST13-003),215,600711
+Monkey.D.Luffy (2nd Anniversary Stamped Promo) (P-043),37,603076
 Premium Card Collection -Best Selection Vol. 3-,247,606589
 Sanji (Winner Pack 2025 Vol. 1) (EB01-014),17,607971
 Charlotte Pudding (Winner Pack 2025 Vol. 1) (OP06-047),76,607973
@@ -1073,7 +1073,7 @@ Hitokiri Kamazo (Tournament Pack 2025 Vol. 1) (OP06-076),12,607978
 Kaku (Tournament Pack 2025 Vol. 1) (OP07-080),12,607979
 Tournament Pack 2025 Vol. 1,12,609714
 Winner Pack 2025 Vol. 1,23,609715
-One Piece Card Game Illustration Box Vol. 1,395,610116
+One Piece Card Game Illustration Box Vol. 1,394,610116
 One Piece Card Game Illustration Box Vol. 2,254,610117
 One Piece Card Game Illustration Box EX,1238,610118
 Nami (2025 New Year Event) (ST01-007),74,610801
@@ -1084,12 +1084,12 @@ Uta (Treasure Cup 2025) (OP09-002),6024,615310
 In Two Years!! At the Sabaody Archipelago!! (One Piece Japanese Version 2nd Anniversary Set) (OP01-030),132,617586
 Portgas.D.Ace (One Piece Japanese Version 2nd Anniversary Set) (OP02-013),231,617587
 Kaya (One Piece Japanese Version 2nd Anniversary Set) (OP03-044),83,617588
-Sabo (One Piece Japanese Version 2nd Anniversary Set) (OP04-083),135,617589
+Sabo (One Piece Japanese Version 2nd Anniversary Set) (OP04-083),134,617589
 Donquixote Rosinante (One Piece Japanese Version 2nd Anniversary Set) (OP05-030),121,617590
-Roronoa Zoro (One Piece Japanese Version 2nd Anniversary Set) (OP06-118),357,617591
+Roronoa Zoro (One Piece Japanese Version 2nd Anniversary Set) (OP06-118),352,617591
 Sanji (One Piece Japanese Version 2nd Anniversary Set) (OP07-064),232,617592
 Charlotte Linlin (One Piece Japanese Version 2nd Anniversary Set) (OP08-069),82,617593
-Monkey.D.Luffy (One Piece Japanese Version 2nd Anniversary Set) (ST13-015),625,617594
+Monkey.D.Luffy (One Piece Japanese Version 2nd Anniversary Set) (ST13-015),617,617594
 Offline Regional Participation Pack 2025 Vol. 1,59,619192
 Event Pack Vol. 6,12,619193
 Judge Pack Vol. 5,12,619194
@@ -1126,7 +1126,7 @@ DON!! Card (One Piece Day Dallas 2025),383,620097
 Special DON!! Set Vol. 1 -Luffy-,66,620141
 Special DON!! Set Vol. 2 -Ace-,65,620142
 Special DON!! Set Vol. 3 -Sabo-,50,620143
-Special DON!! Set Vol. 1-3 [Set of 3],186,620144
+Special DON!! Set Vol. 1-3 [Set of 3],188,620144
 DON!! Card (Sabo) (Special DON!! Set Vol. 3),12,620148
 DON!! Card (Ace) (Special DON!! Set Vol. 2),12,620149
 DON!! Card (Luffy) (Special DON!! Set Vol. 1),12,620151
@@ -1160,15 +1160,15 @@ Camie (Championship 2024 Finalist Card Set Vol. 2) (OP06-025),350,622736
 Brook (Championship 2024 Finalist Card Set Vol. 2) (OP06-092),,622737
 Sanji (Championship 2024 Finalist Card Set Vol. 2) (OP07-064),931,622738
 Drum Kingdom (Championship 2024 Finalist Card Set Vol. 2) (OP08-020),,622739
-Black Maria (Illustration Box Vol.2) (OP08-074),18,623068
-Boa Hancock (Illustration Box Vol.1) (ST17-004),60,623069
-O-Nami (Illustration Box Vol.1) (OP05-062),30,623070
-Yamato (Illustration Box Vol.2) (ST13-016),15,623071
+Black Maria (Illustration Box Vol.2) (OP08-074),17,623068
+Boa Hancock (Illustration Box Vol.1) (ST17-004),61,623069
+O-Nami (Illustration Box Vol.1) (OP05-062),28,623070
+Yamato (Illustration Box Vol.2) (ST13-016),14,623071
 Jewelry Bonney (Illustration Box EX) (OP08-105),429,623072
 Rob Lucci (Illustration Box EX) (OP05-093),173,623073
 Boa Hancock (2025 PSA Magazine Promo) (OP07-038),318,623618
 Adio (Offline Regional Finalist Card Set 2025 Vol.1) (P-078),44,623620
-Nico Olvia (Offline Regional Finalist Card Set 2025 Vol.1) (OP09-106),244,623621
+Nico Olvia (Offline Regional Finalist Card Set 2025 Vol.1) (OP09-106),250,623621
 Urouge (Offline Regional Finalist Card Set 2025 Vol.1) (OP07-021),35,623622
 Spandine (Offline Regional Finalist Card Set 2025 Vol.1) (EB01-043),39,623623
 DON!! Card (Black and Gold),23,623626
@@ -1188,24 +1188,24 @@ Dr. Hogback (Premium Card Collection -Best Selection Vol. 3-) (OP06-090),25,6266
 Atmos (Premium Card Collection -Best Selection Vol. 3-) (OP08-040),14,626672
 Ryuma (Oda Stamped Signature) (Premium Card Collection -Best Selection Vol. 3-) (P-072),64,626673
 Sabo (Premium Card Collection -Best Selection Vol. 3-) (P-073),12,626674
-Portgas.D.Ace (Premium Card Collection -Best Selection Vol. 3-) (P-074),21,626675
-Monkey.D.Luffy (Premium Card Collection -Best Selection Vol. 3-) (P-075),29,627095
+Portgas.D.Ace (Premium Card Collection -Best Selection Vol. 3-) (P-074),20,626675
+Monkey.D.Luffy (Premium Card Collection -Best Selection Vol. 3-) (P-075),28,627095
 Ulti (Premium Card Collection -Best Selection Vol. 3-) (ST04-002),12,627239
 Ain (Premium Card Collection -Best Selection Vol. 3-) (ST05-002),12,627320
 Makino (Premium Card Collection -Best Selection Vol. 3-) (ST13-012),14,627456
-Tony Tony.Chopper (Convention Promo 2025) (OP09-029),35,627696
+Tony Tony.Chopper (Convention Promo 2025) (OP09-029),34,627696
 Trafalgar Law (Treasure Cup 2025) (OP09-069),,629756
 Charlotte Pudding (Treasure Cup 2025) (OP08-067),1087,629757
 Laboon (Treasure Cup 2025) (EB01-048),1071,629758
-One Piece Tin Pack Set Vol. 1 [Set of 2],94,629815
+One Piece Tin Pack Set Vol. 1 [Set of 2],97,629815
 Portgas.D.Ace (Serial Numbered) (OP07-119),6106,630009
 Crocodile (Store 2-on-2 Battle 2025) (P-082),12,630420
 Crocodile (Store 2-on-2 Battle 2025 Winner) (P-082),51,630428
-Charlotte Pudding (Store Treasure Cup 2025) (OP08-067),79,632670
+Charlotte Pudding (Store Treasure Cup 2025) (OP08-067),78,632670
 Dracule Mihawk (OP11 Release Event) (P-081),12,634529
 Dracule Mihawk (OP11 Release Event Winner) (P-081),37,634530
 Monkey.D.Luffy (Release Event Leader) (P),12,634531
-Buggy (English Version 2nd  Anniversary Set) (OP09-042),138,635470
+Buggy (English Version 2nd  Anniversary Set) (OP09-042),139,635470
 Shanks (English Version 2nd Anniversary Set) (OP09-001),222,635471
 Marshall.D.Teach (English Version 2nd Anniversary Set) (OP09-081),103,635472
 Monkey.D.Luffy (English Version 2nd Anniversary Set) (OP09-061),898,635473
@@ -1255,16 +1255,16 @@ Roronoa Zoro (Judge Pack Vol. 6) (OP10-113),14,641240
 When You're at Sea You Fight against Pirates!! (2025 Pirates League Store Qualifier) (OP05-076),35,641243
 When You're at Sea You Fight against Pirates!! (2025 Pirates League Store Qualifier Winner) (OP05-076),1076,641244
 Monkey.D.Luffy (010) (Dodgers x ONE PIECE) (EB02-010),2107,641620
-Shanks (2025 PSA Magazine Promo) (OP09-001),188,643883
+Shanks (2025 PSA Magazine Promo) (OP09-001),186,643883
 Treasure Booster Set Display Case,2173,646249
 One Piece Card Game Illustration Box Vol. 3,145,646591
 One Piece Card Game Illustration Box Vol. 4,130,646592
 Offline Regional Participation Pack 2025 Vol. 2,40,646715
 Kid & Killer (Offline Regional Champion Card Set 2025 Vol.2) (EB01-003),,646720
-Kid & Killer (Offline Regional Finalist Card Set 2025 Vol.2) (EB01-003),121,646721
+Kid & Killer (Offline Regional Finalist Card Set 2025 Vol.2) (EB01-003),125,646721
 Kid & Killer (Offline Regional Participation Pack 2025 Vol.2) (EB01-003),32,646722
 Trafalgar Law (Offline Regional Participation Pack 2025 Vol.2) (OP07-047),20,646725
-Trafalgar Law (Offline Regional Finalist Card Set 2025 Vol.2) (OP07-047),153,646726
+Trafalgar Law (Offline Regional Finalist Card Set 2025 Vol.2) (OP07-047),155,646726
 Trafalgar Law (Offline Regional Champion Card Set 2025 Vol.2) (OP07-047),,646727
 Jewelry Bonney (Offline Regional Participation Pack 2025 Vol.2) (P-085),18,646728
 Jewelry Bonney (Offline Regional Finalist Card Set 2025 Vol.2) (P-085),171,646729
@@ -1283,7 +1283,7 @@ Shanks (Championship 25-26 Offline Regionals Season 2) (OP09-004),2002,646743
 Kujyaku (Treasure Cup August 2025) (OP11-004),478,646745
 Hibari (Treasure Cup August 2025) (OP11-010),952,646746
 Koby (Treasure Cup August 2025) (OP11-119),,646747
-Usopp (Official Playmat -Limited Edition Vol. 3-) (OP10-042),200,647759
+Usopp (Official Playmat -Limited Edition Vol. 3-) (OP10-042),201,647759
 Edward Weevil (Seven Warlords of the Sea Binder Set) (EB01-023),19,648086
 Bartholomew Kuma (Seven Warlords of the Sea Binder Set) (OP05-011),21,648088
 Crocodile (Seven Warlords of the Sea Binder Set) (OP07-040),14,648089
@@ -1299,14 +1299,14 @@ Marshall.D.Teach (Seven Warlords of the Sea Binder Set) (ST17-005),34,648107
 Koby (OP12 Release Event) (P-092),12,649246
 Koby (OP12 Release Event Winner) (P-092),26,649247
 CS 25-26 Event Pack,233,649617
-Zoro-Juurou (CS 25-26 Event Pack) (OP05-067),248,649618
-O-Nami (CS 25-26 Event Pack) (OP06-101),275,649619
+Zoro-Juurou (CS 25-26 Event Pack) (OP05-067),247,649618
+O-Nami (CS 25-26 Event Pack) (OP06-101),273,649619
 Tony Tony.Chopper (CS 25-26 Event Pack) (P-065),152,649620
 Koala (CS 25-26 Event Pack) (P-069),16,649621
 Carrot (CS 25-26 Event Pack) (P-070),29,649622
 Ulti (CS 25-26 Event Pack) (P-077),41,649623
 Lim (CS 25-26 Event Pack) (P-079),12,649624
-Shanks (CS 25-26 Event Pack) (P-083),52,649625
+Shanks (CS 25-26 Event Pack) (P-083),49,649625
 Roronoa Zoro (CS 25-26 3rd Place) (ST21-015),,649626
 Roronoa Zoro (CS 25-26 2nd Place) (ST21-015),,649627
 Roronoa Zoro (CS 25-26 1st Place) (ST21-015),,649628
@@ -1321,7 +1321,7 @@ Hitokiri Kamazo (CS 25-26 Celebration Pack) (OP06-076),57,649640
 Portgas.D.Ace (CS 25-26 Celebration Pack) (OP07-053),121,649642
 Kaku (CS 25-26 Celebration Pack) (OP07-080),21,649643
 Edison (CS 25-26 Celebration Pack) (OP07-100),71,649644
-Wyper (CS 25-26 Celebration Pack) (OP08-110),35,649645
+Wyper (CS 25-26 Celebration Pack) (OP08-110),37,649645
 Hongo (CS 25-26 Celebration Pack) (OP09-011),52,649646
 Tony Tony.Chopper (CS 25-26 Finalist Card Set 1) (OP07-066),,649656
 Monkey.D.Luffy (CS 25-26 Finalist Card Set 1) (OP07-109),,649657
@@ -1346,8 +1346,8 @@ Buggy (CS 25-26 Top Player Pack) (ST17-003),,649677
 Monkey.D.Luffy (Jumbo) (OP09-061),,649678
 Premium Card Collection -Best Selection Vol. 4-,293,649681
 Yamato (Premium Card Collection -Best Selection Vol. 4-) (EB01-007),21,649682
-More Pizza!! (Premium Card Collection -Best Selection Vol. 4-) (OP07-037),14,649683
-Perfume Femur (Premium Card Collection -Best Selection Vol. 4-) (OP07-057),47,649684
+More Pizza!! (Premium Card Collection -Best Selection Vol. 4-) (OP07-037),13,649683
+Perfume Femur (Premium Card Collection -Best Selection Vol. 4-) (OP07-057),46,649684
 Kalgara (Premium Card Collection -Best Selection Vol. 4-) (OP08-099),12,649685
 Building Snake (Premium Card Collection -Best Selection Vol. 4-) (OP09-008),12,649686
 Nami (Premium Card Collection -Best Selection Vol. 4-) (OP09-070),124,649687
@@ -1355,14 +1355,14 @@ Gum-Gum Lightning (Premium Card Collection -Best Selection Vol. 4-) (OP09-077),1
 Laffitte (Premium Card Collection -Best Selection Vol. 4-) (OP09-095),17,649689
 Dereshi! (Premium Card Collection -Best Selection Vol. 4-) (OP09-117),13,649690
 Kouzuki Momonosuke (Premium Card Collection -Best Selection Vol. 4-) (OP10-028),12,649691
-Sabo (Premium Card Collection -Best Selection Vol. 4-) (OP10-049),17,649692
+Sabo (Premium Card Collection -Best Selection Vol. 4-) (OP10-049),16,649692
 Perona (Premium Card Collection -Best Selection Vol. 4-) (OP10-092),15,649693
-Premium Card Collection -6 assort vol.1-,282,649694
-Monkey.D.Luffy (BANDAI Card Games Fest 25-26) (OP07-073),179,649696
-Yamato (Premium Card Collection -6 assort vol.1-) (EB02-006),90,649704
-Leo (Premium Card Collection -6 assort vol.1-) (OP10-057),90,649705
+Premium Card Collection -6 assort vol.1-,273,649694
+Monkey.D.Luffy (BANDAI Card Games Fest 25-26) (OP07-073),178,649696
+Yamato (Premium Card Collection -6 assort vol.1-) (EB02-006),83,649704
+Leo (Premium Card Collection -6 assort vol.1-) (OP10-057),85,649705
 Monkey.D.Luffy (Premium Card Collection -6 assort vol.1-) (OP10-111),89,649706
-Charlotte Linlin (Premium Card Collection -6 assort vol.1-) (OP11-073),31,649707
+Charlotte Linlin (Premium Card Collection -6 assort vol.1-) (OP11-073),30,649707
 Color of the Supreme King Haki (Premium Card Collection -6 assort vol.1-) (OP12-018),35,649708
 Edward.Newgate (Premium Card Collection -6 assort vol.1-) (ST22-003),14,649709
 Jewelry Bonney (Online Regional Participation Pack 2025 Vol.2) (P-085),36,649730
@@ -1379,7 +1379,7 @@ Kid & Killer (Online Regional Champion Card Set 2025 Vol.2) (EB01-003),,649741
 Tony Tony.Chopper (Online Regional Champion Card Set 2025 Vol.2) (P-089),,649742
 Trafalgar Law (Online Regional Champion Card Set 2025 Vol.2) (OP07-047),,649744
 DON!! Card (Donquixote Rosinante) (Devil Fruits Collection Vol. 3),19,649750
-DON!! Card (Op-Op Fruit) (Devil Fruits Collection Vol. 3),14,649751
+DON!! Card (Op-Op Fruit) (Devil Fruits Collection Vol. 3),13,649751
 Monkey.D.Luffy (Sound Loader - Luffy Edition 2025) (EB02-010),118,649772
 Roronoa Zoro (Illustration Box Vol.3) (OP07-113),12,650704
 Monkey.D.Luffy (Illustration Box Vol.3) (OP07-109),12,650706
@@ -1411,7 +1411,7 @@ Tashigi (Treasure Cup 2025) (OP12-031),3859,657114
 Monkey.D.Luffy (Treasure Cup 2025) (OP12-015),1849,657117
 Sanji (Treasure Cup 2025) (OP10-005),,657118
 Roronoa Zoro (Serial Numbered) (OP12-020),,657119
-Premium Card Collection -Best Selection Vol. 5-,141,657215
+Premium Card Collection -Best Selection Vol. 5-,140,657215
 One Piece Tin Pack Set Vol. 2 Display,904,657218
 One Piece Tin Pack Set Vol. 2 Display Case,4172,657219
 Roronoa Zoro - OP12-020 (Official Playmat Limited Edition Vol.4) (OP12-020),483,657221
@@ -1424,7 +1424,7 @@ Kouzuki Oden (Premium Card Collection -Best Selection Vol. 5-) (OP13-063),12,657
 Baby 5 (Premium Card Collection -Best Selection Vol. 5-) (OP12-112),50,657825
 Hair Removal Fist (Premium Card Collection -Best Selection Vol. 5-) (OP12-098),19,657826
 Hina (Premium Card Collection -Best Selection Vol. 5-) (OP12-051),19,657827
-Kuina (Premium Card Collection -Best Selection Vol. 5-) (OP12-026),24,657828
+Kuina (Premium Card Collection -Best Selection Vol. 5-) (OP12-026),23,657828
 Shakuyaku (Premium Card Collection -Best Selection Vol. 5-) (OP12-006),12,657829
 Let's Crash This Wedding!!! (Premium Card Collection -Best Selection Vol. 5-) (OP11-060),19,657830
 Electrical Luna (Premium Card Collection -Best Selection Vol. 5-) (OP08-036),18,657831
@@ -1433,7 +1433,7 @@ Merry Go (Premium Card Collection -Best Selection Vol. 5-) (EB02-041),16,657833
 Jewelry Bonney (CS 25-26 Regionals Textured Chase Promo) (P-085),334,658338
 Kid & Killer (CS 25-26 Regionals Textured Chase Promo) (EB01-003),383,658339
 Tony Tony.Chopper (CS 25-26 Regionals Textured Chase Promo) (P-089),272,658340
-Trafalgar Law (CS 25-26 Regionals Textured Chase Promo) (OP07-047),400,658341
+Trafalgar Law (CS 25-26 Regionals Textured Chase Promo) (OP07-047),398,658341
 Shanks (CS 25-26 Event Pack Finalist Ver.) (P-083),1222,659595
 Lim (CS 25-26 Event Pack Finalist Ver.) (P-079),414,659596
 Dash Pack 2025,,660407
@@ -1463,12 +1463,12 @@ Portgas.D.Ace (Store Tournament 2025 Vol. 4) (P-103),12,668175
 Shanks (Store Tournament 2025 Vol. 4) (P-104),12,668177
 Sabo (Store Tournament 2025 Vol. 4) (P-105),12,668179
 Monkey.D.Luffy (Store Tournament 2025 Vol. 4) (P-106),12,668181
-Gol.D.Roger (Store Tournament 2025 Vol. 4) (P-107),17,668182
+Gol.D.Roger (Store Tournament 2025 Vol. 4) (P-107),16,668182
 Winner Pack 2026 Vol. 1,33,668184
 Kouzuki Hiyori (Winner Pack 2026 Vol. 1) (OP12-028),21,668186
 Vinsmoke Sora (Winner Pack 2026 Vol. 1) (OP12-062),12,668187
-Morley (Winner Pack 2026 Vol. 1) (OP12-093),19,668188
-Baby 5 (Winner Pack 2026 Vol. 1) (OP12-112),36,668189
+Morley (Winner Pack 2026 Vol. 1) (OP12-093),20,668188
+Baby 5 (Winner Pack 2026 Vol. 1) (OP12-112),35,668189
 Judge Pack Vol. 7,19,668191
 Merry Go (Judge Pack Vol. 7) (EB02-041),14,668192
 Mary Geoise (Judge Pack Vol. 7) (OP05-097),12,668193
@@ -1476,7 +1476,7 @@ Jewelry Bonney (Judge Pack Vol. 7) (OP10-107),12,668194
 Prince Grus (Judge Pack Vol. 7) (OP11-013),12,668195
 X.Drake (Judge Pack Vol. 7) (OP11-017),12,668196
 Lord of the Coast (Judge Pack Vol. 7) (OP11-028),12,668197
-Shirahoshi (Judge Pack Vol. 7) (OP11-030),13,668199
+Shirahoshi (Judge Pack Vol. 7) (OP11-030),12,668199
 Tony Tony.Chopper (Judge Pack Vol. 7) (OP11-053),24,668200
 Charlotte Daifuku (Judge Pack Vol. 7) (OP11-068),12,668201
 Black Maria (Judge Pack Vol. 7) (OP11-089),12,668202
@@ -1499,22 +1499,22 @@ Koala (CS 25-26 Winner Card Set 2) (P-069),,668435
 Gol.D.Roger (Jumbo) (OP13-003),,668436
 When You're at Sea You Fight against Pirates!! (2025 Pirates League Finals Textured Foil) (OP05-076),2882,668672
 Spandine (Online Regional Finalist Card Set 2025 Vol.1) (EB01-043),95,668960
-One Piece Card Game Illustration Box Vol. 5,122,669241
+One Piece Card Game Illustration Box Vol. 5,120,669241
 One Piece Card Game Illustration Box Vol. 6,117,669242
 One Piece Tin Pack Set Vol. 2 -Monkey.D.Luffy-,69,669273
-One Piece Tin Pack Set Vol. 2 -Portgas.D.Ace-,63,669277
-One Piece Tin Pack Set Vol. 2 -Sabo-,60,669278
+One Piece Tin Pack Set Vol. 2 -Portgas.D.Ace-,62,669277
+One Piece Tin Pack Set Vol. 2 -Sabo-,59,669278
 Monkey.D.Luffy (Tin Pack Set Vol. 2) (P-075),20,669279
 Portgas.D.Ace (Tin Pack Set Vol. 2) (P-074),12,669293
 Sabo (Tin Pack Set Vol. 2) (P-073),12,669296
-One Piece Tin Pack Set Vol. 2 [Set of 3],195,669298
+One Piece Tin Pack Set Vol. 2 [Set of 3],193,669298
 Sabo (Illustration Box Vol.5) (OP05-007),12,671734
 Portgas.D.Ace (Illustration Box Vol.5) (ST15-005),12,671735
-Trafalgar Law (Illustration Box Vol.6) (P-093),13,671740
+Trafalgar Law (Illustration Box Vol.6) (P-093),12,671740
 Donquixote Rosinante (Illustration Box Vol.6) (OP12-108),12,671741
-Girl (OP14 Release Event) (P-096),53,671883
-Girl (OP14 Release Event Winner) (P-096),176,671884
-One Piece Card Game Illustration Box Vol. 5 Case,933,672601
+Girl (OP14 Release Event) (P-096),50,671883
+Girl (OP14 Release Event Winner) (P-096),172,671884
+One Piece Card Game Illustration Box Vol. 5 Case,938,672601
 One Piece Card Game Illustration Box Vol. 6 Case,932,672604
 Monkey.D.Luffy (055) (College Basketball US Voyage) (P-055),394,675303
 Nami (Whole Cake Island Arc) (OP11-041),1865,675637
@@ -1524,9 +1524,9 @@ Buggy (Event Pack Vol. 8) (P-098),,675736
 Monkey.D.Luffy (Event Pack Vol. 8) (P-099),,675737
 Marshall.D.Teach (Event Pack Vol. 8) (P-100),,675738
 Heroines Battle Pack,46,676678
-Nico Robin (Heroines Battle Pack) (P-111),64,676843
+Nico Robin (Heroines Battle Pack) (P-111),79,676843
 Nami (Heroines Battle Pack) (P-112),19,676844
-Jewelry Bonney (Heroines Battle Pack) (P-113),21,676845
+Jewelry Bonney (Heroines Battle Pack) (P-113),20,676845
 DON!! Card (Japanese Version 3rd Anniversary Set),,680489
 Portgas.D.Ace (Japanese Version 3rd Anniversary Set) (ST15-005),,680490
 Perona (Japanese Version 3rd Anniversary Set) (OP12-034),,680491
@@ -1543,12 +1543,12 @@ Adio (Offline Regional Champion Card Set 2025 Vol.1) (P-078),,681242
 Adio (Online Regional Finalist Card Set 2025 Vol.1) (P-078),,681243
 Nico Olvia (Online Regional Finalist Card Set 2025 Vol.1) (OP09-106),,681245
 Nico Olvia (Offline Regional Champion Card Set 2025 Vol.1) (OP09-106),,681246
-Nico Robin (Heroines Battle Winner Pack) (P-111),730,681612
-Nami (Heroines Battle Winner Pack) (P-112),685,681613
+Nico Robin (Heroines Battle Winner Pack) (P-111),716,681612
+Nami (Heroines Battle Winner Pack) (P-112),657,681613
 Jewelry Bonney (Heroines Battle Winner Pack) (P-113),210,681614
 DON!! Card (Red Bull Double Don!!),167,681870
-DON!! Card (Red Bull Don!!),51,681871
-Monkey.D.Luffy (Red Bull Double Don!!) (PRB02-005),191,681872
+DON!! Card (Red Bull Don!!),52,681871
+Monkey.D.Luffy (Red Bull Double Don!!) (PRB02-005),189,681872
 Monkey.D.Luffy (Red Bull Double Don!!) (Winner) (PRB02-005),,681873
 Monkey.D.Luffy (Red Bull Double Don!!) (Winner) (Textured) (PRB02-005),,681874
 Luffy Is the Man Who Will Become the King of Pirates!!! (Japanese Version 3rd Anniversary Set) (OP12-039),,681982
@@ -1574,8 +1574,8 @@ Bins (ST05-013),12,479849
 Dr. Indigo (ST05-015),12,479850
 Lion's Threat Imperial Earth Bind (ST05-016),12,479851
 Paramount War - Booster Pack,50,455865
-Paramount War - Booster Box,1076,455866
-Paramount War - Booster Box Case,7065,455867
+Paramount War - Booster Box,1073,455866
+Paramount War - Booster Box Case,7206,455867
 DON!! Card (Manga),12,482273
 Monkey.D.Luffy (041) (Alternate Art) (OP02-041),95,482337
 Edward.Newgate (004) (OP02-004),12,482423
@@ -1587,7 +1587,7 @@ Jozu (OP02-008),12,482704
 Monkey.D.Garp (002) (OP02-002),12,482705
 Kingdew (OP02-006),12,482706
 Thatch (OP02-007),12,482707
-Uta (OP02-120),18,482718
+Uta (OP02-120),17,482718
 Dogura (OP02-010),12,483093
 Blenheim (OP02-012),12,483094
 Vista (OP02-011),12,483095
@@ -1600,21 +1600,21 @@ Kin'emon (Alternate Art) (OP02-025),105,483629
 Emporio.Ivankov (049) (Alternate Art) (OP02-049),122,483949
 Magellan (071) (Alternate Art) (OP02-071),109,484134
 Zephyr (Alternate Art) (OP02-072),92,484314
-Smoker (093) (Alternate Art) (OP02-093),227,484476
-Kouzuki Oden (Alternate Art) (OP02-030),24,484627
+Smoker (093) (Alternate Art) (OP02-093),228,484476
+Kouzuki Oden (Alternate Art) (OP02-030),23,484627
 Monkey.D.Garp (115) (Alternate Art) (OP02-115),20,484822
 Borsalino (Alternate Art) (OP02-114),25,485087
 Kuzan (096) (Alternate Art) (OP02-096),34,485162
 Portgas.D.Ace (OP02-013),12,485235
 Kouzuki Toki (Box Topper) (OP02-031),12,485236
-Boa Hancock (Box Topper) (OP02-059),68,485237
+Boa Hancock (Box Topper) (OP02-059),67,485237
 Monkey.D.Luffy (062) (OP02-062),12,485238
 Zephyr (OP02-072),12,485239
 Minokoala (Box Topper) (OP02-086),12,485241
 Sakazuki (OP02-099),12,485242
 Tashigi (OP02-105),12,485243
 Tashigi (Box Topper) (OP02-105),12,485244
-Donquixote Rosinante (Box Topper) (OP02-108),16,485245
+Donquixote Rosinante (Box Topper) (OP02-108),15,485245
 Borsalino (OP02-114),12,485246
 Sakazuki (Alternate Art) (OP02-099),22,485255
 Kuzan (121) (OP02-121),12,485397
@@ -1624,12 +1624,12 @@ Magellan (085) (Alternate Art) (OP02-085),34,485459
 Emporio.Ivankov (051) (Alternate Art) (OP02-051),16,485812
 Buggy (Alternate Art) (OP02-058),36,485813
 Monkey.D.Luffy (062) (Alternate Art) (OP02-062),132,485814
-Edward.Newgate (004) (Alternate Art) (OP02-004),63,485861
+Edward.Newgate (004) (Alternate Art) (OP02-004),64,485861
 Portgas.D.Ace (Parallel) (Manga) (Alternate Art) (OP02-013),2650,485862
 Marco (Alternate Art) (OP02-018),15,485863
 Masked Deuce (Alternate Art) (OP02-017),12,485864
 Squard (OP02-009),12,486332
-Portgas.D.Ace (Parallel) (OP02-013),134,486333
+Portgas.D.Ace (Parallel) (OP02-013),132,486333
 Whitey Bay (OP02-014),12,486334
 Makino (OP02-015),12,486335
 Magura (OP02-016),12,486336
@@ -1652,7 +1652,7 @@ Shishilian (OP02-032),12,486352
 Jinbe (OP02-033),12,486353
 Tony Tony.Chopper (OP02-034),12,486354
 Trafalgar Law (OP02-035),12,486355
-Nami (OP02-036),14,486356
+Nami (OP02-036),13,486356
 Nico Robin (OP02-037),12,486357
 Nekomamushi (OP02-038),12,486359
 Franky (OP02-039),12,486361
@@ -1735,7 +1735,7 @@ Yasakani Sacred Jewel (OP02-118),12,486546
 Meteor Volcano (OP02-119),12,486547
 Revision Pack,15,487126
 Box Promotion Pack,46,488298
-Paramount War - Sleeved Booster Pack,68,531775
+Paramount War - Sleeved Booster Pack,69,531775
 DON!! Card,12,549342
 Starter Deck 6: Absolute Justice,43,455868
 Starter Deck 6: Absolute Justice Display,,455869
@@ -1773,12 +1773,12 @@ Iceburg (Alternate Art) (OP03-058),68,498297
 Charlotte Linlin (077) (OP03-077),12,498481
 Charlotte Linlin (077) (Alternate Art) (OP03-077),88,498482
 Charlotte Katakuri (099) (OP03-099),12,498483
-Charlotte Katakuri (099) (Alternate Art) (OP03-099),232,498484
+Charlotte Katakuri (099) (Alternate Art) (OP03-099),239,498484
 Rob Lucci (076) (OP03-076),12,498485
 Rob Lucci (076) (Alternate Art) (OP03-076),80,498486
 DON!! Card (Alternate Art),12,498519
 Marco (OP03-013),12,498595
-Marco (Alternate Art) (OP03-013),19,498597
+Marco (Alternate Art) (OP03-013),18,498597
 Fire Fist (OP03-018),12,498783
 Fire Fist (Alternate Art) (OP03-018),49,498784
 Gin (OP03-024),12,498861
@@ -1860,7 +1860,7 @@ Vergo (OP03-079),12,500016
 Kaku (080) (OP03-080),12,500017
 Kaku (080) (Alternate Art) (OP03-080),12,500018
 Kalifa (081) (OP03-081),12,500019
-Kalifa (081) (Alternate Art) (OP03-081),42,500020
+Kalifa (081) (Alternate Art) (OP03-081),40,500020
 Kumadori (OP03-082),12,500021
 Corgy (OP03-083),12,500022
 Jerry (OP03-084),12,500026
@@ -1909,11 +1909,11 @@ Thunder Bolt (OP03-121),12,500112
 Sogeking (Alternate Art) (OP03-122),39,500116
 Sogeking (Alternate Art) (Manga) (OP03-122),1629,500118
 Charlotte Katakuri (123) (OP03-123),12,500120
-Charlotte Katakuri (123) (Alternate Art) (OP03-123),61,500122
+Charlotte Katakuri (123) (Alternate Art) (OP03-123),60,500122
 Kingbaum (OP03-100),12,500124
 "Eustass""Captain""Kid (Wanted Poster) (OP01-051)",227,501677
 Monkey.D.Luffy (Wanted Poster) (ST01-012),917,501678
-Donquixote Doflamingo (Wanted Poster) (ST03-009),234,501679
+Donquixote Doflamingo (Wanted Poster) (ST03-009),231,501679
 Kaido (Wanted Poster) (ST04-003),220,501680
 Sogeking (OP03-122),21,501997
 Pillars of Strength - Sleeved Booster Pack,89,531776
@@ -1948,7 +1948,7 @@ Doberman (OP02-107),12,486639
 Dobon (OP02-080),12,486640
 Dogura (OP02-010),12,486641
 Domino (OP02-081),12,486642
-Donquixote Rosinante (OP02-108),,486643
+Donquixote Rosinante (OP02-108),13,486643
 Dracule Mihawk (OP02-055),13,486644
 Franky (OP02-039),12,486645
 Fullbody (OP02-111),12,486646
@@ -2031,7 +2031,7 @@ Mr.2.Bon.Kurei (Bentham) (ST08-013),12,503238
 Laboon (ST08-012),12,503239
 Gaimon (ST08-003),12,503240
 Monkey.D.Garp (ST08-010),12,503241
-Starter Deck 9: Yamato,30,502978
+Starter Deck 9: Yamato,31,502978
 Starter Deck 9: Yamato Display,,502979
 Starter Deck 9: Yamato Display Case,,502980
 Yamato (001) (ST09-001),12,503523
@@ -2060,11 +2060,11 @@ Donquixote Doflamingo (019) (Alternate Art) (OP04-019),132,510897
 Rebecca (039) (OP04-039),12,510993
 Rebecca (039) (Alternate Art) (OP04-039),127,510994
 Issho (OP04-020),12,510995
-Issho (Alternate Art) (OP04-020),53,510996
+Issho (Alternate Art) (OP04-020),52,510996
 Queen (040) (OP04-040),12,511397
 Queen (040) (Alternate Art) (OP04-040),35,511401
 Crocodile (058) (OP04-058),12,511765
-Crocodile (058) (Alternate Art) (OP04-058),102,511766
+Crocodile (058) (Alternate Art) (OP04-058),103,511766
 Pell (OP04-013),12,512612
 Pell (Alternate Art) (OP04-013),12,512613
 Sugar (OP04-024),12,512875
@@ -2081,32 +2081,32 @@ Double Pack Set Volume 1 Display,568,514029
 Who's.Who (OP04-051),12,514030
 Who's.Who (Alternate Art) (OP04-051),12,514031
 Ms. All Sunday (OP04-064),12,514245
-Ms. All Sunday (Alternate Art) (OP04-064),69,514246
+Ms. All Sunday (Alternate Art) (OP04-064),68,514246
 Crocodile (060) (OP04-060),12,514247
-Crocodile (060) (Alternate Art) (OP04-060),22,514248
+Crocodile (060) (Alternate Art) (OP04-060),21,514248
 Mr.5 (Gem) (OP04-072),12,514253
-Mr.5 (Gem) (Alternate Art) (OP04-072),21,514254
+Mr.5 (Gem) (Alternate Art) (OP04-072),19,514254
 Kyros (OP04-082),12,514436
 Kyros (Alternate Art) (OP04-082),12,514437
 Sabo (OP04-083),12,514543
-Sabo (Alternate Art) (OP04-083),67,514544
+Sabo (Alternate Art) (OP04-083),65,514544
 Monkey.D.Luffy (090) (OP04-090),12,515278
-Monkey.D.Luffy (090) (Alternate Art) (OP04-090),56,515279
+Monkey.D.Luffy (090) (Alternate Art) (OP04-090),55,515279
 "Capone""Gang""Bege (OP04-100)",12,515280
 "Capone""Gang""Bege (Alternate Art) (OP04-100)",26,515281
 Sanji (104) (OP04-104),12,515282
 Sanji (104) (Alternate Art) (OP04-104),20,515283
 Yamato (OP04-112),12,515309
-Yamato (Alternate Art) (OP04-112),52,515310
+Yamato (Alternate Art) (OP04-112),51,515310
 Nefeltari Vivi (118) (OP04-118),19,515312
-Nefeltari Vivi (118) (Alternate Art) (OP04-118),63,515333
+Nefeltari Vivi (118) (Alternate Art) (OP04-118),60,515333
 Donquixote Rosinante (OP04-119),12,515594
 Donquixote Rosinante (Alternate Art) (OP04-119),24,515848
 Edward.Newgate (SP) (OP02-004),318,516553
 Trafalgar Law (SP) (OP01-047),423,516554
 Boa Hancock (SP) (OP01-078),1636,516555
 Magellan (SP) (OP02-085),120,516556
-Sakazuki (SP) (OP02-099),145,516557
+Sakazuki (SP) (OP02-099),146,516557
 Sabo (Alternate Art) (Manga) (OP04-083),1431,516558
 Igaram (OP04-002),12,516728
 Usopp (OP04-003),12,516729
@@ -2223,7 +2223,7 @@ Belo Betty (002) (Alternate Art) (OP05-002),68,527008
 Sabo (007) (OP05-007),12,527009
 Donquixote Rosinante (022) (Alternate Art) (OP05-022),51,527010
 Sakazuki (Alternate Art) (OP05-041),62,527011
-Monkey.D.Luffy (060) (Alternate Art) (OP05-060),194,527014
+Monkey.D.Luffy (060) (Alternate Art) (OP05-060),190,527014
 Trafalgar Law (069) (Alternate Art) (Manga) (OP05-069),2286,527019
 "Eustass""Captain""Kid (Alternate Art) (Manga) (OP05-074)",1285,527020
 Enel (098) (Alternate Art) (OP05-098),114,527021
@@ -2231,11 +2231,11 @@ Enel (100) (OP05-100),12,527022
 Monkey.D.Luffy (119) (OP05-119),31,527024
 Monkey.D.Luffy (119) (Alternate Art) (Manga) (OP05-119),8623,527026
 Monkey.D.Luffy (012) (Alternate Art) (ST01-012),84,527027
-Nami (SP) (OP01-016),1229,527035
+Nami (SP) (OP01-016),1242,527035
 Yamato (SP) (OP01-121),506,527036
 Uta (SP) (OP02-120),597,527038
 Rob Lucci (092) (SP) (OP03-092),202,527040
-Kaido (044) (SP) (OP04-044),413,527041
+Kaido (044) (SP) (OP04-044),406,527041
 Enel (100) (SP) (OP05-100),443,527043
 Kaido (118) (OP05-118),15,527045
 Double Pack Set Volume 2,407,527060
@@ -2248,7 +2248,7 @@ Trafalgar Law (Alternate Art) (069) (OP05-069),64,527662
 Koala (OP05-006),12,527663
 Koala (Alternate Art) (OP05-006),22,527664
 Zoro-Juurou (Alternate Art) (OP05-067),49,527665
-Rob Lucci (093) (Alternate Art) (OP05-093),19,527666
+Rob Lucci (093) (Alternate Art) (OP05-093),18,527666
 Ulti (OP05-043),12,527793
 Ulti (Alternate Art) (OP05-043),12,527794
 Borsalino (OP05-051),12,527842
@@ -2257,7 +2257,7 @@ Baby 5 (034) (OP05-034),12,527873
 Baby 5 (034) (Alternate Art) (OP05-034),12,527874
 Trafalgar Law (069) (OP05-069),12,527875
 Mansherry (OP05-088),12,528036
-Mansherry (Alternate Art) (OP05-088),27,528037
+Mansherry (Alternate Art) (OP05-088),26,528037
 Rob Lucci (093) (OP05-093),12,528164
 Rebecca (OP05-091),12,528165
 Rebecca (Alternate Art) (OP05-091),44,528166
@@ -2376,8 +2376,8 @@ Upper Yard (OP05-117),12,528679
 DON!! Card (Alternate Art),12,529792
 Monkey.D.Luffy (012) (Alternate Art) (Gold-Stamped Signature) (ST01-012),9183,529850
 DON!! Card (Silhouette) (Double Pack Set Volume 2),12,530119
-DON!! Card (Manga) (Double Pack Set Volume 2),13,530120
-Monkey.D.Luffy (119) (Alternate Art) (OP05-119),346,530122
+DON!! Card (Manga) (Double Pack Set Volume 2),12,530120
+Monkey.D.Luffy (119) (Alternate Art) (OP05-119),340,530122
 Awakening of the New Era - Sleeved Booster Pack,144,531575
 Special DON!! Card Pack DP-02,12,531974
 Curiel (OP03-004),12,501643
@@ -2457,7 +2457,7 @@ Charlotte Oven (OP03-105),12,501723
 Shirahoshi (OP03-116),12,501724
 Napoleon (OP03-117),12,501725
 Ikoku Sovereignty (OP03-118),12,501726
-Pillars of Strength - Pre-Release Pack,58,502624
+Pillars of Strength - Pre-Release Pack,62,502624
 Ultra Deck: The Three Captains,174,502982
 Ultra Deck: The Three Captains Display,932,502983
 Ultra Deck: The Three Captains Display Case,,502984
@@ -2488,7 +2488,7 @@ Backlight (ST11-003),12,533881
 New Genesis (ST11-004),12,533882
 I'm invincible (ST11-005),12,533883
 Wings of the Captain - Booster Pack,19,515077
-Wings of the Captain - Booster Box,614,515080
+Wings of the Captain - Booster Box,606,515080
 Wings of the Captain - Booster Box Case,5862,515081
 Monkey.D.Luffy (OP06-013),12,539277
 Monkey.D.Luffy (Alternate Art) (OP06-013),29,539278
@@ -2506,7 +2506,7 @@ O-Nami (OP06-101),12,539491
 O-Nami (Alternate Art) (OP06-101),54,539492
 Kouzuki Momonosuke (OP06-107),12,539499
 Kouzuki Momonosuke (Alternate Art) (OP06-107),15,539500
-Kouzuki Hiyori (OP06-106),21,539501
+Kouzuki Hiyori (OP06-106),22,539501
 Kouzuki Hiyori (Alternate Art) (OP06-106),86,539502
 Kikunojo (OP06-104),12,539503
 You're the One Who Should Disappear (OP06-115),12,539504
@@ -2522,7 +2522,7 @@ Camie (Alternate Art) (OP06-025),12,539789
 Vinsmoke Reiju (042) (OP06-042),12,541006
 Vinsmoke Reiju (042) (Alternate Art) (OP06-042),96,541007
 Perona (021) (OP06-021),12,541043
-Perona (021) (Alternate Art) (OP06-021),128,541044
+Perona (021) (Alternate Art) (OP06-021),130,541044
 Ryuma (OP06-036),12,541045
 You Ain't Even Worth Killing Time!! (OP06-039),12,541046
 Charlotte Pudding (OP06-047),12,541047
@@ -2542,12 +2542,12 @@ Perona (093) (Alternate Art) (OP06-093),79,541060
 Vinsmoke Judge (OP06-062),12,541061
 Vinsmoke Judge (Alternate Art) (OP06-062),12,541062
 Vinsmoke Reiju (069) (OP06-069),12,541063
-Vinsmoke Reiju (069) (Alternate Art) (OP06-069),55,541064
+Vinsmoke Reiju (069) (Alternate Art) (OP06-069),53,541064
 Zephyr (Navy) (OP06-074),12,541065
 Dr. Hogback (OP06-090),12,541066
 Brook (OP06-092),12,541067
 Vinsmoke Ichiji (061) (OP06-061),12,541068
-Vinsmoke Ichiji (061) (Alternate Art) (OP06-061),16,541069
+Vinsmoke Ichiji (061) (Alternate Art) (OP06-061),17,541069
 Vinsmoke Niji (065) (OP06-065),12,541070
 Vinsmoke Yonji (067) (OP06-067),12,541071
 Gum-Gum King Kong Gatling (OP06-018),12,541072
@@ -2632,16 +2632,16 @@ Raizo (OP06-112),12,541655
 Raki (OP06-113),12,541656
 Wyper (OP06-114),12,541657
 The Ark Maxim (OP06-117),12,541658
-Roronoa Zoro (Alternate Art) (OP06-118),212,541659
+Roronoa Zoro (Alternate Art) (OP06-118),210,541659
 Roronoa Zoro (Alternate Art) (Manga) (OP06-118),3991,541660
-Roronoa Zoro (OP06-118),28,541661
+Roronoa Zoro (OP06-118),29,541661
 Sanji (OP06-119),15,541662
-Sanji (Alternate Art) (OP06-119),63,541663
+Sanji (Alternate Art) (OP06-119),61,541663
 Nami (TR) (ST01-007),584,541664
 Buggy (SP) (OP03-008),397,541665
 Charlotte Linlin (SP) (OP03-114),163,541666
 Sugar (SP) (OP04-024),187,541667
-Ms. All Sunday (SP) (OP04-064),659,541668
+Ms. All Sunday (SP) (OP04-064),668,541668
 Borsalino (SP) (OP05-051),100,541669
 Rebecca (SP) (OP05-091),311,541670
 DON!! Card (Alternate Art),12,541671
@@ -2732,11 +2732,11 @@ One Piece Card Game: English Version 1st Anniversary Set (Sealed Promotional Bun
 Devil Fruits Collection Vol. 2,182,593446
 Devil Fruits Collection Vol. 2 Case,,593447
 One Piece Japanese Version 2nd Anniversary Set (Sealed Promotional Bundle),1588,617585
-One Piece English Version 2nd Anniversary Set (Sealed Promotional Bundle),2623,635482
+One Piece English Version 2nd Anniversary Set (Sealed Promotional Bundle),2594,635482
 Devil Fruits Collection Vol. 3,96,649748
 Devil Fruits Collection Vol. 3 Case,,649749
 One Piece Japanese Version 3rd Anniversary Set (Sealed Promotional Bundle),,680488
-Memorial Collection - Booster Pack,56,521160
+Memorial Collection - Booster Pack,55,521160
 Memorial Collection - Booster Box,1779,521161
 Memorial Collection - Booster Box Case,10225,521162
 Kouzuki Oden (EB01-001),12,544523
@@ -2746,7 +2746,7 @@ Kid & Killer (EB01-003),12,544526
 Kid & Killer (Alternate Art) (EB01-003),40,544527
 Koza (EB01-004),12,544528
 Doma (EB01-005),12,544529
-Tony Tony.Chopper (EB01-006),40,544530
+Tony Tony.Chopper (EB01-006),41,544530
 Tony Tony.Chopper (Alternate Art) (EB01-006),137,544531
 Tony Tony.Chopper (Alternate Art) (Manga) (EB01-006),4085,544532
 Yamato (EB01-007),12,544533
@@ -2757,7 +2757,7 @@ Mini-Merry (EB01-011),12,544537
 Cavendish (EB01-012),12,544538
 Cavendish (Alternate Art) (EB01-012),78,544539
 Kouzuki Hiyori (EB01-013),12,544540
-Kouzuki Hiyori (Alternate Art) (EB01-013),46,544541
+Kouzuki Hiyori (Alternate Art) (EB01-013),45,544541
 Sanji (EB01-014),12,544542
 Scratchmen Apoo (EB01-015),12,544543
 Bingoh (EB01-016),12,544544
@@ -2766,7 +2766,7 @@ Mountain God (EB01-018),12,544546
 Off-White (EB01-019),12,544547
 Chambres (EB01-020),12,544548
 Hannyabal (EB01-021),12,544549
-Hannyabal (Alternate Art) (EB01-021),41,544550
+Hannyabal (Alternate Art) (EB01-021),39,544550
 Inazuma (EB01-022),12,544551
 Inazuma (Alternate Art) (EB01-022),28,544552
 Edward Weevil (EB01-023),12,544553
@@ -2783,7 +2783,7 @@ Kalifa (Alternate Art) (EB01-031),13,544563
 Army Wolves (EB01-032),12,544564
 Blueno (033) (EB01-033),12,544565
 Ms. Wednesday (EB01-034),12,544566
-Ms. Wednesday (Alternate Art) (EB01-034),33,544567
+Ms. Wednesday (Alternate Art) (EB01-034),32,544567
 Ms. Monday (EB01-035),12,544568
 Minochihuahua (EB01-036),12,544569
 Mr. 9 (EB01-037),12,544570
@@ -2797,16 +2797,16 @@ Spandine (EB01-043),12,544577
 Funkfreed (EB01-044),12,544578
 Brook (045) (EB01-045),12,544579
 Brook (046) (EB01-046),12,544580
-Brook (046) (Alternate Art) (EB01-046),80,544581
+Brook (046) (Alternate Art) (EB01-046),79,544581
 Laboon (047) (EB01-047),12,544582
 Laboon (048) (EB01-048),12,544583
-Laboon (048) (Alternate Art) (EB01-048),129,544584
+Laboon (048) (Alternate Art) (EB01-048),130,544584
 T-Bone (EB01-049),12,544585
 T-Bone (Alternate Art) (EB01-049),19,544586
 ...I Want to Live!! (EB01-050),12,544587
 Finger Pistol (EB01-051),12,544588
 Viola (EB01-052),17,544589
-Viola (Alternate Art) (EB01-052),44,544590
+Viola (Alternate Art) (EB01-052),45,544590
 Gastino (EB01-053),12,544591
 Gan.Fall (EB01-054),12,544592
 Charlotte Compote (EB01-055),12,544593
@@ -2817,7 +2817,7 @@ Shirahoshi (Alternate Art) (EB01-057),31,544597
 Mont Blanc Cricket (EB01-058),12,544598
 Kingdom Come (EB01-059),12,544599
 Did Someone Say...Kami? (EB01-060),12,544600
-Mr.2.Bon.Kurei (Bentham) (EB01-061),51,544601
+Mr.2.Bon.Kurei (Bentham) (EB01-061),50,544601
 Mr.2.Bon.Kurei (Bentham) (Alternate Art) (EB01-061),354,544602
 Starter Deck 12: Zoro and Sanji,72,536585
 Starter Deck 12: Zoro and Sanji Display,,536586
@@ -2875,9 +2875,9 @@ Portgas.D.Ace (011) (Parallel) (ST13-011),23,543632
 Makino (Parallel) (ST13-012),12,543633
 Monkey.D.Garp (Parallel) (ST13-013),15,543634
 Monkey.D.Luffy (014) (Parallel) (ST13-014),21,543635
-Monkey.D.Luffy (015) (Parallel) (ST13-015),46,543636
+Monkey.D.Luffy (015) (Parallel) (ST13-015),45,543636
 Yamato (Parallel) (ST13-016),24,543637
-Awakening of the New Era - 1st Anniversary Tournament Pack,107,520771
+Awakening of the New Era - 1st Anniversary Tournament Pack,105,520771
 Inazuma (OP05-003),41,530887
 Emporio.Ivankov (OP05-004),67,530889
 Chaka (OP05-008),20,530890
@@ -2939,7 +2939,7 @@ Riku Doldo III (OP05-090),12,530946
 Saint Rosward (OP05-092),12,530947
 Dragon Claw (OP05-095),12,530948
 I Bid 500 Million!! (OP05-096),,530949
-Mary Geoise (OP05-097),21,530950
+Mary Geoise (OP05-097),20,530950
 Amazon (OP05-099),,530951
 Kotori (OP05-103),12,530952
 Conis (OP05-104),25,530953
@@ -2955,7 +2955,7 @@ Hino Bird Zap (OP05-116),12,530962
 Upper Yard (OP05-117),13,530963
 500 Years in the Future - Booster Pack,16,532104
 500 Years in the Future - Sleeved Booster Pack,68,532105
-500 Years in the Future - Booster Box,583,532106
+500 Years in the Future - Booster Box,582,532106
 500 Years in the Future - Booster Box Case,6472,532107
 Monkey.D.Dragon (001) (OP07-001),12,545778
 Monkey.D.Dragon (001) (Parallel) (OP07-001),49,545779
@@ -2974,7 +2974,7 @@ Porchemy (OP07-012),12,545791
 Masked Deuce (OP07-013),12,545792
 Moda (OP07-014),12,545793
 Monkey.D.Dragon (015) (OP07-015),12,545794
-Monkey.D.Dragon (015) (Parallel) (OP07-015),37,545795
+Monkey.D.Dragon (015) (Parallel) (OP07-015),38,545795
 Galaxy Wink (OP07-016),12,545796
 Dragon Breath (OP07-017),12,545797
 Keep Out (OP07-018),12,545798
@@ -2988,7 +2988,7 @@ Caribou (OP07-023),12,545805
 Koala (OP07-024),12,545806
 Coribou (OP07-025),12,545807
 Jewelry Bonney (026) (OP07-026),12,545808
-Jewelry Bonney (026) (Parallel) (OP07-026),59,545809
+Jewelry Bonney (026) (Parallel) (OP07-026),57,545809
 Jinbe (027) (OP07-027),12,545810
 Scratchmen Apoo (OP07-028),12,545811
 Basil Hawkins (OP07-029),12,545812
@@ -3019,7 +3019,7 @@ Donquixote Doflamingo (OP07-048),12,545836
 Buckin (OP07-049),12,545837
 Boa Sandersonia (OP07-050),12,545838
 Boa Hancock (051) (OP07-051),12,545839
-Boa Hancock (051) (Parallel) (OP07-051),71,545840
+Boa Hancock (051) (Parallel) (OP07-051),69,545840
 Boa Hancock (051) (Parallel) (Manga) (OP07-051),3599,545841
 Boa Marigold (OP07-052),12,545842
 Portgas.D.Ace (053) (OP07-053),12,545843
@@ -3098,13 +3098,13 @@ I Re-Quasar Helllp!! (OP07-115),12,545915
 Blaze Slice (OP07-116),12,545916
 Egghead (OP07-117),12,545917
 Sabo (OP07-118),12,545918
-Sabo (Parallel) (OP07-118),24,545919
+Sabo (Parallel) (OP07-118),23,545919
 Portgas.D.Ace (119) (OP07-119),12,545920
 Portgas.D.Ace (119) (Parallel) (OP07-119),33,545921
 Okiku (SP) (OP01-035),140,545922
 Donquixote Doflamingo (SP) (OP01-073),241,545923
 Izo (SP) (OP03-003),140,545924
-Issho (SP) (OP03-078),102,545925
+Issho (SP) (OP03-078),101,545925
 "Eustass""Captain""Kid (SP) (OP05-074)",176,545926
 O-Nami (SP) (OP06-101),748,545927
 Double Pack Set Volume 4,99,549493
@@ -3193,12 +3193,12 @@ Nekomamushi (OP06-110),12,541750
 Wyper (OP06-114),12,541751
 Two Legends - Booster Pack,15,542502
 Two Legends - Sleeved Booster Pack,37,542503
-Two Legends - Booster Box,446,542504
+Two Legends - Booster Box,443,542504
 Two Legends - Booster Box Case,3812,542505
 Portgas.D.Ace (SP) (OP02-013),681,558019
 Charlotte Pudding (SP) (OP03-112),256,558020
 Tony Tony.Chopper (001) (OP08-001),12,558021
-Tony Tony.Chopper (001) (Parallel) (OP08-001),127,558022
+Tony Tony.Chopper (001) (Parallel) (OP08-001),126,558022
 Marco (OP08-002),12,558023
 Marco (Parallel) (OP08-002),40,558024
 Twenty Doctors (OP08-003),12,558025
@@ -3206,7 +3206,7 @@ Kuromarimo (OP08-004),12,558026
 Chess (OP08-005),12,558027
 Chessmarimo (OP08-006),12,558028
 Tony Tony.Chopper (007) (OP08-007),12,558029
-Tony Tony.Chopper (0070) (Parallel) (OP08-007),39,558030
+Tony Tony.Chopper (0070) (Parallel) (OP08-007),45,558030
 Dalton (OP08-008),12,558031
 Maria Onion Bear (OP08-009),12,558032
 Hiking Bear (OP08-010),12,558033
@@ -3225,7 +3225,7 @@ Carrot (021) (OP08-021),12,558045
 Carrot (021) (Parallel) (OP08-021),78,558046
 Inuarashi (OP08-022),12,558047
 Carrot (023) (OP08-023),12,558048
-Carrot (023) (Parallel) (OP08-023),51,558049
+Carrot (023) (Parallel) (OP08-023),50,558049
 Concelot (OP08-024),12,558050
 Shishilian (OP08-025),12,558051
 Giovanni (OP08-026),12,558052
@@ -3265,7 +3265,7 @@ Moby Dick (OP08-056),12,558085
 King (057) (OP08-057),12,558086
 King (057) (Parallel) (OP08-057),32,558087
 Charlotte Pudding (058) (OP08-058),12,558088
-Charlotte Pudding (058) (Parallel) (OP08-058),74,558089
+Charlotte Pudding (058) (Parallel) (OP08-058),75,558089
 Alber (OP08-059),12,558090
 King (060) (OP08-060),12,558091
 Charlotte Oven (OP08-061),12,558092
@@ -3312,7 +3312,7 @@ Iron Body Fang Flash (OP08-095),12,558132
 People's Dreams Don't Ever End!! (OP08-096),12,558133
 Heliceratops (OP08-097),12,558134
 Kalgara (098) (OP08-098),12,558135
-Kalgara (098) (Parallel) (OP08-098),50,558136
+Kalgara (098) (Parallel) (OP08-098),48,558136
 Kalgara (099) (OP08-099),12,558137
 South Bird (OP08-100),12,558138
 Charlotte Angel (OP08-101),12,558139
@@ -3322,7 +3322,7 @@ Charlotte Poire (OP08-104),12,558142
 Jewelry Bonney (OP08-105),12,558143
 Jewelry Bonney (Parallel) (OP08-105),31,558144
 Nami (OP08-106),12,558145
-Nami (Parallel) (OP08-106),74,558146
+Nami (Parallel) (OP08-106),72,558146
 Nitro (OP08-107),12,558147
 Mont Blanc Cricket (OP08-108),12,558148
 Mont Blanc Noland (OP08-109),12,558149
@@ -3336,7 +3336,7 @@ S-Hawk (OP08-114),12,558156
 The Earth Will Not Lose! (OP08-115),12,558157
 Burn Bazooka (OP08-116),12,558158
 Burn Blade (OP08-117),12,558159
-Silvers Rayleigh (OP08-118),13,558160
+Silvers Rayleigh (OP08-118),14,558160
 Silvers Rayleigh (Parallel) (OP08-118),46,558161
 Silvers Rayleigh (Parallel) (Manga) (OP08-118),1363,558162
 Kaido & Linlin (OP08-119),12,558163
@@ -3345,10 +3345,10 @@ Jewelry Bonney (SP) (ST02-007),550,558165
 Gecko Moria (SP) (ST03-004),124,558166
 Queen (SP) (ST04-005),132,558167
 Tashigi (SP) (ST06-006),210,558168
-Double Pack Set Volume 5,63,561689
+Double Pack Set Volume 5,64,561689
 Double Pack Set Volume 5 Display,346,561690
 Double Pack Set Volume 5 Display Case,,561691
-Monkey.D.Luffy (TR) (OP07-109),331,564551
+Monkey.D.Luffy (TR) (OP07-109),320,564551
 DON!! Card (Shattered) (Double Pack Set Vol. 5),12,576484
 DON!! Card (Silhouette) (Double Pack Set Vol. 5),12,576485
 DON!! Card (Alternate Art),12,577568
@@ -3471,8 +3471,8 @@ Charlotte Brulee (ST20-003),12,581063
 Charlotte Pudding (ST20-004) (ST20-004),12,581064
 Charlotte Linlin (ST20-005),12,581065
 Premium Booster - Booster Pack,68,545398
-Premium Booster - Booster Box,1900,545399
-Premium Booster - Booster Box Case,13122,545400
+Premium Booster - Booster Box,1894,545399
+Premium Booster - Booster Box Case,13497,545400
 Monkey.D.Luffy (OP01-024) (Alternate Art) (OP01-024),67,586178
 Tony Tony.Chopper (ST01-006) (Jolly Roger Foil) (ST01-006),12,586180
 DON!! Card (Uta) (Gold),382,586181
@@ -3496,14 +3496,14 @@ Sanji's Pilaf (Jolly Roger Foil) (OP03-056),12,586201
 DON!! Card (Oden) (Gold),92,586202
 Nami (P-053) (Jolly Roger Foil) (P-053),12,586408
 Monkey.D.Luffy (P-055) (Jolly Roger Foil) (P-055),12,586480
-DON!! Card (Katakuri) (Gold),194,586481
+DON!! Card (Katakuri) (Gold),193,586481
 DON!! Card (Magellan) (Gold),99,586482
 "Capone""Gang""Bege (OP04-100) (Jolly Roger Foil) (OP04-100)",12,586483
 "Capone""Gang""Bege (OP04-100) (Alternate Art) (OP04-100)",21,586484
 Kaido (OP04-044) (Reprint) (OP04-044),12,586543
 Kaido (OP04-044) (Alternate Art) (OP04-044),29,586544
 Ulti (Alternate Art) (OP05-043),30,586545
-Kouzuki Hiyori (Alternate Art) (OP06-106),273,586547
+Kouzuki Hiyori (Alternate Art) (OP06-106),275,586547
 Boa Hancock (OP01-078) (Alternate Art) (OP01-078),87,586548
 Dracule Mihawk (OP01-070) (Alternate Art) (OP01-070),49,586549
 DON!! Card (Rebecca) (Gold),221,586550
@@ -3520,7 +3520,7 @@ Izo (OP01-033) (Jolly Roger Foil) (OP01-033),12,586589
 Kouzuki Momonosuke (Jolly Roger Foil) (OP01-041),12,586590
 Kouzuki Momonosuke (Alternate Art) (OP01-041),22,586591
 One-Legged Toy Soldier (Jolly Roger Foil) (OP05-081),12,586592
-Gecko Moria (Alternate Art) (OP06-086),46,586593
+Gecko Moria (Alternate Art) (OP06-086),47,586593
 Charlotte Cracker (Alternate Art) (OP03-108),12,586594
 Charlotte Smoothie (Jolly Roger Foil) (OP03-110),12,586595
 Charlotte Smoothie (Alternate Art) (OP03-110),17,586596
@@ -3531,7 +3531,7 @@ Hound Blaze (Alternate Art) (OP05-057),68,586600
 Hound Blaze (Jolly Roger Foil) (OP05-057),12,586601
 Bartolomeo (OP04-089) (Alternate Art) (OP04-089),22,586602
 Bartolomeo (OP04-089) (Jolly Roger Foil) (OP04-089),12,586603
-Shirahoshi (OP05-082) (Full Art) (OP05-082),91,586604
+Shirahoshi (OP05-082) (Full Art) (OP05-082),89,586604
 Shirahoshi (OP05-082) (Jolly Roger Foil) (OP05-082),12,586606
 Sanji (PRB01-001) (PRB01-001),12,586607
 Sanji (PRB01-001) (Alternate Art) (PRB01-001),365,586608
@@ -3546,7 +3546,7 @@ Satori (Alternate Art) (OP05-105),41,586804
 Satori (Jolly Roger Foil) (OP05-105),12,586805
 Two-Hundred Million Volts Amaru (Alternate Art) (OP05-115),46,586806
 Two-Hundred Million Volts Amaru (Jolly Roger Foil) (OP05-115),12,586807
-Yamato (OP04-112) (Alternate Art) (OP04-112),188,586808
+Yamato (OP04-112) (Alternate Art) (OP04-112),187,586808
 Upper Yard (Jolly Roger Foil) (OP05-117),12,586809
 DON!! Card (Yamato) (Gold),279,586810
 DON!! Card (Sabo) (Gold),170,586884
@@ -3584,7 +3584,7 @@ Kingdom of GERMA (Jolly Roger Foil) (OP06-079),12,587575
 DON!! Card (Enel) (Gold),222,587705
 DON!! Card (Luffy) (Gold),372,587706
 Shanks (Manga) (OP01-120),1606,587708
-Portgas.D.Ace (Manga) (OP02-013),1518,587709
+Portgas.D.Ace (Manga) (OP02-013),1575,587709
 Sogeking (Manga) (OP03-122),883,587710
 DON!! Card (Big Mom) (Gold),113,587954
 DON!! Card (Whitebeard) (Gold),129,587955
@@ -3594,7 +3594,7 @@ Trafalgar Law (OP05-069) (Manga) (OP05-069),1587,587959
 "Eustass""Captain""Kid (OP05-074) (Manga) (OP05-074)",998,587960
 Tony Tony.Chopper (EB01-006) (Manga) (EB01-006),3072,587962
 Monkey.D.Luffy (OP05-119) (Manga) (OP05-119),6133,587963
-Roronoa Zoro (Manga) (OP06-118),2027,587964
+Roronoa Zoro (Manga) (OP06-118),2300,587964
 Nami (OP01-016) (Manga) (OP01-016),3484,587966
 Otama (Full Art) (OP01-006),21,593270
 Radical Beam!! (Jolly Roger Foil) (OP01-029),12,593272
@@ -3605,7 +3605,7 @@ Raizo (Jolly Roger Foil) (OP01-052),12,593291
 Raizo (Full Art) (OP01-052),12,593292
 Makino (Jolly Roger Foil) (OP02-015),12,593295
 Makino (Full Art) (OP02-015),20,593296
-Marco (Full Art) (OP02-018),19,593297
+Marco (Full Art) (OP02-018),20,593297
 Tsuru (Jolly Roger Foil) (OP02-106),12,593299
 Tsuru (Full Art) (OP02-106),12,593300
 Ice Age (Jolly Roger Foil) (OP02-117),12,593302
@@ -3628,21 +3628,21 @@ Bartolomeo (OP04-089) (Full Art) (OP04-089),12,593431
 Barrier!! (Jolly Roger Foil) (OP04-095),12,593432
 "Capone""Gang""Bege (OP04-100) (Full Art) (OP04-100)",12,593433
 Nico Robin (Jolly Roger Foil) (OP05-010),12,593434
-Nico Robin (Full Art) (OP05-010),72,593435
-Belo Betty (Full Art) (OP05-015),31,593436
+Nico Robin (Full Art) (OP05-010),71,593435
+Belo Betty (Full Art) (OP05-015),33,593436
 Baby 5 (OP05-034) (Alternate Art) (OP05-034),27,593437
 Baby 5 (OP04-032) (Jolly Roger Foil) (OP04-032),12,593438
 Baby 5 (OP04-032) (Full Art) (OP04-032),12,593439
 Miss Doublefinger(Zala) (Jolly Roger Foil) (OP05-073),12,593464
 Miss Doublefinger(Zala) (Full Art) (OP05-073),29,593465
 One-Legged Toy Soldier (Full Art) (OP05-081),21,593469
-One-Legged Toy Soldier (Alternate Art) (OP05-081),73,593470
+One-Legged Toy Soldier (Alternate Art) (OP05-081),72,593470
 Shirahoshi (OP05-082) (Alternate Art) (OP05-082),231,593472
 Shirahoshi (OP03-116) (Jolly Roger Foil) (OP03-116),12,593473
 Shirahoshi (OP03-116) (Full Art) (OP03-116),34,593474
 Satori (Full Art) (OP05-105),12,593476
 El Thor (Jolly Roger Foil) (OP05-114),12,593477
-Upper Yard (Alternate Art) (OP05-117),79,593479
+Upper Yard (Alternate Art) (OP05-117),78,593479
 Kaido (OP05-118) (Alternate Art) (OP05-118),167,593480
 Emporio.Ivankov (Jolly Roger Foil) (OP06-003),12,593482
 Emporio.Ivankov (Full Art) (OP06-003),35,593483
@@ -3662,7 +3662,7 @@ Vinsmoke Yonji (OP06-066) (Jolly Roger Foil) (OP06-066),12,593553
 Vinsmoke Yonji (OP06-066) (Full Art) (OP06-066),12,593554
 Vinsmoke Yonji (OP06-067) (Full Art) (OP06-067),12,593555
 Vinsmoke Reiju (OP06-068) (Jolly Roger Foil) (OP06-068),12,593558
-Vinsmoke Reiju (OP06-068) (Full Art) (OP06-068),93,593559
+Vinsmoke Reiju (OP06-068) (Full Art) (OP06-068),94,593559
 Kingdom of GERMA (Alternate Art) (OP06-079),71,593561
 Victoria Cindry (Jolly Roger Foil) (OP06-091),12,593562
 Victoria Cindry (Full Art) (OP06-091),115,593563
@@ -3671,10 +3671,10 @@ Inuarashi (Full Art) (OP06-100),12,593565
 Nekomamushi (Jolly Roger Foil) (OP06-110),12,593567
 Nekomamushi (Full Art) (OP06-110),13,593568
 Wyper (Jolly Roger Foil) (OP06-114),12,593569
-Wyper (Full Art) (OP06-114),27,593570
+Wyper (Full Art) (OP06-114),26,593570
 Koby (Full Art) (P-014),38,593571
 Nami (P-053) (Full Art) (P-053),83,593572
-Monkey.D.Luffy (P-055) (Full Art) (P-055),127,593573
+Monkey.D.Luffy (P-055) (Full Art) (P-055),125,593573
 Tony Tony.Chopper (ST01-006) (Full Art) (ST01-006),92,593574
 Tony Tony.Chopper (ST01-006) (Alternate Art) (ST01-006),77,593575
 Guard Point (Jolly Roger Foil) (ST01-014),12,593576
@@ -3702,7 +3702,7 @@ DON!! Card (Ace),20,593801
 DON!! Card (Big Mom),12,593802
 DON!! Card (Big Mom),12,593802
 DON!! Card (Crocodile),12,593803
-DON!! Card (Crocodile),14,593803
+DON!! Card (Crocodile),15,593803
 DON!! Card (Donquixote Doflamingo),12,593804
 DON!! Card (Donquixote Doflamingo),18,593804
 DON!! Card (Enel),17,593805
@@ -3745,7 +3745,7 @@ DON!! Card (Sabo),12,593823
 DON!! Card (Sabo),12,593823
 DON!! Card (Sakazuki),12,593824
 DON!! Card (Sakazuki),12,593824
-DON!! Card (Trafalgar Law),26,593825
+DON!! Card (Trafalgar Law),27,593825
 DON!! Card (Trafalgar Law),12,593825
 DON!! Card (Uta),12,593826
 DON!! Card (Uta),20,593826
@@ -3907,14 +3907,14 @@ Pythagoras (OP07-105),19,552128
 Roronoa Zoro (113) (OP07-113),16,552129
 He Possesses the World's Most Brilliant Mind (OP07-114),12,552130
 Emperors in the New World - Booster Pack,29,563833
-Emperors in the New World - Booster Box,1230,563834
+Emperors in the New World - Booster Box,1228,563834
 Emperors in the New World - Booster Box Case,12428,563835
 Double Pack Set Volume 6,175,563842
 Double Pack Set Volume 6 Display,785,563843
 Donquixote Rosinante (SP) (OP04-119),373,596912
 Zoro-Juurou (SP) (OP05-067),1126,596913
-Rob Lucci (SP) (OP05-093),257,596914
-Monkey.D.Luffy (Wanted Poster) (OP05-119),1564,596915
+Rob Lucci (SP) (OP05-093),258,596914
+Monkey.D.Luffy (Wanted Poster) (OP05-119),1574,596915
 Monkey.D.Dragon (SP) (OP07-015),434,596916
 Boa Hancock (SP) (OP07-051),1467,596917
 Nami (SP) (OP08-106),1910,596918
@@ -3925,14 +3925,14 @@ Uta (Parallel) (OP09-002),12,596922
 Shachi & Penguin (OP09-003),12,596923
 Shanks (004) (OP09-004),12,596924
 Shanks (004) (Manga) (OP09-004),2491,596925
-Shanks (004) (Alternate Art) (OP09-004),47,596926
+Shanks (004) (Alternate Art) (OP09-004),46,596926
 Shanks (004) (Wanted Poster) (OP09-004),623,596927
 Silvers Rayleigh (OP09-005),12,596928
 Howling Gab (OP09-006),12,596929
 Heat (OP09-007),12,596930
 Building Snake (OP09-008),12,596931
 Benn.Beckman (OP09-009),12,596932
-Benn.Beckman (Parallel) (OP09-009),33,596933
+Benn.Beckman (Parallel) (OP09-009),34,596933
 Bonk Punch (OP09-010),12,596934
 Hongo (OP09-011),12,596935
 Monster (OP09-012),12,596936
@@ -4002,7 +4002,7 @@ Nico Robin (062) (Parallel) (OP09-062),147,596999
 Usopp (063) (OP09-063),12,597000
 Killer (OP09-064),12,597001
 Sanji (065) (OP09-065),12,597002
-Sanji (065) (Parallel) (OP09-065),25,597003
+Sanji (065) (Parallel) (OP09-065),24,597003
 Jean Bart (OP09-066),12,597004
 Jinbe (OP09-067),12,597005
 Tony Tony.Chopper (068) (OP09-068),12,597006
@@ -4021,7 +4021,7 @@ Gum-Gum Giant (OP09-078),12,597018
 Gum-Gum Jump Rope (OP09-079),12,597019
 Thousand Sunny (OP09-080),12,597020
 Marshall.D.Teach (081) (OP09-081),12,597021
-Marshall.D.Teach (081) (Parallel) (OP09-081),69,597022
+Marshall.D.Teach (081) (Parallel) (OP09-081),67,597022
 Avalo Pizarro (OP09-082),12,597023
 Van Augur (OP09-083),12,597024
 Catarina Devon (OP09-084),12,597025
@@ -4052,7 +4052,7 @@ Sabo (104) (OP09-104),12,597049
 Sanji (105) (OP09-105),12,597050
 Nico Olvia (OP09-106),12,597051
 Nico Robin (107) (OP09-107),12,597052
-Nico Robin (107) (Parallel) (OP09-107),110,597053
+Nico Robin (107) (Parallel) (OP09-107),109,597053
 Bartholomew Kuma (OP09-108),12,597054
 Jaguar.D.Saul (OP09-109),12,597055
 Pierre (OP09-110),12,597056
@@ -4063,13 +4063,13 @@ Lindbergh (OP09-114),12,597060
 Ice Block Partisan (OP09-115),12,597061
 Never Underestimate the Power of Miracles!! (OP09-116),12,597062
 Dereshi! (OP09-117),12,597063
-Gol.D.Roger (OP09-118),60,597064
+Gol.D.Roger (OP09-118),58,597064
 Gol.D.Roger (Manga) (OP09-118),8073,597065
-Gol.D.Roger (Alternate Art) (OP09-118),131,597066
+Gol.D.Roger (Alternate Art) (OP09-118),133,597066
 Monkey.D.Luffy (119) (OP09-119),17,597067
 Monkey.D.Luffy (119) (Manga) (OP09-119),3129,597068
 Monkey.D.Luffy (119) (Alternate Art) (OP09-119),73,597069
-Zoro-Juurou (ST18-004) (ST18-004),172,600658
+Zoro-Juurou (ST18-004) (ST18-004),170,600658
 DON!! Card (Alternate Art),12,604246
 DON!! Card (Buggy) (Double Pack Set Vol. 6),12,605125
 DON!! Card (Blackbeard) (Double Pack Set Vol. 6),12,605126
@@ -4089,7 +4089,7 @@ Sanji (028) (OP09-028),12,600723
 Tony Tony.Chopper (OP09-029),12,600724
 Nico Robin (033) (OP09-033),16,600725
 Monkey.D.Luffy (036) (OP09-036),22,600726
-Rob Lucci (038) (OP09-038),,600727
+Rob Lucci (038) (OP09-038),12,600727
 Soul Franky Swing Arm Boxing Solid (OP09-041),12,600728
 Kouzuki Oden (OP09-047),12,600729
 Jozu (OP09-049),12,600730
@@ -4228,19 +4228,19 @@ S-Shark (OP08-111),12,576480
 Burn Blade (OP08-117),12,576481
 Two Legends - Pre-Release Pack,12,577144
 Royal Blood Booster Pack,15,586670
-Royal Blood Booster Box,431,586671
+Royal Blood Booster Box,437,586671
 Royal Blood Booster Box Case,4767,586673
 Charlotte Flampe (SP) (EB01-056),104,617028
 Urouge (SP) (OP07-021),90,617029
 Smoker (001) (OP10-001),12,617030
-Smoker (001) (Parallel) (OP10-001),47,617031
+Smoker (001) (Parallel) (OP10-001),46,617031
 Caesar Clown (002) (OP10-002),12,617032
-Caesar Clown (002) (Parallel) (OP10-002),26,617033
+Caesar Clown (002) (Parallel) (OP10-002),25,617033
 Sugar (003) (OP10-003),12,617034
 Sugar (003) (Parallel) (OP10-003),42,617035
 Vergo (OP10-004),12,617036
-Sanji (OP10-005),12,617037
-Sanji (Parallel) (OP10-005),40,617038
+Sanji (OP10-005),13,617037
+Sanji (Parallel) (OP10-005),41,617038
 Caesar Clown (006) (OP10-006),12,617039
 Ceaser Soldier (OP10-007),12,617040
 Scotch (OP10-008),12,617041
@@ -4256,7 +4256,7 @@ Monet (Parallel) (OP10-016),12,617050
 Rock (OP10-017),12,617051
 Ten-Layer Igloo (OP10-018),12,617052
 Divine Departure (OP10-019),12,617053
-Divine Departure (Parallel) (OP10-019),165,617054
+Divine Departure (Parallel) (OP10-019),166,617054
 Gum-Gum UFO (OP10-020),12,617055
 Punk Hazard (OP10-021),12,617056
 Trafalgar Law (022) (OP10-022),12,617057
@@ -4288,7 +4288,7 @@ Usopp (042) (Parallel) (OP10-042),65,617082
 Moocy (OP10-043),12,617083
 Cub (OP10-044),12,617084
 Cavendish (045) (OP10-045),12,617085
-Cavendish (045) (Parallel) (OP10-045),67,617086
+Cavendish (045) (Parallel) (OP10-045),68,617086
 Kyros (OP10-046),12,617087
 Kyros (Parallel) (OP10-046),12,617088
 Koala (OP10-047),12,617089
@@ -4303,7 +4303,7 @@ Marco (OP10-055),12,617097
 Mansherry (OP10-056),12,617098
 Leo (OP10-057),12,617099
 Rebecca (OP10-058),12,617100
-Rebecca (Parallel) (OP10-058),34,617101
+Rebecca (Parallel) (OP10-058),33,617101
 Fo...llow...Me...and...I...Will...Gui...de...You (OP10-059),12,617102
 Barrier-Barrier Pistol (OP10-060),12,617103
 Special Long-Range Attack!! Bagworm (OP10-061),12,617104
@@ -4317,10 +4317,10 @@ Senor Pink (Parallel) (OP10-067),12,617111
 Diamante (OP10-068),12,617112
 Fighting Fish (OP10-069),12,617113
 Trebol (OP10-070),12,617114
-Donquixote Doflamingo (OP10-071),16,617115
-Donquixote Doflamingo (Parallel) (OP10-071),59,617116
+Donquixote Doflamingo (OP10-071),17,617115
+Donquixote Doflamingo (Parallel) (OP10-071),60,617116
 Donquixote Rosinante (OP10-072),12,617117
-Donquixote Rosinante (Parallel) (OP10-072),63,617118
+Donquixote Rosinante (Parallel) (OP10-072),62,617118
 Buffalo (OP10-073),12,617119
 Pica (OP10-074),12,617120
 Foxy (OP10-075),12,617121
@@ -4350,7 +4350,7 @@ There's No Longer Any Need for the Seven Warlords of the Sea!!! (OP10-096),12,61
 Gum-Gum Rhino Schneider (OP10-097),12,617145
 Liberation (OP10-098),12,617146
 "Eustass""Captain""Kid (099) (OP10-099)",12,617147
-"Eustass""Captain""Kid (099) (Parallel) (OP10-099)",85,617148
+"Eustass""Captain""Kid (099) (Parallel) (OP10-099)",84,617148
 Inazuma (OP10-100),12,617149
 Urouge (OP10-101),12,617150
 Emporio.Ivankov (OP10-102),12,617151
@@ -4363,7 +4363,7 @@ Scratchmen Apoo (OP10-108),12,617157
 Basil Hawkins (OP10-109),12,617158
 Heat & Wire (OP10-110),12,617159
 Monkey.D.Luffy (111) (OP10-111),12,617160
-Monkey.D.Luffy (111) (Parallel) (OP10-111),25,617161
+Monkey.D.Luffy (111) (Parallel) (OP10-111),24,617161
 "Eustass""Captain""Kid (112) (OP10-112)",12,617162
 "Eustass""Captain""Kid (112) (Parallel) (OP10-112)",53,617163
 Roronoa Zoro (113) (OP10-113),12,617164
@@ -4374,18 +4374,18 @@ ROOM (OP10-117),12,617168
 Monkey.D.Luffy (118) (OP10-118),13,617169
 Monkey.D.Luffy (118) (Parallel) (OP10-118),139,617170
 Trafalgar Law (119) (OP10-119),12,617171
-Trafalgar Law (119) (Parallel) (OP10-119),74,617172
+Trafalgar Law (119) (Parallel) (OP10-119),71,617172
 Trafalgar Law (119) (Manga) (OP10-119),1691,617173
 Charlotte Pudding (SP) (ST12-012),140,617174
 Sanji (SP) (ST14-003),305,617175
-Edward.Newgate (SP) (ST15-002),454,617176
+Edward.Newgate (SP) (ST15-002),453,617176
 Uso-Hachi (SP) (ST18-001),346,617177
-Portgas.D.Ace (TR) (OP08-052),115,620135
+Portgas.D.Ace (TR) (OP08-052),112,620135
 DON!! Card (Alternate Art),12,624357
 DON!! Card (Alternate Art),12,624357
 Royal Blood - Sleeved Booster Pack,26,624523
 Extra Booster: Anime 25th Collection Pack,35,594068
-Extra Booster: Anime 25th Collection Box,1069,594069
+Extra Booster: Anime 25th Collection Box,1056,594069
 Extra Booster: Anime 25th Collection Box Case,9419,594070
 Kouzuki Oden (SP) (EB01-001),520,629086
 Hannyabal (SP) (EB01-021),300,629087
@@ -4393,7 +4393,7 @@ Kyros (SP) (EB01-040),255,629088
 Karoo (EB02-001),12,629089
 Sabo (EB02-002),12,629090
 Tony Tony.Chopper (EB02-003),12,629091
-Tony Tony.Chopper (Alternate Art) (EB02-003),57,629092
+Tony Tony.Chopper (Alternate Art) (EB02-003),56,629092
 Don Accino (EB02-004),12,629093
 Fake Straw Hat Crew (EB02-005),12,629094
 Yamato (EB02-006),22,629095
@@ -4418,7 +4418,7 @@ Roronoa Zoro (EB02-019),12,629113
 We Are! (EB02-020),12,629114
 Gum-Gum Giant Pistol (EB02-021),12,629115
 Usopp (EB02-022),12,629116
-Usopp (Alternate Art) (EB02-022),31,629117
+Usopp (Alternate Art) (EB02-022),30,629117
 Crocodile (EB02-023),12,629118
 Sogeking (EB02-024),12,629119
 Donquixote Rosinante (EB02-025),12,629120
@@ -4467,7 +4467,7 @@ UUUUUS! (EB02-058),12,629162
 Without Your Help I Can't Become the King of the Pirates!!!! (EB02-059),12,629163
 Merry Go (060) (EB02-060),12,629164
 Monkey.D.Luffy (061) (EB02-061),22,629165
-Monkey.D.Luffy (061) (Alternate Art) (EB02-061),147,629166
+Monkey.D.Luffy (061) (Alternate Art) (EB02-061),145,629166
 Monkey.D.Luffy (061) (Manga) (EB02-061),3641,629167
 Sabo (SP) (OP05-001),694,629168
 Belo Betty (SP) (OP05-002),553,629169
@@ -4478,7 +4478,7 @@ Uta (SP) (OP06-001),615,629173
 Hody Jones (SP) (OP06-020),180,629174
 Perona (SP) (OP06-021),746,629175
 Yamato (SP) (OP06-022),818,629176
-Vinsmoke Reiju (SP) (OP06-042),593,629177
+Vinsmoke Reiju (SP) (OP06-042),602,629177
 Gecko Moria (SP) (OP06-080),472,629178
 Monkey.D.Dragon (SP) (OP07-001),408,629179
 Jewelry Bonney (SP) (OP07-019),1217,629180
@@ -4492,7 +4492,7 @@ Carrot (SP) (OP08-021),595,629187
 King (SP) (OP08-057),483,629188
 Charlotte Pudding (SP) (OP08-058),496,629189
 Kalgara (SP) (OP08-098),312,629190
-Monkey.D.Luffy (ST01-001),16,599769
+Monkey.D.Luffy (ST01-001),17,599769
 Monkey.D.Luffy (ST01-001),13,599769
 Onigashima Island (ST04-017),12,599774
 Jinbe (ST01-005),12,599777
@@ -4560,11 +4560,11 @@ DON!! Card,12,672598
 Starter Deck EX: Gear 5,114,606575
 Starter Deck EX: Gear 5 Display,549,606576
 Monkey.D.Luffy (001) (ST21-001),18,615564
-Monkey.D.Luffy (001) (Parallel) (ST21-001),157,615565
+Monkey.D.Luffy (001) (Parallel) (ST21-001),154,615565
 Usopp (ST21-002),12,615566
 Usopp (Parallel) (ST21-002),12,615567
 Sanji (ST21-003),12,615568
-Sanji (Parallel) (ST21-003),35,615569
+Sanji (Parallel) (ST21-003),34,615569
 Jewelry Bonney (ST21-004),12,615570
 Jewelry Bonney (Parallel) (ST21-004),13,615571
 Jinbe (ST21-005),12,615572
@@ -4669,7 +4669,7 @@ X.Drake (OP10-114),13,620813
 Let's Meet Again in the New World (OP10-115),12,620814
 ROOM (OP10-117),12,620815
 Royal Blood - Release Event Pack,12,620841
-Double Pack Set Volume 7,92,606561
+Double Pack Set Volume 7,94,606561
 Double Pack Set Volume 7 Display,680,606562
 A Fist of Divine Speed Booster Pack,16,620179
 A Fist of Divine Speed Booster Box,790,620180
@@ -4684,10 +4684,10 @@ Smoker (OP11-005),12,632361
 Zephyr (OP11-006),12,632362
 Tashigi (OP11-007),12,632363
 Doll (OP11-008),12,632364
-Doll (Alternate Art) (OP11-008),64,632365
+Doll (Alternate Art) (OP11-008),63,632365
 Nico Robin (OP11-009),12,632366
 Hibari (OP11-010),12,632367
-Hibari (Alternate Art) (OP11-010),24,632368
+Hibari (Alternate Art) (OP11-010),23,632368
 Bins (OP11-011),12,632369
 Franky (OP11-012),12,632370
 Prince Grus (OP11-013),12,632371
@@ -4696,7 +4696,7 @@ Mocha (OP11-015),12,632373
 Roronoa Zoro (OP11-016),12,632374
 X.Drake (OP11-017),12,632375
 Honesty Impact (OP11-018),12,632376
-Honesty Impact (Alternate Art) (OP11-018),112,632377
+Honesty Impact (Alternate Art) (OP11-018),111,632377
 Glorp Web!! (OP11-019),12,632378
 X Calibur (OP11-020),12,632379
 Jinbe (021) (OP11-021),12,632380
@@ -4723,9 +4723,9 @@ Ancient Weapon Poseidon (OP11-037),12,632400
 Gum-Gum Elephant Gatling (OP11-038),12,632401
 Vagabond Drill (OP11-039),12,632402
 Monkey.D.Luffy (040) (OP11-040),12,632403
-Monkey.D.Luffy (040) (Alternate Art) (OP11-040),99,632404
+Monkey.D.Luffy (040) (Alternate Art) (OP11-040),102,632404
 Nami (041) (OP11-041),12,632405
-Nami (041) (Alternate Art) (OP11-041),226,632406
+Nami (041) (Alternate Art) (OP11-041),225,632406
 Vito (OP11-042),12,632407
 Vinsmoke Ichiji (OP11-043),12,632408
 Vinsmoke Judge (OP11-044),12,632409
@@ -4756,11 +4756,11 @@ Saldeath (OP11-064),12,632433
 Charlotte Anana (OP11-065),12,632434
 Charlotte Oven (OP11-066),12,632435
 Charlotte Katakuri (067) (OP11-067),12,632436
-Charlotte Katakuri (067) (Alternate Art) (OP11-067),52,632437
+Charlotte Katakuri (067) (Alternate Art) (OP11-067),51,632437
 Charlotte Daifuku (OP11-068),12,632438
 Charlotte Brulee (OP11-069),12,632439
 Charlotte Pudding (OP11-070),12,632440
-Charlotte Pudding (Alternate Art) (OP11-070),26,632441
+Charlotte Pudding (Alternate Art) (OP11-070),25,632441
 Charlotte Perospero (OP11-071),12,632442
 Charlotte Mont-d'or (OP11-072),12,632443
 Charlotte Linlin (OP11-073),12,632444
@@ -4772,7 +4772,7 @@ Randolph (OP11-077),12,632449
 Decuplets (OP11-078),12,632450
 When Two Men Are Fighting the Last Thing I Need Is Some Half-Hearted Assistance!!!! (OP11-079),12,632451
 Gear Two (OP11-080),12,632452
-Gear Two (Alternate Art) (OP11-080),478,632453
+Gear Two (Alternate Art) (OP11-080),457,632453
 Cognac Mama-Mash (OP11-081),12,632454
 Aramaki (OP11-082),12,632455
 Caribou (OP11-083),12,632456
@@ -4803,7 +4803,7 @@ Long-Jaw Neptunian (OP11-103),12,632480
 Shirley (OP11-104),12,632481
 Charlotte Chiffon (OP11-105),12,632482
 Zeus (OP11-106),12,632483
-Zeus (Alternate Art) (OP11-106),57,632484
+Zeus (Alternate Art) (OP11-106),56,632484
 Topknot Neptunian (OP11-107),12,632485
 Neptune (OP11-108),12,632486
 Pappag (OP11-109),12,632487
@@ -4817,19 +4817,19 @@ You're Just Not My Type! (OP11-115),12,632494
 Merman Combat Ultramarine (OP11-116),12,632495
 Fish-Man Island (OP11-117),12,632496
 Monkey.D.Luffy (118) (OP11-118),12,632497
-Monkey.D.Luffy (118) (Alternate Art) (OP11-118),54,632498
+Monkey.D.Luffy (118) (Alternate Art) (OP11-118),53,632498
 Monkey.D.Luffy (118) (Manga) (OP11-118),2790,632499
 Koby (119) (OP11-119),12,632500
 Koby (119) (Alternate Art) (OP11-119),41,632501
-Shirahoshi (SP) (EB01-057),310,632502
+Shirahoshi (SP) (EB01-057),308,632502
 Monkey.D.Luffy (119) (SP) (OP05-119),4564,632503
 Monkey.D.Luffy (119) (SP) (Gold) (OP05-119),6890,632504
 Sanji (SP) (OP06-119),373,632505
 Stussy (SP) (OP07-085),330,632506
 Silvers Rayleigh (SP) (OP09-005),205,632507
-Shanks (SP) (ST16-004),417,632508
+Shanks (SP) (ST16-004),413,632508
 Luffy-Tarou (SP) (ST18-005),839,632509
-Lucky.Roux (TR) (OP09-015),56,632773
+Lucky.Roux (TR) (OP09-015),55,632773
 A Fist of Divine Speed - Sleeved Booster Pack,49,636741
 DON!! Card (Alternate Art),12,636742
 Special DON!! Card Pack DP-07,12,636743
@@ -4930,7 +4930,7 @@ Rockstar (Reprint) (OP09-016),12,634280
 Come On!! We'll Fight You!! (Reprint) (OP09-020),12,634282
 Starter Decks 23-28 [Set of 6],241,659940
 Starter Deck 24: GREEN Jewelry Bonney Display,159,627671
-Starter Deck 24: GREEN Jewelry Bonney,39,627672
+Starter Deck 24: GREEN Jewelry Bonney,38,627672
 Scratchmen Apoo (Reprint) (EB01-015),12,634598
 Jewelry Bonney (OP07-019) (OP07-019),12,634599
 Urouge (Reprint) (OP07-021),12,634600
@@ -4964,7 +4964,7 @@ Cabaji (ST25-002),12,634307
 Mohji (ST25-005),12,634309
 Buggy (Promo Reprint) (P-084),12,634597
 Starter Deck 26: PURPLE/BLACK Monkey.D.Luffy Display,201,627676
-Starter Deck 26: PURPLE/BLACK Monkey.D.Luffy,73,627677
+Starter Deck 26: PURPLE/BLACK Monkey.D.Luffy,74,627677
 Monkey.D.Luffy (OP09-061) (OP09-061),14,632776
 Nico Robin (ST26-003),12,632777
 Monkey.D.Luffy (ST26-005) (ST26-005),12,632778
@@ -5020,7 +5020,7 @@ Legacy of the Master Booster Box Case,5173,628347
 Double Pack Set Vol. 8,58,628348
 Double Pack Set Vol. 8 Display,301,628349
 Silvers Rayleigh (OP12-001),12,643723
-Silvers Rayleigh (Alternate Art) (OP12-001),42,643724
+Silvers Rayleigh (Alternate Art) (OP12-001),43,643724
 Edward.Newgate (OP12-002),12,643725
 Crocus (OP12-003),12,643726
 Kouzuki Oden (OP12-004),12,643727
@@ -5043,7 +5043,7 @@ Color of Observation Haki (OP12-017),12,643744
 Color of the Supreme King Haki (OP12-018),12,643745
 Color of Arms Haki (OP12-019),12,643746
 Roronoa Zoro (020) (OP12-020),12,643747
-Roronoa Zoro (020) (Alternate Art) (OP12-020),137,643748
+Roronoa Zoro (020) (Alternate Art) (OP12-020),136,643748
 Ipponmatsu (OP12-021),12,643749
 Inuarashi (OP12-022),12,643750
 Kawamatsu (OP12-023),12,643751
@@ -5059,21 +5059,21 @@ Tashigi (OP12-031),12,643760
 Tashigi (Alternate Art) (OP12-031),36,643761
 Nekomamushi (OP12-032),12,643762
 Helmeppo (OP12-033),12,643763
-Perona (OP12-034),16,643764
+Perona (OP12-034),17,643764
 Perona (Alternate Art) (OP12-034),88,643765
 Morgan (OP12-035),12,643766
 Roronoa Zoro (036) (OP12-036),12,643767
 Demon Aura Nine Sword Style Asura Blades Drawn Dead Man's Game (OP12-037),12,643768
-Demon Aura Nine Sword Style Asura Blades Drawn Dead Man's Game (Alternate Art) (OP12-037),284,643769
+Demon Aura Nine Sword Style Asura Blades Drawn Dead Man's Game (Alternate Art) (OP12-037),279,643769
 Two-Sword Style Rashomon (OP12-038),12,643770
 Luffy Is the Man Who Will Become the King of Pirates!!! (OP12-039),12,643771
 Kuzan (040) (OP12-040),12,643772
 Kuzan (040) (Alternate Art) (OP12-040),50,643773
 Sanji (041) (OP12-041),12,643774
-Sanji (041) (Alternate Art) (OP12-041),96,643775
+Sanji (041) (Alternate Art) (OP12-041),95,643775
 Alvida (OP12-042),12,643776
 Kuzan (043) (OP12-043),12,643777
-Kuzan (043) (Alternate Art) (OP12-043),34,643778
+Kuzan (043) (Alternate Art) (OP12-043),33,643778
 Sakazuki (OP12-044),12,643779
 Jango (OP12-045),12,643780
 Zephyr(Navy) (OP12-046),12,643781
@@ -5092,9 +5092,9 @@ Ice Block Pheasant Peck (OP12-057),12,643793
 I Will Make Whitebeard the King of the Pirates (OP12-058),12,643794
 Concasser (OP12-059),12,643795
 Boeuf Burst (OP12-060),12,643796
-Boeuf Burst (Alternate Art) (OP12-060),223,643797
+Boeuf Burst (Alternate Art) (OP12-060),221,643797
 Donquixote Rosinante (061) (OP12-061),12,643798
-Donquixote Rosinante (061) (Alternate Art) (OP12-061),106,643799
+Donquixote Rosinante (061) (Alternate Art) (OP12-061),107,643799
 Vinsmoke Sora (OP12-062),12,643800
 Vinsmoke Reiju (OP12-063),12,643801
 Vinsmoke Reiju (Alternate Art) (OP12-063),38,643802
@@ -5105,7 +5105,7 @@ Carmen (OP12-067),12,643806
 Gin (OP12-068),12,643807
 Crocodile (OP12-069),12,643808
 Sanji (070) (OP12-070),12,643809
-Sanji (070) (Alternate Art) (OP12-070),42,643810
+Sanji (070) (Alternate Art) (OP12-070),41,643810
 Charlotte Pudding (OP12-071),12,643811
 Zeff (OP12-072),12,643812
 Trafalgar Law (073) (OP12-073),12,643813
@@ -5118,7 +5118,7 @@ Brochette Blow (OP12-078),12,643819
 Luffy Is the Man Who Will Be King of the Pirates!!! (OP12-079),12,643820
 Baratie (OP12-080),12,643821
 Koala (081) (OP12-081),12,643822
-Koala (081) (Alternate Art) (OP12-081),44,643823
+Koala (081) (Alternate Art) (OP12-081),46,643823
 Issho (OP12-082),12,643824
 Inazuma (OP12-083),12,643825
 Emporio.Ivankov (084) (OP12-084),12,643826
@@ -5126,7 +5126,7 @@ Karasu (OP12-085),12,643827
 Koala (086) (OP12-086),12,643828
 Koala (086) (Alternate Art) (OP12-086),23,643829
 Nico Robin (OP12-087),12,643830
-Nico Robin (Alternate Art) (OP12-087),72,643831
+Nico Robin (Alternate Art) (OP12-087),73,643831
 Bastille (OP12-088),12,643832
 Hack (OP12-089),12,643833
 Belo Betty (OP12-090),12,643834
@@ -5161,16 +5161,16 @@ I Love You!! (OP12-115),12,643862
 We'll Ring the Bell Waiting for You!! (OP12-116),12,643863
 Slam Gibson (OP12-117),12,643864
 Jewelry Bonney (118) (OP12-118),32,643865
-Jewelry Bonney (118) (Alternate Art) (OP12-118),52,643866
+Jewelry Bonney (118) (Alternate Art) (OP12-118),53,643866
 Jewelry Bonney (118) (Manga) (OP12-118),1963,643867
-Bartholomew Kuma (OP12-119),108,643868
+Bartholomew Kuma (OP12-119),106,643868
 Bartholomew Kuma (Alternate Art) (OP12-119),152,643869
 Vinsmoke Sanji (TR) (OP10-063),75,644882
 Yasopp (SP) (OP09-013),98,646563
 Lim (SP) (OP09-037),98,646564
 Tashigi (SP) (OP06-050),170,646565
 Zoro-Juurou (SP) (ST18-004),543,646566
-Kuzan (SP) (OP10-082),150,646567
+Kuzan (SP) (OP10-082),148,646567
 Portgas.D.Ace (SP) (ST13-011),362,646571
 Marshall.D.Teach (SP) (Silver) (OP09-093),1543,646572
 Marshall.D.Teach (SP) (Gold) (OP09-093),2445,646573
@@ -5179,11 +5179,11 @@ Legacy of the Master - Sleeved Booster Pack,33,650645
 DON!! Card (2Y) (Double Pack Set Vol. 8),12,651174
 DON!! Card (3D) (Double Pack Set Vol. 8),12,651175
 Special DON!! Card Pack DP-08,12,651980
-Carrying On His Will Booster Pack,24,628351
-Carrying On His Will Booster Box,1113,628352
+Carrying On His Will Booster Pack,25,628351
+Carrying On His Will Booster Box,1110,628352
 Carrying On His Will Booster Box Case,14783,628353
-Carrying On His Will Sleeved Booster Pack,42,652643
-Portgas.D.Ace - EB02-028 (SP) (EB02-028),481,654923
+Carrying On His Will Sleeved Booster Pack,43,652643
+Portgas.D.Ace - EB02-028 (SP) (EB02-028),459,654923
 Lilith - OP07-111 (SP) (OP07-111),157,655081
 Sabo - OP07-118 (SP) (OP07-118),298,655082
 Monkey.D.Luffy (001) (OP13-001),12,657250
@@ -5191,13 +5191,13 @@ Monkey.D.Luffy (001) (Alternate Art) (OP13-001),113,657251
 Portgas.D.Ace (002) (OP13-002),12,657252
 Portgas.D.Ace (002) (Alternate Art) (OP13-002),84,657253
 Gol.D.Roger (003) (OP13-003),12,657254
-Gol.D.Roger (003) (Alternate Art) (OP13-003),74,657255
+Gol.D.Roger (003) (Alternate Art) (OP13-003),75,657255
 Sabo (004) (OP13-004),12,657256
 Sabo (004) (Alternate Art) (OP13-004),50,657257
 Inazuma (OP13-005),12,657258
 Woop Slap (OP13-006),12,657259
 Ace & Sabo & Luffy (OP13-007),12,657260
-Ace & Sabo & Luffy (Alternate Art) (OP13-007),53,657261
+Ace & Sabo & Luffy (Alternate Art) (OP13-007),55,657261
 Emporio.Ivankov (OP13-008),12,657262
 Curly.Dadan (OP13-009),12,657263
 Lord of the Coast (OP13-010),12,657264
@@ -5215,12 +5215,12 @@ Meteor Fist (OP13-020),12,657275
 Gum-Gum Gatling Gun (OP13-021),12,657276
 Windmill Village (OP13-022),12,657277
 Uta (OP13-023),12,657278
-Uta (Alternate Art) (OP13-023),17,657279
+Uta (Alternate Art) (OP13-023),16,657279
 Gordon (OP13-024),12,657280
 Koby (OP13-025),12,657281
 Sunny-Kun (OP13-026),12,657282
 Sanji (OP13-027),12,657283
-Sanji (Alternate Art) (OP13-027),29,657284
+Sanji (Alternate Art) (OP13-027),28,657284
 Shanks (028) (OP13-028),12,657285
 Shanks (028) (Alternate Art) (OP13-028),25,657286
 Jinbe (OP13-029),12,657287
@@ -5247,7 +5247,7 @@ Blamenco (OP13-048),12,657307
 Blenheim (OP13-049),12,657308
 Boa Sandersonia (OP13-050),12,657309
 Boa Hancock (OP13-051),12,657310
-Boa Hancock (Alternate Art) (OP13-051),27,657311
+Boa Hancock (Alternate Art) (OP13-051),26,657311
 Boa Marigold (OP13-052),12,657312
 Marshall.D.Teach (OP13-053),12,657313
 Yamato (OP13-054),12,657314
@@ -5264,7 +5264,7 @@ Kouzuki Oden (OP13-063),12,657324
 Gol.D.Roger (064) (OP13-064),12,657325
 Gol.D.Roger (064) (Alternate Art) (OP13-064),42,657326
 Shanks (065) (OP13-065),12,657327
-Shanks (065) (Alternate Art) (OP13-065),20,657328
+Shanks (065) (Alternate Art) (OP13-065),19,657328
 Silvers Rayleigh (OP13-066),12,657329
 Silvers Rayleigh (Alternate Art) (OP13-066),15,657330
 Scopper Gaban (OP13-067),12,657331
@@ -5277,22 +5277,22 @@ Prometheus (OP13-073),12,657337
 Hera (OP13-074),12,657338
 Guess We'll Have Another Scrap. You Can Only Risk Death While You're Still Alive!! (OP13-075),12,657339
 Divine Departure (OP13-076),12,657340
-Divine Departure (Alternate Art) (OP13-076),206,657341
+Divine Departure (Alternate Art) (OP13-076),209,657341
 Go All the Way to the Top!! (OP13-077),12,657342
 Oro Jackson (OP13-078),12,657343
 Imu (OP13-079),12,657344
 Imu (Alternate Art) (OP13-079),77,657345
 St. Ethanbaron V. Nusjuro (OP13-080),12,657346
-St. Ethanbaron V. Nusjuro (Alternate Art) (OP13-080),48,657347
+St. Ethanbaron V. Nusjuro (Alternate Art) (OP13-080),49,657347
 St. Ethanbaron V. Nusjuro (Parallel) (OP13-080),1137,657348
 Koala (OP13-081),12,657349
 Five Elders (OP13-082),12,657350
 Five Elders (Alternate Art) (OP13-082),59,657351
 St. Jaygarcia Saturn (OP13-083),12,657352
-St. Jaygarcia Saturn (Alternate Art) (OP13-083),39,657353
+St. Jaygarcia Saturn (Alternate Art) (OP13-083),37,657353
 St. Jaygarcia Saturn (Parallel) (OP13-083),1080,657354
 St. Shepherd Ju Peter (OP13-084),12,657355
-St. Shepherd Ju Peter (Alternate Art) (OP13-084),40,657356
+St. Shepherd Ju Peter (Alternate Art) (OP13-084),39,657356
 St. Shepherd Ju Peter (Parallel) (OP13-084),1034,657357
 Saint Jalmac (OP13-085),12,657358
 Saint Shalria (OP13-086),12,657359
@@ -5303,7 +5303,7 @@ St. Topman Warcury (Alternate Art) (OP13-089),44,657363
 St. Topman Warcury (Parallel) (OP13-089),969,657364
 Hack (OP13-090),12,657365
 St. Marcus Mars (OP13-091),12,657366
-St. Marcus Mars (Alternate Art) (OP13-091),40,657367
+St. Marcus Mars (Alternate Art) (OP13-091),39,657367
 St. Marcus Mars (Parallel) (OP13-091),1061,657368
 Saint Mjosgard (OP13-092),12,657369
 Morgans (OP13-093),12,657370
@@ -5323,7 +5323,7 @@ Kouzuki Momonosuke (OP13-105),12,657383
 Conney (OP13-106),12,657384
 Shaka (OP13-107),12,657385
 Jewelry Bonney (108) (OP13-108),12,657386
-Jewelry Bonney (108) (Alternate Art) (OP13-108),78,657387
+Jewelry Bonney (108) (Alternate Art) (OP13-108),77,657387
 Jewelry Bonney (109) (OP13-109),12,657388
 Stussy (OP13-110),12,657389
 Stussy (Alternate Art) (OP13-110),36,657390
@@ -5336,7 +5336,7 @@ S-Snake (Alternate Art) (OP13-114),17,657396
 Paper Art Afterimage (OP13-115),12,657397
 The One Who Is the Most Free Is the Pirate King!!! (OP13-116),12,657398
 Gum-Gum Dawn Stamp (OP13-117),12,657399
-Monkey.D.Luffy (118) (OP13-118),45,657400
+Monkey.D.Luffy (118) (OP13-118),44,657400
 Monkey.D.Luffy (118) (Red Super Alternate Art) (OP13-118),17575,657401
 Monkey.D.Luffy (118) (Super Alternate Art) (OP13-118),4035,657402
 Monkey.D.Luffy (118) (Parallel) (OP13-118),158,657403
@@ -5344,20 +5344,20 @@ Monkey.D.Luffy (118) (Wanted Poster) (OP13-118),985,657404
 Portgas.D.Ace (119) (OP13-119),12,657405
 Portgas.D.Ace (119) (Red Super Alternate Art) (OP13-119),9151,657406
 Portgas.D.Ace (119) (Super Alternate Art) (OP13-119),2480,657407
-Portgas.D.Ace (119) (Parallel) (OP13-119),43,657408
+Portgas.D.Ace (119) (Parallel) (OP13-119),42,657408
 Portgas.D.Ace (119) (Wanted Poster) (OP13-119),1394,657409
-Sabo (120) (OP13-120),17,657410
+Sabo (120) (OP13-120),16,657410
 Sabo (120) (Red Super Alternate Art) (OP13-120),9833,657411
 Sabo (120) (Super Alternate Art) (OP13-120),1753,657412
-Sabo (120) (Parallel) (OP13-120),55,657413
+Sabo (120) (Parallel) (OP13-120),53,657413
 Sabo (120) (Wanted Poster) (OP13-120),329,657414
 Shanks - OP09-004 (SP) (Gold) (OP09-004),3198,657442
 Shanks - OP09-004 (SP) (Silver) (OP09-004),2034,657443
 Benn.Beckman (SP) (OP09-009),214,657444
 Gol.D.Roger - OP09-118 (SP) (Wanted Poster) (OP09-118),595,657446
 Monkey.D.Luffy - OP09-119 (SP) (OP09-119),1188,657448
-Smoker - OP10-030 (SP) (OP10-030),142,657449
-Monkey.D.Luffy - OP11-058 (TR) (OP11-058),110,659982
+Smoker - OP10-030 (SP) (OP10-030),138,657449
+Monkey.D.Luffy - OP11-058 (TR) (OP11-058),112,659982
 DON!! Card (Gol.D.Roger) (Gold),18,660710
 DON!! Card (Gol.D.Roger),12,660744
 Starter Deck 22: Ace & Newgate,29,628448
@@ -5394,12 +5394,12 @@ I Am Whitebeard!! (ST22-015),12,647711
 Take That Back!! Take Back What You Said!! (ST22-016),12,647712
 Fire Fist (ST22-017),12,647713
 Premium Booster Vol. 2 - Booster Pack,20,628451
-Premium Booster Vol. 2 - Booster Box,696,628452
+Premium Booster Vol. 2 - Booster Box,692,628452
 Premium Booster Vol. 2 - Booster Box Case,7186,628453
 Lucky.Roux (PRB02-003),12,653261
 Lucky.Roux (Alternate Art) (PRB02-003),13,653262
 Jewelry Bonney -PRB02-004 (PRB02-004),12,653263
-Jewelry Bonney - PRB02-004 (Alternate Art) (PRB02-004),42,653264
+Jewelry Bonney - PRB02-004 (Alternate Art) (PRB02-004),41,653264
 Monkey.D.Luffy - PRB02-005 (PRB02-005),12,653265
 Monkey.D.Luffy - PRB02-005 (Alternate Art) (PRB02-005),41,653266
 Nami (PRB02-012),12,653392
@@ -5407,41 +5407,41 @@ Nami (Alternate Art) (PRB02-012),84,653393
 Mr.3(Galdino) - PRB02-009 (PRB02-009),12,653397
 Mr.3(Galdino) - PRB02-009 (Alternate Art) (PRB02-009),12,653398
 Otama (PRB02-016),12,653400
-Otama (Alternate Art) (PRB02-016),35,653401
+Otama (Alternate Art) (PRB02-016),34,653401
 Shiryu (PRB02-015),12,653403
 Shiryu (Alternate Art) (PRB02-015),12,653404
 Trafalgar Law - PRB02-002 (Alternate Art) (PRB02-002),45,653423
 Trafalgar Law - PRB02-002 (PRB02-002),12,653424
-Koby (PRB02-001),16,653428
-Koby (Alternate Art) (PRB02-001),72,653429
+Koby (PRB02-001),20,653428
+Koby (Alternate Art) (PRB02-001),71,653429
 Roronoa Zoro - PRB02-006 (PRB02-006),31,653430
-Roronoa Zoro - PRB02-006 (Alternate Art) (PRB02-006),86,653431
+Roronoa Zoro - PRB02-006 (Alternate Art) (PRB02-006),87,653431
 Charlotte Pudding - PRB02-010 (PRB02-010),12,653535
 Charlotte Pudding - PRB02-010 (Alternate Art) (PRB02-010),53,653536
 Donquixote Doflamingo (PRB02-011),12,653542
-Donquixote Doflamingo (Alternate Art) (PRB02-011),16,653544
+Donquixote Doflamingo (Alternate Art) (PRB02-011),15,653544
 Marco (Alternate Art) (PRB02-008),195,653586
 Marco (PRB02-008),20,653589
 Jinbe - PRB02-007 (PRB02-007),12,653601
 Jinbe - PRB02-007(Alternate Art) (PRB02-007),12,653603
-Come On!! We'll Fight You!! (Alternate Art) (OP09-020),585,653833
-Cross Guild (Alternate Art) (OP09-057),636,653834
-Gum-Gum Giant (Alternate Art) (OP09-078),1564,653835
-My Era...Begins!! (Alternate Art) (OP09-096),406,653836
-Edward.Newgate - ST15-002 (Alternate Art) (ST15-002),41,653838
+Come On!! We'll Fight You!! (Alternate Art) (OP09-020),586,653833
+Cross Guild (Alternate Art) (OP09-057),634,653834
+Gum-Gum Giant (Alternate Art) (OP09-078),1523,653835
+My Era...Begins!! (Alternate Art) (OP09-096),404,653836
+Edward.Newgate - ST15-002 (Alternate Art) (ST15-002),40,653838
 Shanks - ST16-004 (Alternate Art) (ST16-004),64,653839
-Sabo - PRB02-014 (PRB02-014),17,653840
-Sabo - PRB02-014 (Alternate Art) (PRB02-014),50,653841
-Gecko Moria (PRB02-013),16,653842
-Gecko Moria (Alternate Art) (PRB02-013),58,653843
+Sabo - PRB02-014 (PRB02-014),16,653840
+Sabo - PRB02-014 (Alternate Art) (PRB02-014),52,653841
+Gecko Moria (PRB02-013),15,653842
+Gecko Moria (Alternate Art) (PRB02-013),57,653843
 Boa Hancock (PRB02-017),12,653857
 Boa Hancock (Alternate Art) (PRB02-017),203,653858
-Portgas.D.Ace - PRB02-018 (Alternate Art) (PRB02-018),24,653860
+Portgas.D.Ace - PRB02-018 (Alternate Art) (PRB02-018),23,653860
 Portgas.D.Ace - PRB02-018 (PRB02-018),12,653862
 Trafalgar Law - ST17-002 (Alternate Art) (ST17-002),48,653914
-Scratchmen Apoo - EB01-015 (Alternate Art) (EB01-015),34,653917
+Scratchmen Apoo - EB01-015 (Alternate Art) (EB01-015),33,653917
 Urouge (Alternate Art) (OP07-021),12,653918
-Roronoa Zoro - OP10-095 (Alternate Art) (OP10-095),21,654022
+Roronoa Zoro - OP10-095 (Alternate Art) (OP10-095),20,654022
 Basil Hawkins - OP10-109 (Alternate Art) (OP10-109),27,654093
 Donquixote Rosinante (Alternate Art) (OP05-030),12,654096
 Mr.3(Galdino) - OP09-056 (Alternate Art) (OP09-056),12,654097
@@ -5449,23 +5449,23 @@ Jesus Burgess (Alternate Art) (OP09-086),56,654098
 Roronoa Zoro - OP09-076 (Alternate Art) (OP09-076),101,654099
 Tony Tony.Chopper (Reprint) (OP10-011),12,654100
 Jinbe - P-063 (Alternate Art) (P-063),12,654101
-Tony Tony.Chopper (Alternate Art) (OP10-011),94,654102
+Tony Tony.Chopper (Alternate Art) (OP10-011),96,654102
 Shanks (SP) (OP06-007),539,654141
 Charlotte Pudding (SP) (OP06-047),596,654142
-Carrot (SP) (OP08-023),353,654143
+Carrot (SP) (OP08-023),348,654143
 Monkey.D.Luffy - EB02-061 (SP) (EB02-061),1237,654533
 Rebecca (SP) (OP05-091),350,654571
 Trafalgar Law - OP10-119 (SP) (OP10-119),407,654636
 Sanji - OP06-119 (Manga) (OP06-119),3745,654637
 DON!! Card (Marco),12,655110
 DON!! Card (Marco),12,655110
-DON!! Card (Marco) (Gold),162,655111
+DON!! Card (Marco) (Gold),159,655111
 DON!! Card (Bonney) (Gold),248,655112
 DON!! Card (Bonney),17,655113
 DON!! Card (Bonney),12,655113
 DON!! Card (Dragon),12,655114
 DON!! Card (Dragon),12,655114
-DON!! Card (Dragon) (Gold),95,655115
+DON!! Card (Dragon) (Gold),93,655115
 DON!! Card (Boa Hancock) (Gold),490,655116
 DON!! Card (Boa Hancock),37,655117
 DON!! Card (Boa Hancock),12,655117
@@ -5474,11 +5474,11 @@ DON!! Card (GEAR5 Luffy),12,655119
 DON!! Card (GEAR5 Luffy),12,655119
 DON!! Card (Rob Lucci),12,655120
 DON!! Card (Rob Lucci),12,655120
-DON!! Card (Rob Lucci) (Gold),97,655121
+DON!! Card (Rob Lucci) (Gold),96,655121
 DON!! Card (Shanks),12,655122
 DON!! Card (Shanks),19,655122
 DON!! Card (Hannyabal) (Gold),78,655123
-DON!! Card (Shanks) (Gold),399,655124
+DON!! Card (Shanks) (Gold),394,655124
 DON!! Card (Hannyabal),12,655125
 DON!! Card (Hannyabal),12,655125
 DON!! Card (Teach) (Gold),153,655126
@@ -5493,7 +5493,7 @@ DON!! Card (Buggy) (Gold),160,655131
 DON!! Card (Smoker) (Gold),126,655132
 DON!! Card (Smoker),12,655133
 DON!! Card (Smoker),12,655133
-DON!! Card (Jinbe) (Gold),167,655134
+DON!! Card (Jinbe) (Gold),165,655134
 DON!! Card (Jinbe),12,655135
 DON!! Card (Jinbe),12,655135
 DON!! Card (Yamato),12,655136
@@ -5510,7 +5510,7 @@ DON!! Card (Vegapunk),12,655480
 DON!! Card (Vegapunk) (Gold),121,655481
 DON!! Card (Lim),12,655482
 DON!! Card (Lim),12,655482
-DON!! Card (Lim) (Gold),89,655483
+DON!! Card (Lim) (Gold),86,655483
 DON!! Card (Caesar Clown),12,655485
 DON!! Card (Caesar Clown),12,655485
 DON!! Card (Caesar Clown) (Gold),86,655486
@@ -5574,7 +5574,7 @@ You Can Be My Samurai!! (Pirate Foil) (OP01-055),12,656002
 Curly.Dadan (Reprint) (OP02-005),12,656003
 Curly.Dadan (Pirate Foil) (OP02-005),12,656004
 Gum-Gum Rain (Reprint) (OP02-068),12,656005
-Gum-Gum Rain (Alternate Art) (OP02-068),66,656006
+Gum-Gum Rain (Alternate Art) (OP02-068),65,656006
 Charlotte Brulee (Reprint) (ST20-003),12,656007
 Charlotte Brulee (Pirate Foil) (ST20-003),12,656008
 Buggy - OP03-008 (Reprint) (OP03-008),12,656009
@@ -5587,7 +5587,7 @@ San-Gorou (Reprint) (ST18-003),12,656015
 Nojiko (Pirate Foil) (OP03-048),12,656016
 San-Gorou (Pirate Foil) (ST18-003),12,656017
 Gum-Gum Jet Gatling (Reprint) (OP03-072),12,656018
-Gum-Gum Jet Gatling (Alternate Art) (OP03-072),30,656019
+Gum-Gum Jet Gatling (Alternate Art) (OP03-072),29,656019
 Six King Pistol (Reprint) (OP03-097),12,656020
 Bad Manners Kick Course (Reprint) (OP04-016),12,656021
 Bad Manners Kick Course (Alternate Art) (OP04-016),19,656022
@@ -5714,19 +5714,19 @@ X.Drake (Reprint) (OP10-114),12,656147
 Sabo - ST13-007 (Pirate Foil) (ST13-007),12,656148
 GERMA 66 (Reprint) (OP06-078),12,656149
 GERMA 66 (Pirate Foil) (OP06-078),12,656150
-X.Drake (Alternate Art) (OP10-114),29,656151
+X.Drake (Alternate Art) (OP10-114),28,656151
 Edward.Newgate - ST13-004 (Reprint) (ST13-004),12,656153
 Kouzuki Momonosuke (Reprint) (OP06-107),12,656154
 Trafalgar Law - OP10-119 (Reprint) (OP10-119),12,656155
 Edward.Newgate - ST13-004 (Pirate Foil) (ST13-004),12,656156
 You're the One Who Should Disappear (Reprint) (OP06-115),12,656157
-You're the One Who Should Disappear (Alternate Art) (OP06-115),78,656158
+You're the One Who Should Disappear (Alternate Art) (OP06-115),76,656158
 Plastic Surgery Shot - ST12-017 (Reprint) (ST12-017),12,656159
 Plastic Surgery Shot - ST12-017 (Pirate Foil) (ST12-017),12,656160
 Perona (Reprint) (ST12-005),12,656161
 Perona (Pirate Foil) (ST12-005),12,656162
 Sabo - P-044 (Pirate Foil) (P-044),12,656163
-Roronoa Zoro - OP06-118 (Reprint) (OP06-118),14,656164
+Roronoa Zoro - OP06-118 (Reprint) (OP06-118),13,656164
 Roronoa Zoro - OP06-118 (Reprint) (OP06-118),15,656164
 Sanji - OP06-119 (Reprint) (OP06-119),12,656165
 Sabo - P-044 (Reprint) (P-044),12,656166
@@ -5773,7 +5773,7 @@ Monkey.D.Luffy - P-075 (Reprint) (P-075),12,656216
 Monkey.D.Luffy - OP07-109 (Reprint) (OP07-109),12,656217
 He Possesses the World's Most Brilliant Mind (Reprint) (OP07-114),12,656218
 He Possesses the World's Most Brilliant Mind (Pirate Foil) (OP07-114),12,656219
-Trafalgar Law -  P-088 (Reprint) (P-088),36,656220
+Trafalgar Law -  P-088 (Reprint) (P-088),37,656220
 Adio (Pirate Foil) (P-078),12,656222
 Adio (P-078),12,656223
 Sabo - OP07-118 (Reprint) (OP07-118),12,656224
@@ -5864,7 +5864,7 @@ Legacy of the Master Booster Box Case,5173,628347
 Double Pack Set Vol. 8,58,628348
 Double Pack Set Vol. 8 Display,301,628349
 Silvers Rayleigh (OP12-001),12,643723
-Silvers Rayleigh (Alternate Art) (OP12-001),42,643724
+Silvers Rayleigh (Alternate Art) (OP12-001),43,643724
 Edward.Newgate (OP12-002),12,643725
 Crocus (OP12-003),12,643726
 Kouzuki Oden (OP12-004),12,643727
@@ -5887,7 +5887,7 @@ Color of Observation Haki (OP12-017),12,643744
 Color of the Supreme King Haki (OP12-018),12,643745
 Color of Arms Haki (OP12-019),12,643746
 Roronoa Zoro (020) (OP12-020),12,643747
-Roronoa Zoro (020) (Alternate Art) (OP12-020),137,643748
+Roronoa Zoro (020) (Alternate Art) (OP12-020),136,643748
 Ipponmatsu (OP12-021),12,643749
 Inuarashi (OP12-022),12,643750
 Kawamatsu (OP12-023),12,643751
@@ -5903,21 +5903,21 @@ Tashigi (OP12-031),12,643760
 Tashigi (Alternate Art) (OP12-031),36,643761
 Nekomamushi (OP12-032),12,643762
 Helmeppo (OP12-033),12,643763
-Perona (OP12-034),16,643764
+Perona (OP12-034),17,643764
 Perona (Alternate Art) (OP12-034),88,643765
 Morgan (OP12-035),12,643766
 Roronoa Zoro (036) (OP12-036),12,643767
 Demon Aura Nine Sword Style Asura Blades Drawn Dead Man's Game (OP12-037),12,643768
-Demon Aura Nine Sword Style Asura Blades Drawn Dead Man's Game (Alternate Art) (OP12-037),284,643769
+Demon Aura Nine Sword Style Asura Blades Drawn Dead Man's Game (Alternate Art) (OP12-037),279,643769
 Two-Sword Style Rashomon (OP12-038),12,643770
 Luffy Is the Man Who Will Become the King of Pirates!!! (OP12-039),12,643771
 Kuzan (040) (OP12-040),12,643772
 Kuzan (040) (Alternate Art) (OP12-040),50,643773
 Sanji (041) (OP12-041),12,643774
-Sanji (041) (Alternate Art) (OP12-041),96,643775
+Sanji (041) (Alternate Art) (OP12-041),95,643775
 Alvida (OP12-042),12,643776
 Kuzan (043) (OP12-043),12,643777
-Kuzan (043) (Alternate Art) (OP12-043),34,643778
+Kuzan (043) (Alternate Art) (OP12-043),33,643778
 Sakazuki (OP12-044),12,643779
 Jango (OP12-045),12,643780
 Zephyr(Navy) (OP12-046),12,643781
@@ -5936,9 +5936,9 @@ Ice Block Pheasant Peck (OP12-057),12,643793
 I Will Make Whitebeard the King of the Pirates (OP12-058),12,643794
 Concasser (OP12-059),12,643795
 Boeuf Burst (OP12-060),12,643796
-Boeuf Burst (Alternate Art) (OP12-060),223,643797
+Boeuf Burst (Alternate Art) (OP12-060),221,643797
 Donquixote Rosinante (061) (OP12-061),12,643798
-Donquixote Rosinante (061) (Alternate Art) (OP12-061),106,643799
+Donquixote Rosinante (061) (Alternate Art) (OP12-061),107,643799
 Vinsmoke Sora (OP12-062),12,643800
 Vinsmoke Reiju (OP12-063),12,643801
 Vinsmoke Reiju (Alternate Art) (OP12-063),38,643802
@@ -5949,7 +5949,7 @@ Carmen (OP12-067),12,643806
 Gin (OP12-068),12,643807
 Crocodile (OP12-069),12,643808
 Sanji (070) (OP12-070),12,643809
-Sanji (070) (Alternate Art) (OP12-070),42,643810
+Sanji (070) (Alternate Art) (OP12-070),41,643810
 Charlotte Pudding (OP12-071),12,643811
 Zeff (OP12-072),12,643812
 Trafalgar Law (073) (OP12-073),12,643813
@@ -5962,7 +5962,7 @@ Brochette Blow (OP12-078),12,643819
 Luffy Is the Man Who Will Be King of the Pirates!!! (OP12-079),12,643820
 Baratie (OP12-080),12,643821
 Koala (081) (OP12-081),12,643822
-Koala (081) (Alternate Art) (OP12-081),44,643823
+Koala (081) (Alternate Art) (OP12-081),46,643823
 Issho (OP12-082),12,643824
 Inazuma (OP12-083),12,643825
 Emporio.Ivankov (084) (OP12-084),12,643826
@@ -5970,7 +5970,7 @@ Karasu (OP12-085),12,643827
 Koala (086) (OP12-086),12,643828
 Koala (086) (Alternate Art) (OP12-086),23,643829
 Nico Robin (OP12-087),12,643830
-Nico Robin (Alternate Art) (OP12-087),72,643831
+Nico Robin (Alternate Art) (OP12-087),73,643831
 Bastille (OP12-088),12,643832
 Hack (OP12-089),12,643833
 Belo Betty (OP12-090),12,643834
@@ -6005,16 +6005,16 @@ I Love You!! (OP12-115),12,643862
 We'll Ring the Bell Waiting for You!! (OP12-116),12,643863
 Slam Gibson (OP12-117),12,643864
 Jewelry Bonney (118) (OP12-118),32,643865
-Jewelry Bonney (118) (Alternate Art) (OP12-118),52,643866
+Jewelry Bonney (118) (Alternate Art) (OP12-118),53,643866
 Jewelry Bonney (118) (Manga) (OP12-118),1963,643867
-Bartholomew Kuma (OP12-119),108,643868
+Bartholomew Kuma (OP12-119),106,643868
 Bartholomew Kuma (Alternate Art) (OP12-119),152,643869
 Vinsmoke Sanji (TR) (OP10-063),75,644882
 Yasopp (SP) (OP09-013),98,646563
 Lim (SP) (OP09-037),98,646564
 Tashigi (SP) (OP06-050),170,646565
 Zoro-Juurou (SP) (ST18-004),543,646566
-Kuzan (SP) (OP10-082),150,646567
+Kuzan (SP) (OP10-082),148,646567
 Portgas.D.Ace (SP) (ST13-011),362,646571
 Marshall.D.Teach (SP) (Silver) (OP09-093),1543,646572
 Marshall.D.Teach (SP) (Gold) (OP09-093),2445,646573
@@ -6023,30 +6023,30 @@ Legacy of the Master - Sleeved Booster Pack,33,650645
 DON!! Card (2Y) (Double Pack Set Vol. 8),12,651174
 DON!! Card (3D) (Double Pack Set Vol. 8),12,651175
 Special DON!! Card Pack DP-08,12,651980
-The Azure Sea's Seven Booster Box,489,665598
-The Azure Sea's Seven Booster Box Case,5650,665599
+The Azure Sea's Seven Booster Box,471,665598
+The Azure Sea's Seven Booster Box Case,5647,665599
 Trafalgar Law - OP14-001 (OP14-001),12,666518
 Trafalgar Law - OP14-001 (Alternate Art) (OP14-001),64,666519
 Monkey.D.Luffy - OP14-013 (OP14-013),12,666520
-Monkey.D.Luffy - OP14-013 (Alternate Art) (OP14-013),40,666521
+Monkey.D.Luffy - OP14-013 (Alternate Art) (OP14-013),39,666521
 Dracule Mihawk - OP14-020 (OP14-020),12,666524
-Dracule Mihawk - OP14-020 (Alternate Art) (OP14-020),84,666525
+Dracule Mihawk - OP14-020 (Alternate Art) (OP14-020),82,666525
 Perona - OP14-033 (OP14-033),12,666526
-Perona - OP14-033 (Alternate Art) (OP14-033),76,666527
+Perona - OP14-033 (Alternate Art) (OP14-033),75,666527
 Donquixote Doflamingo - OP14-060 (OP14-060),12,666528
-Donquixote Doflamingo - OP14-060 (Alternate Art) (OP14-060),83,666529
+Donquixote Doflamingo - OP14-060 (Alternate Art) (OP14-060),82,666529
 Sugar (OP14-063),12,666530
 Megalo (Alternate Art) (EB04-018),36,666532
 Jinbe - EB04-015 (EB04-015),12,666534
 Eleclaw (EB04-019),12,666535
 Issho - EB04-022 (Alternate Art) (EB04-022),17,666537
 Kaido (EB04-030),12,666539
-King (Alternate Art) (EB04-031),15,666540
+King (Alternate Art) (EB04-031),16,666540
 Gecko Moria - OP14-080 (OP14-080),12,666572
 Gecko Moria - OP14-080 (Alternate Art) (OP14-080),43,666573
-Gecko Moria - OP14-104 (OP14-104),12,666574
-Gecko Moria - OP14-104 (Alternate Art) (OP14-104),91,666575
-The Azure Sea's Seven Sleeved Booster Pack,21,666576
+Gecko Moria - OP14-104 (OP14-104),15,666574
+Gecko Moria - OP14-104 (Alternate Art) (OP14-104),92,666575
+The Azure Sea's Seven Sleeved Booster Pack,20,666576
 The Azure Sea's Seven Booster Pack,15,666577
 Double Pack Set Vol. 9,62,666578
 Double Pack Set Vol. 9 Display,546,666579
@@ -6055,49 +6055,49 @@ Crocodile - OP14-079 (Alternate Art) (OP14-079),66,666762
 Ms. All Sunday (OP14-084),12,666912
 Ms. All Sunday (Alternate Art) (OP14-084),86,666913
 Boa Hancock - OP14-041 (OP14-041),12,668333
-Boa Hancock - OP14-041 (Alternate Art) (OP14-041),265,668335
-Boa Hancock - OP14-112 (OP14-112),15,668342
-Boa Hancock - OP14-112 (Alternate Art) (OP14-112),187,668343
+Boa Hancock - OP14-041 (Alternate Art) (OP14-041),264,668335
+Boa Hancock - OP14-112 (OP14-112),13,668342
+Boa Hancock - OP14-112 (Alternate Art) (OP14-112),183,668343
 Stealth Black (EB04-041),12,668420
 Boa Hancock - EB04-027 (EB04-027),12,668528
 Chaka & Pell - EB04-023 (EB04-023),12,668529
 Jinbe - OP14-040 (OP14-040),12,668568
-Jinbe - OP14-040 (Alternate Art) (OP14-040),41,668569
+Jinbe - OP14-040 (Alternate Art) (OP14-040),40,668569
 Jinbe - OP14-049 (OP14-049),12,668570
 Jinbe - OP14-049 (Alternate Art) (OP14-049),21,668571
 Trafalgar Law - OP14-009 (OP14-009),12,668636
 Trafalgar Law - OP14-009 (Alternate Art) (OP14-009),38,668637
 Donquixote Doflamingo - OP14-069 (OP14-069),12,668638
-Donquixote Doflamingo - OP14-069 (Alternate Art) (OP14-069),31,668639
+Donquixote Doflamingo - OP14-069 (Alternate Art) (OP14-069),30,668639
 Crocodile - OP14-120 (OP14-120),12,668640
 Dracule Mihawk - OP14-119 (OP14-119),12,668641
-Crocodile - OP14-120 (Alternate Art) (OP14-120),70,668642
-Dracule Mihawk - OP14-119 (Alternate Art) (OP14-119),63,668643
+Crocodile - OP14-120 (Alternate Art) (OP14-120),69,668642
+Dracule Mihawk - OP14-119 (Alternate Art) (OP14-119),61,668643
 Kikunojo - EB04-012 (EB04-012),12,668644
-Kikunojo - EB04-012 (Alternate Art) (EB04-012),16,668645
+Kikunojo - EB04-012 (Alternate Art) (EB04-012),15,668645
 Carrot (EB04-013),12,668658
-Carrot (Alternate Art) (EB04-013),34,668659
+Carrot (Alternate Art) (EB04-013),35,668659
 Nefeltari Vivi (EB04-025),12,668670
 Nefeltari Vivi (Alternate Art) (EB04-025),88,668671
 Foxy (Alternate Art) (EB04-036),15,668752
 Foxy (EB04-036),12,668753
 Rosinante & Law (EB04-038),12,669239
-Rosinante & Law (Alternate Art) (EB04-038),101,669240
-Roronoa Zoro - OP14-015 (Alternate Art) (OP14-015),25,670250
+Rosinante & Law (Alternate Art) (EB04-038),102,669240
+Roronoa Zoro - OP14-015 (Alternate Art) (OP14-015),23,670250
 Vergo (Alternate Art) (OP14-061),30,670251
 Nami (OP14-031),12,670252
-Nami (Alternate Art) (OP14-031),108,670254
-Shanks (Alternate Art) (OP14-027),50,670255
+Nami (Alternate Art) (OP14-031),111,670254
+Shanks (Alternate Art) (OP14-027),51,670255
 Perona - OP14-111 (Alternate Art) (OP14-111),70,670596
 Arlong (Alternate Art) (OP14-042),12,670597
 Mr.1 (Daz.Bonez) (Alternate Art) (OP14-090),14,670630
 Mr.2.Bon.Kurei (Bentham) (OP14-091),12,670639
-Mr.2.Bon.Kurei (Bentham) (Alternate Art) (OP14-091),28,670640
-Roronoa Zoro - PRB02-006 (SP) (PRB02-006),2415,670642
-Edward Weevil - EB01-023 (SP) (EB01-023),119,670645
-Ground Death (Alternate Art) (OP14-096),207,670874
-You'll Frighten Me... (Alternate Art) (OP14-118),398,670875
-Donquixote Rosinante - OP12-108 (OP12-108),83,670876
+Mr.2.Bon.Kurei (Bentham) (Alternate Art) (OP14-091),29,670640
+Roronoa Zoro - PRB02-006 (SP) (PRB02-006),2365,670642
+Edward Weevil - EB01-023 (SP) (EB01-023),117,670645
+Ground Death (Alternate Art) (OP14-096),204,670874
+You'll Frighten Me... (Alternate Art) (OP14-118),388,670875
+Donquixote Rosinante - OP12-108 (OP12-108),82,670876
 Scaled Neptunian (EB04-011),12,671329
 Kouzuki Sukiyaki (EB04-014),12,671330
 Bird Neptunian (EB04-016),12,671331
@@ -6219,7 +6219,7 @@ Brick Bat (OP14-117),12,671446
 You'll Frighten Me... (OP14-118),12,671447
 Dracule Mihawk (Manga) (OP14-119),2679,671448
 Kid & Killer - EB01-003 (SP) (EB01-003),203,671449
-"Eustass""Captain""Kid - EB04-039 (SP) (EB04-039)",223,671450
+"Eustass""Captain""Kid - EB04-039 (SP) (EB04-039)",220,671450
 Perona - OP06-093 (SP) (OP06-093),389,671451
 Sengoku - OP07-046 (SP) (OP07-046),155,671452
 Buggy - OP09-051 (SP) (Gold) (OP09-051),5484,671453
