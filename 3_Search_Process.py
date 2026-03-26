@@ -73,6 +73,7 @@ urls = [
     'https://tcgcsv.com/tcgplayer/68/24545/ProductsAndPrices.csv',
     'https://tcgcsv.com/tcgplayer/68/24575/ProductsAndPrices.csv',
     'https://tcgcsv.com/tcgplayer/68/24579/ProductsAndPrices.csv',
+    'https://tcgcsv.com/tcgplayer/68/24637/ProductsAndPrices.csv',
     # Add more URLs as needed
 ]
 
