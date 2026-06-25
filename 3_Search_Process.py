@@ -1,6 +1,21 @@
+import os
 import pandas as pd
 import requests
+import time
 from io import StringIO
+
+# Delay between each CSV fetch, in seconds
+FETCH_DELAY_SECONDS = 1
+
+# Optional authentication / header configuration
+API_TOKEN = os.getenv('TCGCSV_API_TOKEN')
+AUTH_USERNAME = os.getenv('TCGCSV_USER')
+AUTH_PASSWORD = os.getenv('TCGCSV_PASS')
+
+DEFAULT_HEADERS = {
+    'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36',
+    'Accept': 'text/csv,application/csv,application/octet-stream;q=0.9,*/*;q=0.8',
+}
 
 # URLs of the CSV files to be downloaded
 urls = [
@@ -83,10 +98,24 @@ urls = [
 def download_and_process_csv(urls):
     dfs = []  # List to hold DataFrames
 
+    auth = None
+    if AUTH_USERNAME and AUTH_PASSWORD:
+        auth = (AUTH_USERNAME, AUTH_PASSWORD)
+
+    headers = DEFAULT_HEADERS.copy()
+    if API_TOKEN:
+        headers['Authorization'] = f'Bearer {API_TOKEN}'
+
+    session = requests.Session()
+    session.headers.update(headers)
+
     for url in urls:
+        # Wait before fetching the next file to avoid hammering the server
+        time.sleep(FETCH_DELAY_SECONDS)
         try:
             # Download CSV from the URL
-            response = requests.get(url)
+            print(f"Fetching {url}")
+            response = session.get(url, auth=auth, timeout=30)
             response.raise_for_status()  # Check for successful download
 
             # Check if the content is empty
@@ -101,6 +130,9 @@ def download_and_process_csv(urls):
             # Append the DataFrame to the list
             dfs.append(df)
 
+        except requests.exceptions.HTTPError as e:
+            status = getattr(e.response, 'status_code', 'unknown')
+            print(f"HTTP error {status} downloading {url}: {e}")
         except requests.exceptions.RequestException as e:
             print(f"Error downloading the file from {url}: {e}")
         except pd.errors.EmptyDataError:
