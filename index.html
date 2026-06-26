@@ -71,6 +71,53 @@
             cursor: pointer;
         }
 
+        .cart {
+            margin-top: 20px;
+            border-top: 1px solid #ddd;
+            padding-top: 10px;
+            text-align: left;
+        }
+
+        .cart-item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 10px;
+        }
+
+        .cart-item img {
+            width: 40px;
+            height: 50px;
+            object-fit: cover;
+            margin-right: 10px;
+            border: 1px solid #ddd;
+        }
+
+        .cart-item-info {
+            flex-grow: 1;
+        }
+
+        .cart-item-controls button {
+            margin: 0 5px;
+        }
+
+        .remove-item {
+            background-color: #FF4D4D;
+            color: white;
+            padding: 5px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .clear-cart {
+            background-color: #FF9800;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
         .pagination {
             display: flex;
             justify-content: center;
@@ -124,10 +171,20 @@
 
         <!-- Results -->
         <div class="results" id="resultsContainer"></div>
+
+        <!-- Cart -->
+        <div class="cart">
+            <h3>Your Cart</h3>
+            <div id="cartContainer"></div>
+            <p id="cartTotal"></p>
+            <button class="clear-cart" onclick="clearCart()">Clear Cart</button>
+        </div>
     </div>
 
     <script>
         let cards = [];
+        let cart = [];
+        let latestSet = "";
         let currentResults = [];
         let currentPage = 1;
         const RESULTS_PER_PAGE = 20;
@@ -139,7 +196,7 @@
             cards = parseCSV(csvText);
 
             populateCategories(cards);
-            showAllSets();
+            showLatestSet();
         }
 
         function parseCSV(csvText) {
@@ -167,12 +224,15 @@
 
             // determine latest
             latestSet = sortedCategories[sortedCategories.length - 1];
-clear and rebuild dropdown
+
+            // clear and rebuild dropdown
             categorySelect.innerHTML = '<option value="">All Sets</option>';
             sortedCategories.forEach(cat => {
                 const option = document.createElement("option");
                 option.value = cat;
-                option.textContent =
+                option.textContent = (cat === latestSet) ? `${cat} (Latest)` : cat;
+                categorySelect.appendChild(option);
+            });
         }
 
         function customSetSort(a, b) {
@@ -190,10 +250,14 @@ clear and rebuild dropdown
         function showLatestSet() {
             if (!latestSet) return;
             document.getElementById('categorySelect').value = latestSet;
-            const resAllSets() {
-            document.getElementById('categorySelect').value = '';
+            const results = cards.filter(card =>
+                card.extNumber.toUpperCase().startsWith(latestSet)
+            );
             currentPage = 1;
-            displayResults(cardy) {
+            displayResults(results);
+        }
+
+        function searchCards(query) {
             // Debounce search
             clearTimeout(searchTimeout);
             searchTimeout = setTimeout(() => {
@@ -261,7 +325,11 @@ clear and rebuild dropdown
                             onclick="addToCart('${card.extNumber}', '${card.name}', ${usdPrice}, '${card.imageUrl}', '${card.url}')">
                             Add to Cart
                         </button>
-                    
+                    </div>
+                `;
+                container.appendChild(cardDiv);
+            });
+
             // Add pagination controls if needed
             if (totalPages > 1) {
                 const paginationDiv = document.createElement('div');
@@ -287,7 +355,78 @@ clear and rebuild dropdown
             const existingCard = cart.find(card =>
                 card.extNumber === extNumber && card.price === price && card.url === url
             );
-ocument.getElementById('categorySelect').addEventListener('change', () => {
+
+            if (existingCard) {
+                existingCard.quantity += 1;
+            } else {
+                cart.push({ extNumber, name, price, imageUrl, url, quantity: 1 });
+            }
+            updateCart();
+        }
+
+        function updateCart() {
+            const cartContainer = document.getElementById('cartContainer');
+            const cartTotal = document.getElementById('cartTotal');
+
+            cartContainer.innerHTML = '';
+            let totalUSD = 0;
+
+            cart.forEach(card => {
+                const cadPrice = (card.price * 1.5).toFixed(2);
+
+                const itemDiv = document.createElement('div');
+                itemDiv.classList.add('cart-item');
+
+                itemDiv.innerHTML = `
+                    <img src="${card.imageUrl}" alt="${card.name}">
+                    <div class="cart-item-info">
+                        <p>${card.name} (${card.extNumber})</p>
+                        <p>$${card.price.toFixed(2)} USD</p>
+                    </div>
+                    <div class="cart-item-controls">
+                        <button onclick="changeQuantity('${card.extNumber}', ${card.price}, '${card.url}', -1)">-</button>
+                        ${card.quantity}
+                        <button onclick="changeQuantity('${card.extNumber}', ${card.price}, '${card.url}', 1)">+</button>
+                        <button class="remove-item" onclick="removeItem('${card.extNumber}', ${card.price}, '${card.url}')">Remove</button>
+                    </div>
+                `;
+                cartContainer.appendChild(itemDiv);
+
+                totalUSD += card.quantity * card.price;
+            });
+
+            const totalCAD = (totalUSD * 1.5).toFixed(2);
+            cartTotal.innerText = `Total: $${totalUSD.toFixed(2)} USD (CAD: $${totalCAD})`;
+        }
+
+        function changeQuantity(extNumber, price, url, delta) {
+            const card = cart.find(card =>
+                card.extNumber === extNumber && card.price === price && card.url === url
+            );
+            if (card) {
+                card.quantity += delta;
+                if (card.quantity <= 0) {
+                    removeItem(extNumber, price, url);
+                }
+            }
+            updateCart();
+        }
+
+        function removeItem(extNumber, price, url) {
+            cart = cart.filter(card =>
+                !(card.extNumber === extNumber && card.price === price && card.url === url)
+            );
+            updateCart();
+        }
+
+        function clearCart() {
+            cart = [];
+            updateCart();
+        }
+
+        // Event listeners
+        document.getElementById('searchBar').addEventListener('input', e => searchCards(e.target.value));
+        document.getElementById('categorySelect').addEventListener('change', () => {
             const query = document.getElementById('searchBar').value;
             searchCards(query);
         });
@@ -302,4 +441,3 @@ ocument.getElementById('categorySelect').addEventListener('change', () => {
 
 </body>
 </html>
-AllSets
