@@ -10,12 +10,13 @@
             font-family: Arial, sans-serif;
             background-color: #f5f5f5;
             margin: 0;
-            padding: 0;
+            padding: 16px;
             display: flex;
             justify-content: center;
             align-items: flex-start;
-            height: 100vh;
-            overflow: hidden;
+            min-height: 100vh;
+            overflow-x: hidden;
+            box-sizing: border-box;
         }
 
         .container {
@@ -24,16 +25,16 @@
             padding: 20px;
             border-radius: 8px;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-            max-width: 700px;
-            width: 90%;
-            margin: 20px;
+            width: min(90%, 900px);
+            max-width: 900px;
+            margin: 0 auto;
             overflow-y: auto;
-            max-height: 90vh;
+            max-height: calc(100vh - 32px);
         }
 
         select,
         input[type="text"] {
-            width: calc(100% - 20px);
+            width: 100%;
             padding: 12px;
             margin: 10px 0;
             border: 1px solid #ccc;
@@ -41,9 +42,30 @@
             box-sizing: border-box;
         }
 
+        .search-row {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+        }
+
+        .search-row input {
+            flex: 1;
+            min-width: 0;
+        }
+
+        .clear-button {
+            padding: 10px;
+            border: none;
+            background: #FF4D4D;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+            flex-shrink: 0;
+        }
+
         .results {
             text-align: left;
-            max-height: 400px;
+            max-height: 560px;
             overflow-y: auto;
         }
 
@@ -52,14 +74,19 @@
             align-items: center;
             padding: 10px;
             border-bottom: 1px solid #eee;
+            gap: 10px;
         }
 
         .card img {
             width: 60px;
             height: 80px;
             object-fit: cover;
-            margin-right: 10px;
             border: 1px solid #ddd;
+            flex-shrink: 0;
+        }
+
+        .card > div {
+            min-width: 0;
         }
 
 
@@ -92,6 +119,52 @@
             color: #666;
             margin: 10px 0;
         }
+
+        @media (max-width: 600px) {
+            body {
+                padding: 8px;
+            }
+
+            .container {
+                width: 100%;
+                max-width: none;
+                padding: 12px;
+                max-height: none;
+                overflow: visible;
+            }
+
+            .search-row {
+                flex-wrap: wrap;
+            }
+
+            .search-row input,
+            .clear-button {
+                width: 100%;
+            }
+
+            .results {
+                max-height: none;
+                overflow: visible;
+            }
+
+            .card {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .card img {
+                width: 48px;
+                height: 64px;
+            }
+
+            .pagination {
+                flex-wrap: wrap;
+            }
+
+            .pagination button {
+                padding: 6px 10px;
+            }
+        }
     </style>
 </head>
 
@@ -106,10 +179,9 @@
         </select>
 
         <!-- Search bar -->
-        <div style="display:flex; gap:10px; align-items:center;">
-            <input type="text" id="searchBar" placeholder="Search by Name or OPXX-XXX..." style="flex:1;">
-            <button id="clearSearch"
-                style="padding:10px; border:none; background:#FF4D4D; color:white; border-radius:5px; cursor:pointer;">
+        <div class="search-row">
+            <input type="text" id="searchBar" placeholder="Search by Name or OPXX-XXX...">
+            <button id="clearSearch" class="clear-button">
                 Clear
             </button>
         </div>
@@ -124,7 +196,7 @@
         let latestSet = "";
         let currentResults = [];
         let currentPage = 1;
-        const RESULTS_PER_PAGE = 20;
+        const RESULTS_PER_PAGE = 24;
         let searchTimeout;
 
         async function loadCards() {
@@ -235,6 +307,11 @@
             infoDiv.innerText = `Showing ${start + 1}-${Math.min(end, results.length)} of ${results.length} cards`;
             container.appendChild(infoDiv);
 
+            const pageInfoDiv = document.createElement('div');
+            pageInfoDiv.classList.add('result-info');
+            pageInfoDiv.innerText = `Page ${currentPage} of ${totalPages}`;
+            container.appendChild(pageInfoDiv);
+
             // Render cards for current page
             pagedResults.forEach(card => {
                 const cardDiv = document.createElement('div');
@@ -259,22 +336,62 @@
                 container.appendChild(cardDiv);
             });
 
-            // Add pagination controls if needed
+            // Add simplified pagination controls
             if (totalPages > 1) {
                 const paginationDiv = document.createElement('div');
                 paginationDiv.classList.add('pagination');
 
-                for (let i = 1; i <= totalPages; i++) {
+                const prevBtn = document.createElement('button');
+                prevBtn.textContent = 'Prev';
+                prevBtn.disabled = currentPage === 1;
+                prevBtn.onclick = () => {
+                    if (currentPage > 1) {
+                        currentPage -= 1;
+                        displayResults(results);
+                        document.querySelector('.results').scrollTop = 0;
+                    }
+                };
+                paginationDiv.appendChild(prevBtn);
+
+                const pageNumbers = totalPages <= 4
+                    ? Array.from({ length: totalPages }, (_, i) => i + 1)
+                    : currentPage <= 3
+                        ? [1, 2, 3, '...', totalPages]
+                        : currentPage >= totalPages - 1
+                            ? [1, '...', totalPages - 2, totalPages - 1, totalPages]
+                            : [1, '...', currentPage - 1, currentPage, currentPage + 1, '...', totalPages];
+
+                pageNumbers.forEach(page => {
+                    if (page === '...') {
+                        const dots = document.createElement('span');
+                        dots.textContent = '…';
+                        dots.style.padding = '8px 4px';
+                        paginationDiv.appendChild(dots);
+                        return;
+                    }
+
                     const btn = document.createElement('button');
-                    btn.textContent = i;
-                    if (i === currentPage) btn.classList.add('active');
+                    btn.textContent = page;
+                    if (page === currentPage) btn.classList.add('active');
                     btn.onclick = () => {
-                        currentPage = i;
+                        currentPage = Number(page);
                         displayResults(results);
                         document.querySelector('.results').scrollTop = 0;
                     };
                     paginationDiv.appendChild(btn);
-                }
+                });
+
+                const nextBtn = document.createElement('button');
+                nextBtn.textContent = 'Next';
+                nextBtn.disabled = currentPage === totalPages;
+                nextBtn.onclick = () => {
+                    if (currentPage < totalPages) {
+                        currentPage += 1;
+                        displayResults(results);
+                        document.querySelector('.results').scrollTop = 0;
+                    }
+                };
+                paginationDiv.appendChild(nextBtn);
 
                 container.appendChild(paginationDiv);
             }
