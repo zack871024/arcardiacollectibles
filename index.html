@@ -117,6 +117,36 @@
             border-radius: 5px;
             cursor: pointer;
         }
+
+        .pagination {
+            display: flex;
+            justify-content: center;
+            gap: 5px;
+            margin-top: 15px;
+        }
+
+        .pagination button {
+            padding: 8px 12px;
+            border: 1px solid #ccc;
+            background: white;
+            cursor: pointer;
+            border-radius: 3px;
+        }
+
+        .pagination button.active {
+            background: #007bff;
+            color: white;
+        }
+
+        .pagination button:hover {
+            background: #f0f0f0;
+        }
+
+        .result-info {
+            font-size: 12px;
+            color: #666;
+            margin: 10px 0;
+        }
     </style>
 </head>
 
@@ -155,6 +185,10 @@
         let cards = [];
         let cart = [];
         let latestSet = "";
+        let currentResults = [];
+        let currentPage = 1;
+        const RESULTS_PER_PAGE = 20;
+        let searchTimeout;
 
         async function loadCards() {
             const response = await fetch('search_database.csv?t=' + Date.now());
@@ -219,36 +253,57 @@
             const results = cards.filter(card =>
                 card.extNumber.toUpperCase().startsWith(latestSet)
             );
+            currentPage = 1;
             displayResults(results);
         }
 
         function searchCards(query) {
-            query = query.toLowerCase();
-            const category = document.getElementById("categorySelect").value;
+            // Debounce search
+            clearTimeout(searchTimeout);
+            searchTimeout = setTimeout(() => {
+                query = query.toLowerCase();
+                const category = document.getElementById("categorySelect").value;
 
-            const results = cards.filter(card => {
-                const matchesQuery =
-                    !query || card.name.toLowerCase().includes(query) || card.extNumber.toLowerCase().includes(query);
+                const results = cards.filter(card => {
+                    const matchesQuery =
+                        !query || card.name.toLowerCase().includes(query) || card.extNumber.toLowerCase().includes(query);
 
-                const matchesCategory = category
-                    ? card.extNumber.toUpperCase().startsWith(category.toUpperCase())
-                    : true;
+                    const matchesCategory = category
+                        ? card.extNumber.toUpperCase().startsWith(category.toUpperCase())
+                        : true;
 
-                return matchesCategory && matchesQuery;
-            });
+                    return matchesCategory && matchesQuery;
+                });
 
-            displayResults(results);
+                currentPage = 1;
+                currentResults = results;
+                displayResults(results);
+            }, 300);
         }
 
         function displayResults(results) {
             const container = document.getElementById('resultsContainer');
             container.innerHTML = '';
+            
             if (results.length === 0) {
                 container.innerHTML = '<p>No cards found.</p>';
                 return;
             }
 
-            results.forEach(card => {
+            // Calculate pagination
+            const totalPages = Math.ceil(results.length / RESULTS_PER_PAGE);
+            const start = (currentPage - 1) * RESULTS_PER_PAGE;
+            const end = start + RESULTS_PER_PAGE;
+            const pagedResults = results.slice(start, end);
+
+            // Add result info
+            const infoDiv = document.createElement('div');
+            infoDiv.classList.add('result-info');
+            infoDiv.innerText = `Showing ${start + 1}-${Math.min(end, results.length)} of ${results.length} cards`;
+            container.appendChild(infoDiv);
+
+            // Render cards for current page
+            pagedResults.forEach(card => {
                 const cardDiv = document.createElement('div');
                 const usdPrice = parseFloat(card.marketPrice);
                 const cadPrice = (usdPrice * 1.5).toFixed(2);
@@ -274,6 +329,26 @@
                 `;
                 container.appendChild(cardDiv);
             });
+
+            // Add pagination controls if needed
+            if (totalPages > 1) {
+                const paginationDiv = document.createElement('div');
+                paginationDiv.classList.add('pagination');
+
+                for (let i = 1; i <= totalPages; i++) {
+                    const btn = document.createElement('button');
+                    btn.textContent = i;
+                    if (i === currentPage) btn.classList.add('active');
+                    btn.onclick = () => {
+                        currentPage = i;
+                        displayResults(results);
+                        document.querySelector('.results').scrollTop = 0;
+                    };
+                    paginationDiv.appendChild(btn);
+                }
+
+                container.appendChild(paginationDiv);
+            }
         }
 
         function addToCart(extNumber, name, price, imageUrl, url) {
