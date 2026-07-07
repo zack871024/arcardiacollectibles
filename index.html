@@ -63,6 +63,109 @@
             flex-shrink: 0;
         }
 
+        .collection-panel {
+            margin: 16px 0 20px;
+            padding: 14px;
+            border: 1px solid #e5e5e5;
+            border-radius: 8px;
+            background: #fafafa;
+            text-align: left;
+        }
+
+        .collection-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .collection-header h3 {
+            margin: 0;
+            font-size: 16px;
+        }
+
+        .collection-actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 10px;
+        }
+
+        .action-button {
+            padding: 8px 12px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 13px;
+        }
+
+        .action-button.primary {
+            background: #007bff;
+            color: white;
+        }
+
+        .action-button.secondary {
+            background: #e9ecef;
+            color: #333;
+        }
+
+        .action-button.danger {
+            background: #ff4d4d;
+            color: white;
+        }
+
+        .collection-list {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .collection-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 10px;
+            padding: 10px;
+            background: white;
+            border-radius: 6px;
+            border: 1px solid #eee;
+        }
+
+        .collection-item strong {
+            display: block;
+            margin-bottom: 2px;
+        }
+
+        .collection-item small {
+            color: #666;
+            display: block;
+        }
+
+        .collection-item .meta {
+            flex: 1;
+            min-width: 0;
+        }
+
+        .collection-item .quantity {
+            font-weight: bold;
+            color: #007bff;
+        }
+
+        .collection-item .remove-button {
+            border: none;
+            background: transparent;
+            color: #ff4d4d;
+            cursor: pointer;
+            font-size: 13px;
+            white-space: nowrap;
+        }
+
+        .empty-state {
+            margin: 0;
+            color: #666;
+            font-size: 14px;
+        }
+
         .results {
             text-align: left;
             max-height: 560px;
@@ -75,6 +178,13 @@
             padding: 10px;
             border-bottom: 1px solid #eee;
             gap: 10px;
+        }
+
+        .card-actions {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            flex-shrink: 0;
         }
 
         .card img {
@@ -190,10 +300,26 @@
             </button>
         </div>
 
+        <div class="collection-panel">
+            <div class="collection-header">
+                <h3>Card List</h3>
+                <span id="collectionCount">0 cards</span>
+            </div>
+            <div class="collection-actions">
+                <button id="exportCsvBtn" class="action-button secondary">Export CSV</button>
+                <button id="exportPdfBtn" class="action-button primary">Export PDF</button>
+                <button id="clearCollectionBtn" class="action-button danger">Clear List</button>
+            </div>
+            <div class="collection-list" id="collectionList">
+                <p class="empty-state">No cards in your list yet. Add cards from the search results.</p>
+            </div>
+        </div>
+
         <!-- Results -->
         <div class="results" id="resultsContainer"></div>
     </div>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
     <script>
         let cards = [];
         let cart = [];
@@ -202,6 +328,223 @@
         let currentPage = 1;
         const RESULTS_PER_PAGE = 24;
         let searchTimeout;
+        const STORAGE_KEY = 'arcardia-card-collection';
+
+        function escapeHtml(value) {
+            return String(value ?? '')
+                .replace(/&/g, '&amp;')
+                .replace(/</g, '&lt;')
+                .replace(/>/g, '&gt;')
+                .replace(/"/g, '&quot;')
+                .replace(/'/g, '&#39;');
+        }
+
+        function saveCollection() {
+            localStorage.setItem(STORAGE_KEY, JSON.stringify(cart));
+        }
+
+        function loadSavedCollection() {
+            try {
+                const saved = JSON.parse(localStorage.getItem(STORAGE_KEY) || '[]');
+                if (Array.isArray(saved)) {
+                    cart = saved;
+                }
+            } catch (error) {
+                console.warn('Could not load saved collection', error);
+            }
+            renderCollection();
+        }
+
+        function addCardToCollection(card) {
+            const usdPrice = parseFloat(card.marketPrice || 0);
+            const cadPrice = (usdPrice * 1.5).toFixed(2);
+            const existingCard = cart.find(item => item.extNumber === card.extNumber && item.name === card.name);
+
+            if (existingCard) {
+                existingCard.quantity += 1;
+            } else {
+                cart.push({
+                    name: card.name,
+                    extNumber: card.extNumber,
+                    marketPrice: usdPrice.toFixed(2),
+                    cadPrice,
+                    imageUrl: card.imageUrl,
+                    url: card.url,
+                    quantity: 1
+                });
+            }
+
+            saveCollection();
+            renderCollection();
+        }
+
+        function removeCardFromCollection(index) {
+            cart.splice(index, 1);
+            saveCollection();
+            renderCollection();
+        }
+
+        function renderCollection() {
+            const collectionList = document.getElementById('collectionList');
+            const collectionCount = document.getElementById('collectionCount');
+
+            if (!cart.length) {
+                collectionList.innerHTML = '<p class="empty-state">No cards in your list yet. Add cards from the search results.</p>';
+                collectionCount.textContent = '0 cards';
+                return;
+            }
+
+            const totalCards = cart.reduce((sum, item) => sum + item.quantity, 0);
+            collectionCount.textContent = `${totalCards} card${totalCards === 1 ? '' : 's'}`;
+            collectionList.innerHTML = '';
+
+            const fragment = document.createDocumentFragment();
+            cart.forEach((item, index) => {
+                const row = document.createElement('div');
+                row.className = 'collection-item';
+
+                const meta = document.createElement('div');
+                meta.className = 'meta';
+                meta.innerHTML = `
+                    <strong>${escapeHtml(item.name)}</strong>
+                    <small>${escapeHtml(item.extNumber)} • Qty ${item.quantity} • USD $${Number(item.marketPrice || 0).toFixed(2)} • CAD $${item.cadPrice}</small>
+                `;
+
+                const quantity = document.createElement('div');
+                quantity.className = 'quantity';
+                quantity.textContent = `x${item.quantity}`;
+
+                const removeButton = document.createElement('button');
+                removeButton.className = 'remove-button';
+                removeButton.textContent = 'Remove';
+                removeButton.onclick = () => removeCardFromCollection(index);
+
+                row.appendChild(meta);
+                row.appendChild(quantity);
+                row.appendChild(removeButton);
+                fragment.appendChild(row);
+            });
+
+            collectionList.appendChild(fragment);
+        }
+
+        function escapeCsv(value) {
+            const stringValue = String(value ?? '');
+            return /[",\n]/.test(stringValue) ? `"${stringValue.replace(/"/g, '""')}"` : stringValue;
+        }
+
+        function downloadFile(content, filename, mimeType) {
+            const blob = new Blob([content], { type: mimeType });
+            const url = URL.createObjectURL(blob);
+            const link = document.createElement('a');
+            link.href = url;
+            link.download = filename;
+            document.body.appendChild(link);
+            link.click();
+            link.remove();
+            URL.revokeObjectURL(url);
+        }
+
+        function exportCollectionToCsv() {
+            if (!cart.length) {
+                alert('Your card list is empty.');
+                return;
+            }
+
+            const rows = [
+                ['Name', 'Card Number', 'Quantity', 'Price (USD)', 'Price (CAD)', 'Link'],
+                ...cart.map(item => [
+                    item.name,
+                    item.extNumber,
+                    item.quantity,
+                    item.marketPrice,
+                    item.cadPrice,
+                    item.url
+                ])
+            ];
+
+            const csvContent = rows.map(row => row.map(escapeCsv).join(',')).join('\n');
+            downloadFile(csvContent, 'card-list.csv', 'text/csv;charset=utf-8;');
+        }
+
+        function loadImageAsDataUrl(url) {
+            return new Promise(resolve => {
+                const img = new Image();
+                img.crossOrigin = 'Anonymous';
+                img.onload = () => {
+                    const canvas = document.createElement('canvas');
+                    canvas.width = img.naturalWidth;
+                    canvas.height = img.naturalHeight;
+                    const ctx = canvas.getContext('2d');
+                    ctx.drawImage(img, 0, 0);
+                    resolve(canvas.toDataURL('image/jpeg', 0.9));
+                };
+                img.onerror = () => resolve(null);
+                img.src = url;
+            });
+        }
+
+        async function exportCollectionToPdf() {
+            if (!cart.length) {
+                alert('Your card list is empty.');
+                return;
+            }
+
+            if (!window.jspdf || !window.jspdf.jsPDF) {
+                alert('The PDF library could not load. Please refresh the page and try again.');
+                return;
+            }
+
+            const { jsPDF } = window.jspdf;
+            const doc = new jsPDF({ orientation: 'portrait', unit: 'pt', format: 'a4' });
+            const pageWidth = doc.internal.pageSize.getWidth();
+            const margin = 40;
+            let y = 50;
+
+            doc.setFontSize(18);
+            doc.text('Arcardia Card List', margin, y);
+            y += 24;
+
+            doc.setFontSize(10);
+            doc.text('Generated from your current collection.', margin, y);
+            y += 20;
+
+            for (const [index, item] of cart.entries()) {
+                if (y > 760) {
+                    doc.addPage();
+                    y = 50;
+                }
+
+                let imageData = null;
+                if (item.imageUrl) {
+                    imageData = await loadImageAsDataUrl(item.imageUrl);
+                }
+
+                if (imageData) {
+                    doc.addImage(imageData, 'JPEG', margin, y, 50, 70);
+                }
+
+                const textX = imageData ? margin + 70 : margin;
+                doc.setFontSize(12);
+                doc.setFont(undefined, 'bold');
+                doc.text(item.name, textX, y + 12);
+                doc.setFont(undefined, 'normal');
+                doc.setFontSize(10);
+                doc.text(`Card Number: ${item.extNumber}`, textX, y + 32);
+                doc.text(`Quantity: ${item.quantity}`, textX, y + 48);
+                doc.text(`Price (USD): $${Number(item.marketPrice || 0).toFixed(2)}`, textX, y + 64);
+                doc.text(`Price (CAD): $${item.cadPrice}`, textX, y + 80);
+
+                y += 100;
+
+                if (index < cart.length - 1) {
+                    doc.setDrawColor(220);
+                    doc.line(margin, y - 8, pageWidth - margin, y - 8);
+                }
+            }
+
+            doc.save('card-list.pdf');
+        }
 
         async function loadCards() {
             const response = await fetch('search_database.csv?t=' + Date.now());
@@ -319,24 +662,40 @@
             // Render cards for current page
             pagedResults.forEach(card => {
                 const cardDiv = document.createElement('div');
-                const usdPrice = parseFloat(card.marketPrice);
+                const usdPrice = parseFloat(card.marketPrice || 0);
                 const cadPrice = (usdPrice * 1.5).toFixed(2);
 
                 cardDiv.classList.add('card');
-                cardDiv.innerHTML = `
-                    <img src="${card.imageUrl}" alt="${card.name}">
-                    <div>
-                        <p>
-                            <strong>
-                                <a href="${card.url}" target="_blank" style="text-decoration:none; color:#007bff;">
-                                    ${card.name}
-                                </a>
-                            </strong> 
-                            (${card.extNumber})
-                        </p>
-                        <p>Price: $${usdPrice.toFixed(2)} USD (CAD: $${cadPrice})</p>
-                    </div>
+
+                const image = document.createElement('img');
+                image.src = card.imageUrl;
+                image.alt = card.name;
+                cardDiv.appendChild(image);
+
+                const details = document.createElement('div');
+                details.innerHTML = `
+                    <p>
+                        <strong>
+                            <a href="${card.url}" target="_blank" style="text-decoration:none; color:#007bff;">
+                                ${escapeHtml(card.name)}
+                            </a>
+                        </strong>
+                        (${escapeHtml(card.extNumber)})
+                    </p>
+                    <p>Price: $${usdPrice.toFixed(2)} USD (CAD: $${cadPrice})</p>
                 `;
+                cardDiv.appendChild(details);
+
+                const actions = document.createElement('div');
+                actions.className = 'card-actions';
+
+                const addButton = document.createElement('button');
+                addButton.className = 'action-button primary';
+                addButton.textContent = 'Add to list';
+                addButton.onclick = () => addCardToCollection(card);
+                actions.appendChild(addButton);
+                cardDiv.appendChild(actions);
+
                 container.appendChild(cardDiv);
             });
 
@@ -412,6 +771,15 @@
             showAllSets();
         });
 
+        document.getElementById('exportCsvBtn').addEventListener('click', exportCollectionToCsv);
+        document.getElementById('exportPdfBtn').addEventListener('click', exportCollectionToPdf);
+        document.getElementById('clearCollectionBtn').addEventListener('click', () => {
+            cart = [];
+            saveCollection();
+            renderCollection();
+        });
+
+        loadSavedCollection();
         loadCards();
     </script>
 
