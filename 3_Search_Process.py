@@ -1,8 +1,11 @@
 import os
+import re
 import pandas as pd
 import requests
 import time
 from io import StringIO
+from pathlib import Path
+from urllib.parse import urlparse
 
 # Delay between each CSV fetch, in seconds
 FETCH_DELAY_SECONDS = 1
@@ -15,7 +18,11 @@ AUTH_PASSWORD = os.getenv('TCGCSV_PASS')
 DEFAULT_HEADERS = {
     'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36',
     'Accept': 'text/csv,application/csv,application/octet-stream;q=0.9,*/*;q=0.8',
+    'Referer': 'https://www.tcgplayer.com/',
 }
+
+IMAGE_OUTPUT_DIR = Path('images')
+IMAGE_OUTPUT_DIR.mkdir(exist_ok=True)
 
 # URLs of the CSV files to be downloaded
 urls = [
@@ -94,6 +101,33 @@ urls = [
     # Add more URLs as needed
 ]
 
+def sanitize_name(value):
+    safe_value = re.sub(r'[^A-Za-z0-9._-]+', '_', str(value or 'card')).strip('_')
+    return safe_value[:80] or 'card'
+
+
+def download_image_to_local(image_url, product_id, name, ext_number, headers):
+    if not image_url:
+        return ''
+
+    parsed = urlparse(image_url)
+    extension = Path(parsed.path).suffix or '.jpg'
+    image_filename = f"{sanitize_name(product_id)}_{sanitize_name(ext_number or name)}{extension}"
+    output_path = IMAGE_OUTPUT_DIR / image_filename
+
+    if output_path.exists():
+        return output_path.as_posix()
+
+    try:
+        response = requests.get(image_url, headers=headers, timeout=45, stream=True, allow_redirects=True)
+        response.raise_for_status()
+        output_path.write_bytes(response.content)
+        return output_path.as_posix()
+    except Exception as e:
+        print(f"Warning: could not download image {image_url}: {e}")
+        return image_url
+
+
 # Function to download and process CSV
 def download_and_process_csv(urls):
     dfs = []  # List to hold DataFrames
@@ -154,6 +188,17 @@ def download_and_process_csv(urls):
 
     # Reformat combined DataFrame to match your database.csv structure
     combined_df = combined_df[['productId','name', 'extNumber', 'imageUrl', 'url', 'marketPrice','extRarity', 'extDescription', 'extColor', 'extCardType',]]  # Adjust as needed
+
+    for index, row in combined_df.iterrows():
+        image_url = row.get('imageUrl')
+        if pd.notna(image_url) and str(image_url).strip():
+            combined_df.at[index, 'imageUrl'] = download_image_to_local(
+                str(image_url).strip(),
+                row.get('productId'),
+                row.get('name'),
+                row.get('extNumber'),
+                headers,
+            )
 
     # Save the final DataFrame as 'search_database.csv'
     combined_df.to_csv('search_database.csv', index=False)

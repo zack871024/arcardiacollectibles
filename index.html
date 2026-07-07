@@ -339,6 +339,38 @@
                 .replace(/'/g, '&#39;');
         }
 
+        const imageUrlCache = new Map();
+
+        async function getImageUrl(url) {
+            if (!url) return '';
+            if (imageUrlCache.has(url)) return imageUrlCache.get(url);
+
+            const candidates = [`https://proxy.cors.sh/${url}`, url];
+            for (const candidate of candidates) {
+                try {
+                    const response = await fetch(candidate, {
+                        headers: {
+                            'Accept': 'image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8',
+                            'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36',
+                            'Referer': 'https://www.tcgplayer.com/'
+                        }
+                    });
+
+                    if (!response.ok) continue;
+
+                    const blob = await response.blob();
+                    const objectUrl = URL.createObjectURL(blob);
+                    imageUrlCache.set(url, objectUrl);
+                    return objectUrl;
+                } catch (error) {
+                    console.warn('Unable to load image through proxy', error);
+                }
+            }
+
+            imageUrlCache.set(url, url);
+            return url;
+        }
+
         function saveCollection() {
             localStorage.setItem(STORAGE_KEY, JSON.stringify(cart));
         }
@@ -467,21 +499,36 @@
             downloadFile(csvContent, 'card-list.csv', 'text/csv;charset=utf-8;');
         }
 
-        function loadImageAsDataUrl(url) {
-            return new Promise(resolve => {
-                const img = new Image();
-                img.crossOrigin = 'Anonymous';
-                img.onload = () => {
-                    const canvas = document.createElement('canvas');
-                    canvas.width = img.naturalWidth;
-                    canvas.height = img.naturalHeight;
-                    const ctx = canvas.getContext('2d');
-                    ctx.drawImage(img, 0, 0);
-                    resolve(canvas.toDataURL('image/jpeg', 0.9));
-                };
-                img.onerror = () => resolve(null);
-                img.src = url;
-            });
+        async function loadImageAsDataUrl(url) {
+            if (!url) return null;
+
+            const resolvedUrl = await getImageUrl(url);
+            if (!resolvedUrl || resolvedUrl === url && !resolvedUrl.startsWith('http')) {
+                return null;
+            }
+
+            try {
+                const response = await fetch(resolvedUrl, {
+                    headers: {
+                        'Accept': 'image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8',
+                        'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36',
+                        'Referer': 'https://www.tcgplayer.com/'
+                    }
+                });
+
+                if (!response.ok) return null;
+
+                const blob = await response.blob();
+                return await new Promise((resolve, reject) => {
+                    const reader = new FileReader();
+                    reader.onloadend = () => resolve(reader.result);
+                    reader.onerror = reject;
+                    reader.readAsDataURL(blob);
+                });
+            } catch (error) {
+                console.warn('Unable to convert image for PDF export', error);
+                return null;
+            }
         }
 
         async function exportCollectionToPdf() {
@@ -534,8 +581,13 @@
                 doc.text(`Quantity: ${item.quantity}`, textX, y + 48);
                 doc.text(`Price (USD): $${Number(item.marketPrice || 0).toFixed(2)}`, textX, y + 64);
                 doc.text(`Price (CAD): $${item.cadPrice}`, textX, y + 80);
+                if (item.url) {
+                    doc.setTextColor(0, 102, 204);
+                    doc.textWithLink('View card link', textX, y + 96, { url: item.url });
+                    doc.setTextColor(0, 0, 0);
+                }
 
-                y += 100;
+                y += 112;
 
                 if (index < cart.length - 1) {
                     doc.setDrawColor(220);
@@ -668,8 +720,16 @@
                 cardDiv.classList.add('card');
 
                 const image = document.createElement('img');
-                image.src = card.imageUrl;
                 image.alt = card.name;
+                image.loading = 'lazy';
+                image.onerror = () => {
+                    image.style.display = 'none';
+                };
+                getImageUrl(card.imageUrl).then(resolvedUrl => {
+                    if (resolvedUrl) {
+                        image.src = resolvedUrl;
+                    }
+                });
                 cardDiv.appendChild(image);
 
                 const details = document.createElement('div');
