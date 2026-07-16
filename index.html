@@ -608,13 +608,60 @@
         }
 
         function parseCSV(csvText) {
-            const rows = csvText.trim().split('\n');
-            const headers = rows[0].split(',').map(h => h.trim());
+            const rows = [];
+            let row = [];
+            let value = '';
+            let inQuotes = false;
 
-            return rows.slice(1).map(row => {
-                const values = row.split(',').map(v => v.trim());
-                let entry = {};
-                headers.forEach((header, index) => entry[header] = values[index] || '');
+            for (let i = 0; i < csvText.length; i += 1) {
+                const char = csvText[i];
+                const nextChar = csvText[i + 1];
+
+                if (char === '"') {
+                    if (inQuotes && nextChar === '"') {
+                        value += '"';
+                        i += 1;
+                    } else {
+                        inQuotes = !inQuotes;
+                    }
+                } else if (char === ',' && !inQuotes) {
+                    row.push(value.trim());
+                    value = '';
+                } else if ((char === '\n' || char === '\r') && !inQuotes) {
+                    if (char === '\r' && nextChar === '\n') {
+                        i += 1;
+                    }
+                    row.push(value.trim());
+                    if (row.some(cell => cell !== '')) {
+                        rows.push(row);
+                    }
+                    row = [];
+                    value = '';
+                } else {
+                    value += char;
+                }
+            }
+
+            if (value.length > 0 || row.length > 0) {
+                row.push(value.trim());
+                if (row.some(cell => cell !== '')) {
+                    rows.push(row);
+                }
+            }
+
+            if (!rows.length) return [];
+
+            const headers = rows[0].map(header => header.trim());
+            return rows.slice(1).filter(row => row.some(cell => cell !== '')).map(row => {
+                const values = row.slice(0, headers.length);
+                while (values.length < headers.length) {
+                    values.push('');
+                }
+
+                const entry = {};
+                headers.forEach((header, index) => {
+                    entry[header] = values[index] || '';
+                });
                 return entry;
             });
         }
@@ -722,14 +769,14 @@
                 const image = document.createElement('img');
                 image.alt = card.name;
                 image.loading = 'lazy';
+                image.decoding = 'async';
+                image.referrerPolicy = 'no-referrer-when-downgrade';
                 image.onerror = () => {
                     image.style.display = 'none';
                 };
-                getImageUrl(card.imageUrl).then(resolvedUrl => {
-                    if (resolvedUrl) {
-                        image.src = resolvedUrl;
-                    }
-                });
+                if (card.imageUrl) {
+                    image.src = card.imageUrl;
+                }
                 cardDiv.appendChild(image);
 
                 const details = document.createElement('div');
