@@ -1,17 +1,53 @@
+import os
 import pandas as pd
 import requests
 import math
 from io import StringIO
+
+# Optional authentication / header configuration
+API_TOKEN = os.getenv('TCGCSV_API_TOKEN')
+AUTH_USERNAME = os.getenv('TCGCSV_USER')
+AUTH_PASSWORD = os.getenv('TCGCSV_PASS')
+
+DEFAULT_HEADERS = {
+    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36',
+    'Accept': 'text/csv,application/csv,application/octet-stream;q=0.9,*/*;q=0.8',
+    'Referer': 'https://www.tcgplayer.com/',
+}
 
 ##############################################################
 #### PUT NEW PRODUCT URL DOWN BELOW, REMOVE EXISTING ONES ####
 ##############################################################
 
 urls = [
-    'https://tcgcsv.com/tcgplayer/68/24575/ProductsAndPrices.csv',
-    'https://tcgcsv.com/tcgplayer/68/24537/ProductsAndPrices.csv',
-    'https://tcgcsv.com/tcgplayer/68/24545/ProductsAndPrices.csv',
-    'https://tcgcsv.com/tcgplayer/68/24579/ProductsAndPrices.csv',
+    'https://tcgcsv.com/tcgplayer/86/24193/ProductsAndPrices.csv',
+    'https://tcgcsv.com/tcgplayer/86/24221/ProductsAndPrices.csv',
+    'https://tcgcsv.com/tcgplayer/86/24222/ProductsAndPrices.csv',
+    'https://tcgcsv.com/tcgplayer/86/24223/ProductsAndPrices.csv',
+    'https://tcgcsv.com/tcgplayer/86/24224/ProductsAndPrices.csv',
+    'https://tcgcsv.com/tcgplayer/86/24225/ProductsAndPrices.csv',
+    'https://tcgcsv.com/tcgplayer/86/24340/ProductsAndPrices.csv',
+    'https://tcgcsv.com/tcgplayer/86/24372/ProductsAndPrices.csv',
+    'https://tcgcsv.com/tcgplayer/86/24373/ProductsAndPrices.csv',
+    'https://tcgcsv.com/tcgplayer/86/24374/ProductsAndPrices.csv',
+    'https://tcgcsv.com/tcgplayer/86/24407/ProductsAndPrices.csv',
+    'https://tcgcsv.com/tcgplayer/86/24408/ProductsAndPrices.csv',
+    'https://tcgcsv.com/tcgplayer/86/24409/ProductsAndPrices.csv',
+    'https://tcgcsv.com/tcgplayer/86/24410/ProductsAndPrices.csv',
+    'https://tcgcsv.com/tcgplayer/86/24411/ProductsAndPrices.csv',
+    'https://tcgcsv.com/tcgplayer/86/24522/ProductsAndPrices.csv',
+    'https://tcgcsv.com/tcgplayer/86/24625/ProductsAndPrices.csv',
+    'https://tcgcsv.com/tcgplayer/86/24633/ProductsAndPrices.csv',
+    'https://tcgcsv.com/tcgplayer/86/24692/ProductsAndPrices.csv',
+    'https://tcgcsv.com/tcgplayer/86/24693/ProductsAndPrices.csv',
+    'https://tcgcsv.com/tcgplayer/86/24699/ProductsAndPrices.csv',
+    'https://tcgcsv.com/tcgplayer/86/24767/ProductsAndPrices.csv',
+    'https://tcgcsv.com/tcgplayer/86/24800/ProductsAndPrices.csv',
+    'https://tcgcsv.com/tcgplayer/86/24801/ProductsAndPrices.csv',
+    'https://tcgcsv.com/tcgplayer/86/24802/ProductsAndPrices.csv',
+    'https://tcgcsv.com/tcgplayer/86/24803/ProductsAndPrices.csv',
+    'https://tcgcsv.com/tcgplayer/86/24804/ProductsAndPrices.csv',
+    'https://tcgcsv.com/tcgplayer/86/24826/ProductsAndPrices.csv',
     # Add more URLs as needed
 ]
 
@@ -19,9 +55,20 @@ urls = [
 def download_and_process_csv(urls):
     dfs = []
 
+    auth = None
+    if AUTH_USERNAME and AUTH_PASSWORD:
+        auth = (AUTH_USERNAME, AUTH_PASSWORD)
+
+    headers = DEFAULT_HEADERS.copy()
+    if API_TOKEN:
+        headers['Authorization'] = f'Bearer {API_TOKEN}'
+
+    session = requests.Session()
+    session.headers.update(headers)
+
     for url in urls:
         try:
-            response = requests.get(url)
+            response = session.get(url, auth=auth, timeout=30)
             response.raise_for_status()
 
             if not response.text.strip():
